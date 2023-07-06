@@ -1,4 +1,8 @@
-**Welcome to Jazz Chord Generator**
+**Welcome to gospel-gamers.com**
+This is the website of gospel_gamers. The source code is public under the MIT License.
+Some of the best coding projects include:
+
+**Jazz Chord Generator**
 
 The idea is to create smooth jazz chords and voicings based upon user input.
 A user is prompted to give a starting note and then decide what chord, extension or voicing to build.
