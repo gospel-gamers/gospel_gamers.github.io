@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="jazzStyle.css">
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+        <!-- Don't use this in production: -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    </head>
+
+    <body>
+        <!-- titles start here -->
+        <p class='title'>Jazz Chords and Scale Generator</p>
+        <p id='demo'>Select a key and create either chord voicings or scales</p>
+
+        <!-- this begins the display of the piano keyboard -->
+        <section class="piano">
+            <section id='c2-key' class="key">
+            <section class='keynote'>C2</section>
+            </section>
+            <section id='c2-sharp-key' class="black-key">
+            <section class='black-keynote'>C#</section>
+            </section>
+            <section id='d2-key' class="key">
+            <section class='keynote'>D</section>
+            </section>
+            <section id='d2-sharp-key' class="black-key">
+            <section class='black-keynote'>D#</section>
+            </section>
+            <section id='e2-key' class="key">
+            <section class='keynote'>E</section>
+            </section>
+            <section id='f2-key' class="key">
+            <section class='keynote'>F</section>
+            </section>
+            <section id='f2-sharp-key' class="black-key">
+            <section class='black-keynote'>F#</section>
+            </section>
+            <section id='g2-key' class="key">
+            <section class='keynote'>G</section>
+            </section>
+            <section id='g2-sharp-key' class="black-key">
+            <section class='black-keynote'>G#</section>
+            </section>
+            <section id='a2-key' class="key">
+            <section class='keynote'>A</section>
+            </section>
+            <section id='a2-sharp-key' class="black-key">
+            <section class='black-keynote'>A#</section>
+            </section>
+            <section id='b2-key' class="key">
+            <section class='keynote'>B</section>
+            </section>
+            <section id='c3-key' class="key">
+            <section class='keynote'>C3</section>
+            </section>
+            <section id='c3-sharp-key' class="black-key">
+                <section class='black-keynote'>C#</section>
+            </section>
+            <section id='d3-key' class="key">
+                <section class='keynote'>D</section>
+            </section>
+            <section id='d3-sharp-key' class="black-key">
+                <section class='black-keynote'>D#</section>
+            </section>
+            <section id='e3-key' class="key">
+                <section class='keynote'>E</section>
+            </section>
+            <section id='f3-key' class="key">
+                <section class='keynote'>F</section>
+            </section>
+            <section id='f3-sharp-key' class="black-key">
+                <section class='black-keynote'>F#</section>
+            </section>
+            <section id='g3-key' class="key">
+                <section class='keynote'>G</section>
+            </section>
+            <section id='g3-sharp-key' class="black-key">
+                <section class='black-keynote'>G#</section>
+            </section>
+            <section id='a3-key' class="key">
+                <section class='keynote'>A</section>
+            </section>
+            <section id='a3-sharp-key' class="black-key">
+                <section class='black-keynote'>A#</section>
+            </section>
+            <section id='b3-key' class="key">
+                <section class='keynote'>B</section>
+            </section>
+            <section id='c4-key' class="key">
+                <section class='keynote'>C4</section>
+            </section>
+            <section id='c4-sharp-key' class="black-key">
+                <section class='black-keynote'>C#</section>
+            </section>
+            <section id='d4-key' class="key">
+                <section class='keynote'>D</section>
+            </section>
+            <section id='d4-sharp-key' class="black-key">
+                <section class='black-keynote'>D#</section>
+            </section>
+            <section id='e4-key' class="key">
+                <section class='keynote'>E</section>
+            </section>
+            <section id='f4-key' class="key">
+                <section class='keynote'>F</section>
+            </section>
+            <section id='f4-sharp-key' class="black-key">
+                <section class='black-keynote'>F#</section>
+            </section>
+            <section id='g4-key' class="key">
+                <section class='keynote'>G</section>
+            </section>
+            <section id='g4-sharp-key' class="black-key">
+                <section class='black-keynote'>G#</section>
+            </section>
+            <section id='a4-key' class="key">
+                <section class='keynote'>A</section>
+            </section>
+            <section id='a4-sharp-key' class="black-key">
+                <section class='black-keynote'>A#</section>
+            </section>
+            <section id='b4-key' class="key">
+                <section class='keynote'>B</section>
+            </section>
+            <section id='c5-key' class="key">
+                <section class='keynote'>C5</section>
+            </section>
+            <section id='c5-sharp-key' class="black-key">
+                <section class='black-keynote'>C#</section>
+            </section>
+            <section id='d5-key' class="key">
+                <section class='keynote'>D</section>
+            </section>
+            <section id='d5-sharp-key' class="black-key">
+                <section class='black-keynote'>D#</section>
+            </section>
+            <section id='e5-key' class="key">
+                <section class='keynote'>E</section>
+            </section>
+            <section id='f5-key' class="key">
+                <section class='keynote'>F</section>
+            </section>
+            <section id='f5-sharp-key' class="black-key">
+                <section class='black-keynote'>F#</section>
+            </section>
+            <section id='g5-key' class="key">
+                <section class='keynote'>G</section>
+            </section>
+            <section id='g5-sharp-key' class="black-key">
+                <section class='black-keynote'>G#</section>
+            </section>
+            <section id='a5-key' class="key">
+                <section class='keynote'>A</section>
+            </section>
+            <section id='a5-sharp-key' class="black-key">
+                <section class='black-keynote'>A#</section>
+            </section>
+            <section id='b5-key' class="key">
+                <section class='keynote'>B</section>
+            </section>
+            <section id='c6-key' class="key">
+                <section class='keynote'>C6</section>
+            </section>
+            <section id='c6-sharp-key' class="black-key">
+                <section class='black-keynote'>C#</section>
+            </section>
+            <section id='d6-key' class="key">
+                <section class='keynote'>D</section>
+            </section>
+            <section id='d6-sharp-key' class="black-key">
+                <section class='black-keynote'>D#</section>
+            </section>
+            <section id='e6-key' class="key">
+                <section class='keynote'>E</section>
+            </section>
+            <section id='f6-key' class="key">
+                <section class='keynote'>F</section>
+            </section>
+            <section id='f6-sharp-key' class="black-key">
+                <section class='black-keynote'>F#</section>
+            </section>
+            <section id='g6-key' class="key">
+                <section class='keynote'>G</section>
+            </section>
+            <section id='g6-sharp-key' class="black-key">
+                <section class='black-keynote'>G#</section>
+            </section>
+            <section id='a6-key' class="key">
+                <section class='keynote'>A</section>
+            </section>
+            <section id='a6-sharp-key' class="black-key">
+                <section class='black-keynote'>A#</section>
+            </section>
+            <section id='b6-key' class="key">
+                <section class='keynote'>B</section>
+            </section>
+            <section id='c7-key' class="key">
+                <section class='keynote'>C7</section>
+            </section>
+
+
+        </section>
+
+        <!-- script to light up piano keys-->
+        <script src="jazzReactScript.js"></script>
+
+        <!-- old use of React Components
+        <section id="reactComponents">
+            use React for the chords and scales logic
+            <section id='reactLogicSection'>
+
+
+            </section>
+
+        </section>
+        -->
+
+        <!-- Main React Script -->
+        <section id="reactComponents">
+
+            <section id="root"></section>
+            <!-- this renders to the root component-->
+            <script type="text/babel">
+
+                // four buttons for choosing chord type
+                function MajButton() 
+                {
+                    /*
+                    return 
+                    (
+                        <button onClick={() => this.setState({ liked: true })}>
+                            Like
+                        </button>
+                    );
+                    */
+
+                    function handleClick() 
+                    {
+                        alert('You clicked me!');
+                    }
+
+                    return (
+                        <button className="reactChordButton" onClick={handleClick}>
+                        maj chord
+                        </button>
+                    );
+                    
+                }
+
+                function MinButton() 
+                {
+                    function handleClick() 
+                    {
+                        alert('You clicked me!');
+                    }
+
+                    return (
+                        <button className="reactChordButton" onClick={handleClick}>
+                        min chord
+                        </button>
+                    );
+                }
+
+                function AugButton() 
+                {
+                    function handleClick() 
+                    {
+                        alert('You clicked me!');
+                    }
+
+                    return (
+                        <button className="reactChordButton"  onClick={handleClick}>
+                        aug chord
+                        </button>
+                    );
+                }
+
+                function DimButton() 
+                    {
+                        function handleClick() 
+                        {
+                            alert('You clicked me!');
+                        }
+
+                        return (
+                            <button className="reactChordButton"  onClick={handleClick}>
+                            dim chord
+                            </button>
+                        );
+                    }
+
+
+                function MyApp() {
+                    return( 
+                        <>
+                        <MajButton/>
+                        <MinButton/>
+                        <AugButton/>
+                        <DimButton/>
+                        </>
+                    ) 
+
+                }
+
+                const container = document.getElementById('root');
+                const root = ReactDOM.createRoot(container);
+                root.render(<MyApp />);
+
+            </script>
+
+
+        </section>
+
+        <a href="/gospel_gamers/gospel_gamers Website/knabeWebsite/index.html">
+            <button class="home_button">
+                Home
+            </button>
+        </a>
+
+
+
+    </body>
+
+</html>
