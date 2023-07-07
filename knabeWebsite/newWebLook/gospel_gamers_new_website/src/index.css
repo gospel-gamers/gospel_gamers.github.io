@@ -179,6 +179,101 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
+/* mixing single, ep, or lp */
+
+.mixing--single {
+  flex: 1;
+  border-top: solid;
+  border-left: solid;
+  border-bottom: solid;
+
+}
+
+.mixing--single:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: grey;
+  border: solid;
+  border-color: white;
+  color: white;
+}
+
+.mixing--single--dark {
+  flex: 1;
+  border: solid;
+}
+
+.mixing--single--dark:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: darkslateblue;
+  opacity: 1;
+  /* border: solid; */
+  border-color: white;
+  color: white;
+}
+
+.mixing--ep {
+  flex: 1;
+  border: solid;
+}
+
+.mixing--ep:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: grey;
+  border: solid;
+  border-color: white;
+  color: white;
+}
+
+.mixing--ep--dark {
+  flex: 1;
+  border-top: solid;
+  border-bottom: solid;
+}
+
+.mixing--ep--dark:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: darkslateblue;
+  /* border: solid; */
+  border-color: white;
+  color: white;
+}
+
+.mixing--lp {
+  flex: 1;
+  border-top: solid;
+  border-right: solid;
+  border-bottom: solid;
+}
+
+.mixing--lp:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: grey;
+  border: solid;
+  border-color: white;
+  color: white;
+}
+
+.mixing--lp--dark {
+  flex: 1;
+  border: solid;
+}
+
+.mixing--lp--dark:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: darkslateblue;
+  /* border: solid; */
+  border-color: white;
+  color: white;
+}
+
+/* mastering section */
+
 .mastering--list {
   list-style: none;
   display: flex;
@@ -207,6 +302,97 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
+/* mastering single, ep, or lp */
+
+.mastering--single {
+  flex: 1;
+  border: solid;
+}
+
+.mastering--single:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: grey;
+  border: solid;
+  border-color: white;
+  color: white;
+}
+
+.mastering--single--dark {
+  flex: 1;
+  border: solid;
+}
+
+.mastering--single--dark:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: darkslateblue;
+  opacity: 1;
+  /* border: solid; */
+  border-color: white;
+  color: white;
+}
+
+.mastering--ep {
+  flex: 1;
+  border-top: solid;
+  border-bottom: solid;
+}
+
+.mastering--ep:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: grey;
+  border: solid;
+  border-color: white;
+  color: white;
+}
+
+.mastering--ep--dark {
+  flex: 1;
+  border-top: solid;
+  border-bottom: solid;
+}
+
+.mastering--ep--dark:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: darkslateblue;
+  /* border: solid; */
+  border-color: white;
+  color: white;
+}
+
+.mastering--lp {
+  flex: 1;
+  border: solid;
+}
+
+.mastering--lp:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: grey;
+  border: solid;
+  border-color: white;
+  color: white;
+}
+
+.mastering--lp--dark {
+  flex: 1;
+  border: solid;
+}
+
+.mastering--lp--dark:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: darkslateblue;
+  /* border: solid; */
+  border-color: white;
+  color: white;
+}
+
+
+
 /* hover logic */
 .mixing--list > h3:hover {
   color: tomato;
@@ -232,24 +418,24 @@ body {
 /* audio paragraph component */
 
 .audio--paragraph {
-  /*border: solid 1px red;*/
+  border: solid;
   font-size: 1.7rem;
   background-color: white;
-  height: 21rem;
+  height: 23rem;
   margin-left: 3rem;
   margin-right: 3rem;
-  padding: 2rem;
+  padding: 1.5rem;
   align-items: start;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
 .audio--paragraph--dark {
-  /*border: solid 1px red;*/
+  border: solid white;
   font-size: 1.7rem;
-  height: 21rem;
+  height: 24rem;
   margin-left: 3rem;
   margin-right: 3rem;
-  padding: 2rem;
+  padding: 1.5rem;
   align-items: start;
   background-color: rgba(39, 55, 136, 0.924);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
@@ -396,9 +582,8 @@ body {
 .wedding--list > div:hover {
   opacity: 1;
   cursor: pointer;
-  border-style: solid;
-  border-color: white;
-  color: white;
+  border: solid;
+  /* color: white; */
 }
 
 .wedding--list--dark {
@@ -441,7 +626,8 @@ body {
   align-items: center;
   opacity: 0.9;
   background-color: rgb(205, 127, 50);
-  color: white;
+  /* color: white; */
+  transition: 0.1s ease-in-out;
   /* border-color: black; */
   /* border-style: solid; */
     /* margin: auto; */
@@ -456,6 +642,7 @@ body {
   opacity: 0.9;
   color: white;
   background-color: rgb(205, 127, 50);
+  transition: 0.1s ease-in-out;
   /* border-color: black; */
   /* border-style: solid; */
     /* margin: auto; */
@@ -467,9 +654,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  /* color: white; */
   background-color: rgb(192, 192, 192);
   opacity: 0.9;
+  transition: 0.1s ease-in-out;
 }
 
 .wedding--silver--dark {
@@ -480,6 +668,7 @@ body {
   align-items: center;
   background-color: rgb(192, 192, 192);
   opacity: 0.9;
+  transition: 0.1s ease-in-out;
 }
 
 .wedding--gold {
@@ -489,9 +678,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  /* color: white; */
   background-color: goldenrod;
   opacity: 0.9;
+  transition: 0.1s ease-in-out;
 }
 
 .wedding--gold--dark {
@@ -503,6 +693,7 @@ body {
   align-items: center;
   background-color: goldenrod;
   opacity: 0.9;
+  transition: 0.1s ease-in-out;
 }
 
 .wedding--medals--images {
@@ -512,7 +703,7 @@ body {
 /* wedding paragraph component */
 
 .wedding--paragraph {
-  /*border: solid 1px red;*/
+  border: solid;
   flex: 3;
   font-size: 1.7rem;
   background-color: white;
@@ -529,7 +720,7 @@ body {
 }
 
 .wedding--paragraph--dark {
-  /*border: solid 1px red;*/
+  border: solid;
   flex: 3;
   font-size: 1.7rem;
   background-color: white;

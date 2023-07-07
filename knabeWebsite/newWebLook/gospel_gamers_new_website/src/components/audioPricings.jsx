@@ -64,7 +64,7 @@ export default function AudioPricings(props) {
     }
 
     return (
-        <div>
+        <div className={!props.darkMode ? 'audio--content' : 'audio--content--dark'}>
             <div className={!props.darkMode ? 'audio--titles' : 'audio--titles--dark'}>
                 <h1>Mixing</h1>
                 <h1>Mastering</h1>
@@ -74,9 +74,16 @@ export default function AudioPricings(props) {
 
                 <div className={!props.darkMode ? 'audio--mixing' : 'audio--mixing--dark'}>
                     <ul className={!props.darkMode ? 'mixing--list' : 'mixing--list--dark'}>
-                        <h3 onClick={singleMixBool}>Single</h3>
-                        <h3 onClick={epMixBool}>EP</h3>
-                        <h3 onClick={lpMixBool}>LP</h3>
+                        <div onClick={singleMixBool} className={!props.darkMode ? 'mixing--single' : 'mixing--single--dark'}>
+                            <h3>Single</h3>
+                        </div>
+                        <div onClick={epMixBool} className={!props.darkMode ? 'mixing--ep' : 'mixing--ep--dark'}>
+                            <h3>EP</h3>
+                        </div>
+                        <div onClick={lpMixBool} className={!props.darkMode ? 'mixing--lp' : 'mixing--lp--dark'}>
+                            <h3>LP</h3>
+                        </div>
+
                     </ul>
 
                     {singleMix && <AudioParagraph 
@@ -110,9 +117,16 @@ export default function AudioPricings(props) {
 
                 <div className={!props.darkMode ? 'audio--mastering' : 'audio--mastering--dark'}>
                     <ul className={!props.darkMode ? 'mastering--list' : 'mastering--list--dark'}>
-                        <h3 onClick={singleMasterBool}>Single</h3>
-                        <h3 onClick={epMasterBool}>EP</h3>
-                        <h3 onClick={lpMasterBool}>LP</h3>
+                        <div onClick={singleMasterBool} className={!props.darkMode ? 'mastering--single' : 'mastering--single--dark'}>
+                            <h3>Single</h3>
+                        </div>
+                        <div onClick={epMasterBool} className={!props.darkMode ? 'mastering--ep' : 'mastering--ep--dark'}>
+                            <h3>EP</h3>
+                        </div>
+                        <div onClick={lpMasterBool} className={!props.darkMode ? 'mastering--lp' : 'mastering--lp--dark'}>
+                            <h3>LP</h3>
+                        </div>
+
                     </ul>
 
                     {singleMaster&& <AudioParagraph 

@@ -92,7 +92,7 @@ export default function WeddingPricings(props) {
 
             </div>
 
-            <div className={!props.darkMode ? 'wedding--titles--info' : 'wedding--titles--info--dark'}> A decade ago, I began playing music and running audio for the weddings of friends. This has turned into being a musician, emcee and DJ for weddings as well as other events.
+            <div className={!props.darkMode ? 'wedding--titles--info' : 'wedding--titles--info--dark'}> A decade ago, I began playing music and running audio for the weddings of friends. This has grow into being a wedding musician, emcee and DJ as well as other events.
 
 For weddings, I have three packages available.
 Contact me for pricings on other events.</div>
