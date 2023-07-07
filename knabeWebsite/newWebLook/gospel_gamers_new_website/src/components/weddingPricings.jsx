@@ -40,53 +40,62 @@ export default function WeddingPricings(props) {
     return (
         <div>
             <div className={!props.darkMode ? 'wedding--titles' : 'wedding--titles--dark'}>
-                <h1>Weddings</h1>
+                <h1>Wedding Pricing Plans</h1>
             </div>
-            <div className={!props.darkMode ? 'wedding--titles--info' : 'wedding--titles--info--dark'}> I began playing music and running sound for the weddings of friends about a decade ago. This turned into being a musician, audio engineer and DJ for weddings and other events.
 
-            For weddings, I have three packages available.
-            Contact me for pricings on other events.</div>
 
             <div className={!props.darkMode ? 'wedding--pricings' : 'wedding--pricings--dark'}>
 
                 <div className={!props.darkMode ? 'wedding--main' : 'wedding--main--dark'}>
                     <ul className={!props.darkMode ? 'wedding--list' : 'wedding--list--dark'}>
-                        <h3 onClick={singleMixBool}>Bronze</h3>
-                        <h3 onClick={epMixBool}>Silver</h3>
-                        <h3 onClick={lpMixBool}>Gold</h3>
+                        <div onClick={singleMixBool} className={!props.darkMode ? 'wedding--bronze' : 'wedding--bronze--dark'}>
+                            <h3 >Bronze</h3>
+                        </div>
+                        
+                        <div onClick={epMixBool} className={!props.darkMode ? 'wedding--silver' : 'wedding--silver--dark'}>
+                            <h3 >Silver</h3>
+                        </div>
+
+                        <div onClick={lpMixBool} className={!props.darkMode ? 'wedding--gold' : 'wedding--gold--dark'}>
+                            <h3>Gold</h3>
+                        </div>
+                        
+                        
                     </ul>
 
                     {singleMix && <AudioParagraph 
                     className={!props.darkMode ? 'wedding--paragraph' : 'wedding--paragraph--dark'}
-                    text=' I began playing music and running sound for the weddings of friends about a decade ago. This turned into being a musician, audio engineer and DJ for weddings and other events.
-
-                    For weddings, I have three packages available.
-                    Contact me for pricings on other events
-                    Bronze Plan (Audio or Music):
-
-                    Wedding service audio or music
-                    $500 for wedding service music
-                    $500 for wedding service audio
+                    image='bronze'
+                    text='
+                    $500 for ceremony music;
+                    $750 for ceremony audio
                     '
                     />}
                     {epMix && <AudioParagraph 
                     className={!props.darkMode ? 'wedding--paragraph' : 'wedding--paragraph--dark'}
-                    text={`Silver Plan (Audio and DJ):
+                    image='silver'
+                    text={`
 
-                    $1300 for Wedding service audio,
-                    cocktail hour and reception DJ`}
+                    $1500 for Ceremony audio,
+                    Cocktail Hour and Reception DJ`}
                     />}
                     {lpMix && <AudioParagraph 
                     className={!props.darkMode ? 'wedding--paragraph' : 'wedding--paragraph--dark'}
-                    text={`Gold Plan (Audio, Cocktail Live Music & DJ):
+                    image='gold'
+                    text={`
 
-                    $1600 for Wedding service audio,
-                    cocktail hour live music and reception DJ`}
+                    $1750 for Ceremony audio,
+                    Live Cocktail Hour music and Reception DJ`}
                     />}
 
                 </div>
 
             </div>
+
+            <div className={!props.darkMode ? 'wedding--titles--info' : 'wedding--titles--info--dark'}> A decade ago, I began playing music and running audio for the weddings of friends. This has turned into being a musician, emcee and DJ for weddings as well as other events.
+
+For weddings, I have three packages available.
+Contact me for pricings on other events.</div>
         </div>
     )
 }

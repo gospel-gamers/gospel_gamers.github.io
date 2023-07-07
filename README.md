@@ -7,7 +7,7 @@ Read jazzKnowledge.md for the music theory.
 
 Required packages:
 - node.js
-- prompt npm
-
+- react, react-dom 
+- vite --> `npm i -D vite @vitejs/plugin-react-refresh`
 
 Addition of a scale creator coming soon as well!
