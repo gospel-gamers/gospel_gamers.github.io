@@ -63,6 +63,75 @@ body {
   min-height: 100vh;*/
 }
 
+/* bio page css rules */
+
+.bio--page {
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/berlin2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-color:hsla(26, 92%, 68%, 0.285);
+  margin: 0 auto;
+  padding: 3rem;
+  /* text-align: center; */
+
+}
+
+.bio--page--dark {
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/berlin5.jpg');
+  background-position: bottom;
+  background-size: cover;
+  /*background-color: rgba(16, 25, 68, 0.845);*/
+  background-color: rgb(38, 32, 78);
+  margin: 0 auto;
+  padding: 3rem;
+  /* text-align: center; */
+}
+
+/* music page css rules */
+
+.music--page {
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/guitar3.jpg');
+  background-position: center;
+  background-size: cover;
+  background-color:hsla(26, 92%, 68%, 0.285);
+  margin: 0 auto;
+  padding: 3rem;
+  /* text-align: center; */
+
+}
+
+.music--page--dark {
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/guitar20.jpg');
+  background-position: bottom;
+  background-size: cover;
+  /*background-color: rgba(16, 25, 68, 0.845);*/
+  background-color: rgb(38, 32, 78);
+  margin: 0 auto;
+  padding: 3rem;
+  /* text-align: center; */
+}
+
+.music--content {
+  font-size: 2rem;
+  margin-left: 4.5rem;
+  max-width: 50rem;
+}
+
+.music--content--dark {
+  font-size: 2rem;
+  margin-left: 4.5rem;
+  max-width: 50rem;
+  color: white;
+}
+
 /* audio page css rules */
 
 .audio--page {
@@ -1576,6 +1645,12 @@ body {
   font-size: 1.7rem;
 }
 
+.nav--items > li:hover {
+  cursor: pointer;
+  color: tomato;
+  font-weight: 600;
+}
+
 /* navbar darkMode*/
 .nav--bar--dark {
   display: flex;
@@ -1623,6 +1698,12 @@ body {
 .nav--items--dark > li {
   padding: 3rem;
   font-size: 1.7rem;
+}
+
+.nav--items--dark > li:hover {
+  cursor: pointer;
+  color: tomato;
+  font-weight: 600;
 }
 
 /* lightMode button & logo */
@@ -1746,6 +1827,7 @@ input:checked + .slider:before {
 
 .card:hover .card--image {
   opacity: 0.65;
+  cursor: pointer;
 }
 
 .card--image {
@@ -1779,6 +1861,7 @@ input:checked + .slider:before {
 
 .card--dark:hover .card--image--dark {
   opacity: 0.65;
+  cursor: pointer;
 }
 
 .card--image--dark {

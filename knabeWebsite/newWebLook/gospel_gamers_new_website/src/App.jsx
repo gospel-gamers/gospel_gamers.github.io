@@ -9,6 +9,8 @@ import './App.css'
 
 // import all the different pages
 import HomePage from './HomePage'
+import Bio from './bio/bio'
+import Music from './music/music'
 import Audio from './audio/Audio'
 import Coding from './coding/coding'
 import Weddings from './weddings/weddings'
@@ -34,6 +36,8 @@ function App() {
       <Routes>
 
         <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/bio" element={<Bio />} />
+        <Route exact path="/music" element={<Music />} />
         <Route exact path="/audio" element={<Audio />} />
         <Route exact path="/weddings" element={<Weddings />} />
         <Route exact path="/coding" element={<Coding />} />
