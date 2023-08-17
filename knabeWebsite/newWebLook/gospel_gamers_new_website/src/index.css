@@ -71,7 +71,7 @@ body {
   height: 100%;
   background-image: url('./images/berlinDay/berlin13.jpg');
   /* background-position: center; */
-  background-position: 40% 45%;
+  background-position: 40% 36%;
   background-size: cover;
   background-color:hsla(26, 92%, 68%, 0.285);
   margin: 0 auto;
@@ -84,7 +84,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: url('./images/berlinNight/berlin14.jpg');
-  background-position: 40% 70%;
+  background-position: 40% 68%;
   background-size: cover;
   /*background-color: rgba(16, 25, 68, 0.845);*/
   background-color: rgb(38, 32, 78);
@@ -107,9 +107,10 @@ body {
 
 .bio--para {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   color: black;
-  max-width: 46rem;
+  text-align: justify;
+  max-width: 58rem;
 }
 
 .bio--para--dark {
@@ -117,7 +118,8 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
   color: white;
-  max-width: 55rem;
+  text-align: justify;
+  max-width: 58rem;
 }
 
 /* music page css rules */
@@ -1625,6 +1627,54 @@ body {
   margin: 0 auto;
   padding: 3rem;
   text-align: center;
+}
+
+.contact--form {
+  margin-top: 10rem;
+  border: red solid;
+  display: inline-block;
+}
+
+.contact--form > div > div {
+  margin: 2rem;
+  color: white; 
+  font-size: 2rem;
+}
+
+.contact--form--dark {
+  margin-top: 10rem;
+  border: red solid;
+  display: inline-block;
+}
+
+.contact--form--dark > div > div {
+  margin: 2rem;
+  color: white; 
+  font-size: 2rem;
+}
+
+.input--line {
+  width: 15rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+}
+
+.input--line--dark {
+  width: 15rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+}
+
+.input--text {
+  width: 15rem;
+  height: 9.5rem;
+  font-size: 1.5rem;
+}
+
+.input--text--dark {
+  width: 15rem;
+  height: 9.5rem;
+  font-size: 1.5rem;
 }
 
 /* navbar lightMode */

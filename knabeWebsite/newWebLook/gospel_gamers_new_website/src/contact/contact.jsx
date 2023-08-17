@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NavBar from '../components/navbar'
+import ContactForm from '../components/contactForm'
 import Footer from '../components/footer'
 
 export default function Contact() {
@@ -16,7 +17,9 @@ export default function Contact() {
 
       <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
-      {/*<h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Welcome to my audio pricings page</h1>*/}
+      {/* this is where the contact form begins*/}
+
+     <ContactForm darkMode={darkMode} />
 
 
       <Footer darkMode={darkMode}/>
