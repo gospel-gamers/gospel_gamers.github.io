@@ -1,4 +1,5 @@
 import React from "react"
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 //import ReactDOM from "react-dom"
 import BioImg from '../images/berlin2.jpg'
 import MusicImg from '../images/guitar2.jpg'
@@ -30,10 +31,30 @@ const pictureObj =
     16: ContactImgDark,
 }
 
+
+const routeObj =
+{
+    1: '/bio',
+    2: '/music',
+    3: '/audio',
+    4: '/weddings',
+    5: '/coding',
+    6: '/contact',
+    11: '/bio?darkMode=true',
+    12: '/music?darkMode=true',
+    13: '/audio?darkMode=true',
+    14: '/weddings?darkMode=true',
+    15: '/coding?darkMode=true',
+    16: '/contact?darkMode=true',
+}
+
 export default function Card(props) {
     return (
         <div className={!props.darkMode ? 'card' : 'card--dark'}>
-            <img src={pictureObj[props.id]} className={!props.darkMode ? 'card--image' : 'card--image--dark'}/>
+            <Link to={routeObj[props.id]}>
+                <img src={pictureObj[props.id]} className={!props.darkMode ? 'card--image' : 'card--image--dark'}/>
+            </Link>
+
             <div className={!props.darkMode ? 'card--container' : 'card--container--dark'}>
                 <p className={!props.darkMode ? 'card--message' : 'card--message--dark'}>{props.message}</p>
             </div>

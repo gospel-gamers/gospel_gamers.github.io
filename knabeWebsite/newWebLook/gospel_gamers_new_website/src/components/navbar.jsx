@@ -1,5 +1,5 @@
 import React from "react"
-//import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 // logos and pics
 import mainLogo from '../images/gg-black.png';
@@ -14,30 +14,28 @@ import darkModeLogo from '../images/dark-mode2.png'
 
 export default function NavBar(props) {
     
-    //
-    //const [darkMode, setDarkMode]= React.useState(false);
-
-    // function handleToggle() {
-    //     setDarkMode(prevState => !prevState)
-    // }
-    
     return (
 
         <div className={!props.darkMode ? 'nav--bar' : 'nav--bar--dark'}>
             
             <div className={!props.darkMode ? 'nav--logoDiv' : 'nav--logoDiv--dark'}>
-                <img src={!props.darkMode ? mainLogo : mainLogoDarkMode} className={!props.darkMode ? 'nav--mainLogo' : 'nav--mainLogo--dark'}/>
-                <h6 className={!props.darkMode ? 'nav--logoTitle' : 'nav--logoTitle--dark'}>gospel_gamers</h6>
+                <Link to={`/?darkMode=${props.darkMode}`}>
+                    <img src={!props.darkMode ? mainLogo : mainLogoDarkMode} className={!props.darkMode ? 'nav--mainLogo' : 'nav--mainLogo--dark'}/>
+                </Link>
+                <Link to={`/?darkMode=${props.darkMode}`}>
+                    <h6 className={!props.darkMode ? 'nav--logoTitle' : 'nav--logoTitle--dark'}>gospel_gamers</h6>
+                </Link>
+
             </div>
 
 
             <ul className={!props.darkMode ? 'nav--items' : 'nav--items--dark'}>
-                    <li>Bio</li>
-                    <li>Music</li>
-                    <li>Audio</li>
-                    <li>Weddings</li>
-                    <li>Coding</li>
-                    <li>Contact</li>
+                    <li><Link to={`/bio?darkMode=${props.darkMode}`} className={!props.darkMode ? 'nav--atag' : 'nav--atag--dark'}>Bio</Link></li>
+                    <li><Link to={`/music?darkMode=${props.darkMode}`} className={!props.darkMode ? 'nav--atag' : 'nav--atag--dark'}>Music</Link></li>
+                    <li><Link to={`/audio?darkMode=${props.darkMode}`} className={!props.darkMode ? 'nav--atag' : 'nav--atag--dark'}>Audio</Link></li>
+                    <li><Link to={`/weddings?darkMode=${props.darkMode}`} className={!props.darkMode ? 'nav--atag' : 'nav--atag--dark'}>Weddings</Link></li>
+                    <li><Link to={`/coding?darkMode=${props.darkMode}`} className={!props.darkMode ? 'nav--atag' : 'nav--atag--dark'}>Coding</Link></li>
+                    <li><Link to={`/contact?darkMode=${props.darkMode}`} className={!props.darkMode ? 'nav--atag' : 'nav--atag--dark'}>Contact</Link></li>
             </ul>
 
             {/*<!-- Rounded switch --> */}

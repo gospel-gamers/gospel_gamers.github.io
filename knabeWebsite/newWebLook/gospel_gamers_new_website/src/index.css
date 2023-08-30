@@ -1,6 +1,6 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -20,18 +20,18 @@
 
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-weight: 500; 
+  /* color: #646cff;  */
   text-decoration: inherit;
 }
 
-a:hover {
+/* a:hover {
   color: #535bf2;
-}
+} */
 
 /* App, body and html for HomePage */
 .App {
-  width: 100%;
+  /* width: auto; */
   background-color:hsla(26, 92%, 68%, 0.285);
   margin: 0 auto;
   padding: 3rem;
@@ -39,7 +39,7 @@ a:hover {
 }
 
 .App--dark {
-  width: 100%;
+  /* width: 100%; */
   /*background-color: rgba(16, 25, 68, 0.845);*/
   background-color: rgb(38, 32, 78);
   margin: 0 auto;
@@ -67,7 +67,7 @@ body {
 /* bio page css rules */
 
 .bio--page {
-  width: 100%;
+  width: 101.2%;
   height: 100%;
   background-image: url('./images/berlinDay/berlin13.jpg');
   /* background-position: center; */
@@ -81,7 +81,7 @@ body {
 }
 
 .bio--page--dark {
-  width: 100%;
+  width: 101.2%;
   height: 100%;
   background-image: url('./images/berlinNight/berlin14.jpg');
   background-position: 40% 68%;
@@ -125,7 +125,7 @@ body {
 /* music page css rules */
 
 .music--page {
-  width: 100%;
+  width: 101.2%;
   height: 100%;
   background-image: url('./images/guitar3.jpg');
   background-position: center;
@@ -138,7 +138,7 @@ body {
 }
 
 .music--page--dark {
-  width: 100%;
+  width: 101.2%;
   height: 100%;
   background-image: url('./images/guitar20.jpg');
   background-position: bottom;
@@ -166,7 +166,7 @@ body {
 /* audio page css rules */
 
 .audio--page {
-  width: 100%;
+  width: auto;
   height: 100%;
   background-image: url('./images/mixer5.jpg');
   background-position: bottom;
@@ -179,7 +179,7 @@ body {
 }
 
 .audio--page--dark {
-  width: 100%;
+  width: auto;
   height: 100%;
   background-image: url('./images/mixer3.jpg');
   background-position: center;
@@ -544,7 +544,7 @@ body {
 /* wedding page css rules */
 
 .wedding--page {
-  width: 100%;
+  width: auto;
   height: 100%;
   background-image: url('./images/wedding18.jpg');
   background-position: center;
@@ -557,7 +557,7 @@ body {
 }
 
 .wedding--page--dark {
-  width: 100%;
+  width: auto;
   height: 100%;
   background-image: url('./images/wedding19.jpg');
   background-position: top;
@@ -851,29 +851,62 @@ body {
 /* coding page css rules */
 
 .coding--page {
-  width: 100%;
+  width: 101.2%;
   height: 100%;
-  background-image: url('./images/web.jpg');
+  background-image: url('./images/web3.jpg');
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-color:hsla(26, 92%, 68%, 0.285);
   margin: 0 auto;
   padding: 3rem;
   text-align: center;
+  /* display: block; */
 
 }
 
 .coding--page--dark {
-  width: 100%;
+  width: 101.2%;
   height: 100%;
-  background-image: url('./images/web10.jpg');
-  background-position: top;
+  background-image: url('./images/web14.jpg');
+  background-position: 60% 8%;
   
   /*background-color: rgba(16, 25, 68, 0.845);*/
   background-color: rgb(38, 32, 78);
   margin: 0 auto;
   padding: 3rem;
   text-align: center;
+}
+
+.welcome--coding--title {
+  color: white;
+  font-size: 4rem;
+  margin-top: 4rem;
+
+}
+
+.welcome--coding--title--dark {
+  color: white;
+  font-size: 4rem;
+  margin-top: 4rem;
+}
+
+
+.coding--page > p {
+  max-width: 55rem;
+  /* margin-top: 22rem; */
+  /* margin-left: 10rem; */
+  color: white;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+.coding--page--dark > p {
+  max-width: 100rem;
+  margin-top: 4rem;
+  /* margin-left: 10rem; */
+  color: white;
+  font-size: 2rem;
+  text-align: justify;
 }
 
 /* jazz Chords generator */
@@ -1604,22 +1637,22 @@ body {
 
 /* contact page css rules */
 .contact--page {
-  width: 100%;
+  width: 101.2%;
   height: 100%;
-  background-image: url('./images/contact.jpg');
+  background-image: url('./images/web6.jpg');
   background-position: left;
   background-size: cover;
   background-color:hsla(26, 92%, 68%, 0.285);
   margin: 0 auto;
   padding: 3rem;
   text-align: center;
-
+  /* display: inline-block; */
 }
 
 .contact--page--dark {
-  width: 100%;
+  width: 101.2%;
   height: 100%;
-  background-image: url('./images/web11.jpg');
+  background-image: url('./images/web12.jpg');
   background-position: center;
   background-size: cover;
   /*background-color: rgba(16, 25, 68, 0.845);*/
@@ -1629,10 +1662,28 @@ body {
   text-align: center;
 }
 
+.contact--welcome--title {
+  margin-top: 4rem;
+  color: whitesmoke;
+  width: 40rem;
+  text-align: justify;
+}
+
+.contact--welcome--title--dark {
+  margin-top: 4rem;
+  color: whitesmoke;
+  width: 40rem;
+  text-align: justify;
+}
+
 .contact--form {
-  margin-top: 10rem;
-  border: red solid;
-  display: inline-block;
+  margin-left: 10rem;
+  margin-top: 1rem;
+  /* border: red solid; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: start;
 }
 
 .contact--form > div > div {
@@ -1642,9 +1693,13 @@ body {
 }
 
 .contact--form--dark {
-  margin-top: 10rem;
-  border: red solid;
-  display: inline-block;
+  margin-left: 10rem;
+  margin-top: 1rem;
+  /* border: red solid; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: start;
 }
 
 .contact--form--dark > div > div {
@@ -1654,27 +1709,117 @@ body {
 }
 
 .input--line {
-  width: 15rem;
-  height: 3.5rem;
+  width: 20rem;
+  height: 2.5rem;
   font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
-.input--line--dark {
-  width: 15rem;
-  height: 3.5rem;
+.input--line--dark {  
+  width: 20rem;
+  height: 2.5rem;
   font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
 .input--text {
-  width: 15rem;
-  height: 9.5rem;
+  width: 35rem;
+  height: 12.5rem;
   font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
 .input--text--dark {
-  width: 15rem;
-  height: 9.5rem;
+  width: 35rem;
+  height: 12.5rem;
   font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.input--combined {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input--combined--dark {
+  display: flex;
+  flex-direction: column;
+}
+
+/* css rules for placeholder text */
+input::placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 1.4rem;
+  color: #999;
+  padding: 0.5rem;
+}
+
+textarea::placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 1.4rem;
+  color: #999;
+  padding: 0.5rem;
+}
+
+.submit--button--class {
+  margin-top: 1rem;
+  margin-left: 7rem;
+}
+
+.submit--button--class--dark {
+  margin-top: 1rem;
+  margin-left: 7rem;
+}
+
+.submit--button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #af704c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.submit--button:hover {
+  background-color: #af704c;
+}
+
+.submit--button:active {
+  background-color: #af704c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.submit--button--dark {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #af704c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.submit--button--dark:hover {
+  background-color: #af704c;
+}
+
+.submit--button--dark:active {
+  background-color: #af704c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 /* navbar lightMode */
@@ -1707,6 +1852,11 @@ body {
 
 .nav--logoTitle {
   font-size: 2rem;
+  color: black;
+}
+
+.nav--logoTitle:hover {
+  color: tomato;
 }
 
 .nav--menuLogo {
@@ -1763,6 +1913,10 @@ body {
   color: white;
 }
 
+.nav--logoTitle--dark:hover {
+  color: tomato;
+}
+
 .nav--menuLogo--dark {
   width: 5rem;
   margin: 40px;
@@ -1783,6 +1937,19 @@ body {
   cursor: pointer;
   color: tomato;
   font-weight: 600;
+}
+
+/* navbar anchor <a> tags from the Links */
+.nav--atag {
+  color: black;
+}
+
+.nav--atag--dark {
+  color: white;
+}
+
+.nav--atag:hover, .nav--atag--dark:hover {
+  color: tomato;
 }
 
 /* lightMode button & logo */

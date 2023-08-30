@@ -7,9 +7,8 @@ import Card  from './components/card'
 import Footer from './components/footer'
 
 export default function HomePage() {
-  // setState variables
-  const [count, setCount] = useState(0)
-  const [darkMode, setDarkMode] = useState(false)
+  // darkMode state variable
+  const [darkMode, setDarkMode] = useState(location.search.includes('darkMode=true'))
 
   function toggleDarkMode() {
     setDarkMode(prevMode => !prevMode)

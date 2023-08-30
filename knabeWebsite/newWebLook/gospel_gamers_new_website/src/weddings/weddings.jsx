@@ -6,7 +6,7 @@ import Footer from '../components/footer'
 export default function Weddings() {
   // setState variables
   const [count, setCount] = useState(0)
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(location.search.includes('darkMode=true'))
 
   function toggleDarkMode() {
     setDarkMode(prevMode => !prevMode)

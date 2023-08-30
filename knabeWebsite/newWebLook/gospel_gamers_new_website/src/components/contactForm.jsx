@@ -26,33 +26,43 @@ const ContactForm = (props) => {
       <form onSubmit={handleSubmit} className={!props.darkMode ? 'contact--form' : 'contact--form--dark'}>
 
         <div className={!props.darkMode ? 'form--inputs' : 'form--inputs--dark'}>
-            <div>
-            <label>First Name:</label>
-            <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} className={!props.darkMode ? 'input--line' : 'input--line--dark'}/>
+
+            <div className={!props.darkMode ? 'input--combined' : 'input--combined--dark'}>
+            {/* <label htmlFor="firstName">First Name:</label> */}
+            <input id="firstName" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} className={!props.darkMode ? 'input--line' : 'input--line--dark'} placeholder='first name...'/>
             </div>
-            <div>
-            <label>Last Name:</label>
-            <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} className={!props.darkMode ? 'input--line' : 'input--line--dark'}/>
+
+            <div className={!props.darkMode ? 'input--combined' : 'input--combined--dark'}>
+            {/* <label htmlFor="lastName">Last Name:</label> */}
+            <input id="lastName" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} className={!props.darkMode ? 'input--line' : 'input--line--dark'} placeholder='last name...'/>
             </div>
-            <div>
-            <label>Email:</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className={!props.darkMode ? 'input--line' : 'input--line--dark'}/>
+
+            <div className={!props.darkMode ? 'input--combined' : 'input--combined--dark'}>
+            {/* <label htmlFor="email">Email:</label> */}
+            <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className={!props.darkMode ? 'input--line' : 'input--line--dark'} placeholder='email...'/>
             </div>
-            <div>
-            <label>Extra Details:</label>
-            <textarea value={extraDetails} onChange={(e) => setExtraDetails(e.target.value)} className={!props.darkMode ? 'input--text' : 'input--text--dark'}/>
+
+            <div className={!props.darkMode ? 'input--combined' : 'input--combined--dark'}>
+            {/* <label htmlFor="textBox">Describe your reason for contact:</label> */}
+            <textarea id="textBox" value={extraDetails} onChange={(e) => setExtraDetails(e.target.value)} className={!props.darkMode ? 'input--text' : 'input--text--dark'} placeholder='type your reason for contact here...'/>
             </div>
         </div>
 
 
         {/* reCAPTCHA  */}
         <ReCAPTCHA
+            className={!props.darkMode ? 'captcha--test' : 'captcha--test--dark'}
             sitekey="6LepirQnAAAAADVl7O-uSytwz-4v39HkCf4505Am"
             onChange={handleRecaptchaChange}
         />
 
         {/* button */}
-        <button type="submit">Submit</button>
+        <div className={!props.darkMode ? 'submit--button--class' : 'submit--button--class--dark'}>
+          <button className={!props.darkMode ? 'submit--button' : 'submit--button--dark'} type="submit">
+            Submit Form
+          </button>
+        </div>
+
       </form>
     );
   };

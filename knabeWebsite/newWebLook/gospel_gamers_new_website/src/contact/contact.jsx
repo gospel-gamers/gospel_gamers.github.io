@@ -5,8 +5,7 @@ import Footer from '../components/footer'
 
 export default function Contact() {
   // setState variables
-  const [count, setCount] = useState(0)
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(location.search.includes('darkMode=true'))
 
   function toggleDarkMode() {
     setDarkMode(prevMode => !prevMode)
@@ -17,8 +16,10 @@ export default function Contact() {
 
       <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
-      {/* this is where the contact form begins*/}
+      <h1 className={!darkMode ? 'contact--welcome--title' : 'contact--welcome--title--dark'}>To contact me for any of my services, fill out this form and verify you are not a bot &#129302;</h1>
 
+
+      {/* this is where the contact form begins*/}
      <ContactForm darkMode={darkMode} />
 
 

@@ -1,13 +1,15 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 
 export default function Bio() {
   // setState variables
-  const [count, setCount] = useState(0)
-  const [darkMode, setDarkMode] = useState(false)
+  const location = useLocation()
+  // set darkMode variable based on darkMode state from query parameters
+  const [darkMode, setDarkMode] = useState(location.search.includes('darkMode=true'))
 
-  function toggleDarkMode() {
+  function toggleDarkMode(input) {
     setDarkMode(prevMode => !prevMode)
   }
 
