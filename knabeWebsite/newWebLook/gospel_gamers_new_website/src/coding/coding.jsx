@@ -4,7 +4,6 @@ import Footer from '../components/footer'
 
 export default function Coding() {
   // setState variables
-  const [count, setCount] = useState(0)
   const [darkMode, setDarkMode] = useState(location.search.includes('darkMode=true'))
 
   function toggleDarkMode() {
@@ -16,7 +15,7 @@ export default function Coding() {
 
       <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
-      <h1 className={!darkMode ? 'welcome--coding--title' : 'welcome--coding--title--dark'}>Welcome to my coding page</h1>
+      <h1 className={!darkMode ? 'welcome--coding--title' : 'welcome--coding--title--dark'}>coding == 'cool' ? 🥳 : 😩</h1>
 
       <p>
         I am a self-taught developer and built this website using HTML, CSS, JavaScript and React. As of late, I have also been learning C# for video game development using the Unity engine. Visit my contact page regarding any inquiries and check out these two projects of mine:

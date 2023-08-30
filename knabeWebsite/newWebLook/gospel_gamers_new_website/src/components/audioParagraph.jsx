@@ -16,7 +16,7 @@ export default function AudioParagraph(props) {
     return (
         <div className={props.className}>
             <p>{props.text}</p>
-            <img src={medalImg} className="wedding--medals--images"/>
+            <img src={medalImg} className={props.image === 'silver' ? "wedding--medal--silver" : props.image === 'gold' ? "wedding--medal--gold" : "wedding--medal--bronze"}/>
         </div>
 
     )

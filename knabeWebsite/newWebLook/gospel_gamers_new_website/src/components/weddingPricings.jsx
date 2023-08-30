@@ -3,7 +3,6 @@ import { useState } from 'react'
 //import AudioTitle from "./audioTitle";
 import AudioParagraph from "./audioParagraph"
 
-
 export default function WeddingPricings(props) {
     // booleans to change paragraph text
     const [singleMix, setSingleMix] = useState(true)
@@ -40,7 +39,7 @@ export default function WeddingPricings(props) {
     return (
         <div>
             <div className={!props.darkMode ? 'wedding--titles' : 'wedding--titles--dark'}>
-                <h1>Wedding Pricing Plans</h1>
+                <h1>Plan your perfect day 🤵🏼 ⛪ 👰🏾 !</h1>
             </div>
 
 
@@ -92,10 +91,9 @@ export default function WeddingPricings(props) {
 
             </div>
 
-            <div className={!props.darkMode ? 'wedding--titles--info' : 'wedding--titles--info--dark'}> A decade ago, I began playing music and running audio for the weddings of friends. This has grow into being a wedding musician, emcee and DJ as well as other events.
+            <div className={!props.darkMode ? 'wedding--titles--info' : 'wedding--titles--info--dark'}> About a decade ago, I began playing music and running audio for the weddings of friends. This has grow into being a musician, emcee and DJ for weddings and other events. I have three packages available for weddings - contact me for pricings on other events.
+            </div>
 
-For weddings, I have three packages available.
-Contact me for pricings on other events.</div>
         </div>
     )
 }

@@ -16,7 +16,7 @@ export default function Contact() {
 
       <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
-      <h1 className={!darkMode ? 'contact--welcome--title' : 'contact--welcome--title--dark'}>To contact me for any of my services, fill out this form and verify you are not a bot &#129302;</h1>
+      <h1 className={!darkMode ? 'contact--welcome--title' : 'contact--welcome--title--dark'}>To contact me for any of my services, fill out this form and verify you are not a bot 🤖</h1>
 
 
       {/* this is where the contact form begins*/}

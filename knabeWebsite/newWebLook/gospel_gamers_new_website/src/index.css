@@ -18,11 +18,16 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
+/* affects the Link anchor tags via react-router-dom */
 a {
   font-weight: 500; 
   /* color: #646cff;  */
   text-decoration: inherit;
+}
+
+/* box-sizing wrapper for certain sections */
+.box-sizing--wrapper {
+  box-sizing: border-box;
 }
 
 /* a:hover {
@@ -150,6 +155,17 @@ body {
   /* text-align: center; */
 }
 
+.shakespeare {
+  margin-left: 13rem;
+  font-size: 1.8rem;
+}
+
+.shakespeare--dark {
+  color: white;
+  margin-left: 13rem;
+  font-size: 1.8rem;
+}
+
 .music--content {
   font-size: 2rem;
   margin-left: 4.5rem;
@@ -260,7 +276,7 @@ body {
   margin-right: 3rem;
   font-size: 1.5rem;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   /*box-shadow: 4px 0 4px gray; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
@@ -578,7 +594,7 @@ body {
   align-items: center;
   font-size: 1.7rem;
   padding: 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
   color: #213547;
 
 }
@@ -592,18 +608,19 @@ body {
   align-items: center;
   font-size: 1.7rem;
   padding: 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .wedding--titles--info {
   display: flex;
   /* border: solid blue; */
+  font-weight: 600;
   height: 2rem;
   width: auto;
   margin-left: 20rem;
   margin-right: 20rem;
   color: white;
-  justify-content: space-around;
+  text-align: justify;
   align-items: center;
   font-size: 1.7rem;
   padding: 2rem;
@@ -614,16 +631,19 @@ body {
 .wedding--titles--info--dark {
   display: flex;
   /* border: solid blue; */
+  font-weight: 600;
   height: 2rem;
+  /* max-width: 60rem; */
   width: auto;
   margin-left: 20rem;
   margin-right: 20rem;
   color: white;
-  justify-content: space-around;
+  text-align: justify;
   align-items: center;
   font-size: 1.7rem;
   padding: 2rem;
   margin-top: 3rem;
+  margin-bottom: 7rem;
 }
 
 .wedding--pricings {
@@ -796,8 +816,16 @@ body {
   transition: 0.1s ease-in-out;
 }
 
-.wedding--medals--images {
-  max-width: 15%;
+.wedding--medal--bronze {
+  max-width: 17%;
+}
+
+.wedding--medal--silver {
+  max-width: 20%;
+}
+
+.wedding--medal--gold {
+  max-width: 16%;
 }
 
 /* wedding paragraph component */
@@ -806,9 +834,10 @@ body {
   border: solid;
   flex: 3;
   font-size: 1.7rem;
+  font-weight: 550;
   background-color: white;
   opacity: 0.9;
-  height: 90%;
+  height: 76.2%;
   width: auto;
   margin-top: 1.4rem;
   margin-right: 8rem;
@@ -823,9 +852,10 @@ body {
   border: solid;
   flex: 3;
   font-size: 1.7rem;
+  font-weight: 550;
   background-color: white;
   opacity: 0.95;
-  height: 90%;
+  height: 75.6%;
   width: auto;
   margin-top: 1.4rem;
   margin-right: 8rem;
@@ -859,7 +889,7 @@ body {
   background-color:hsla(26, 92%, 68%, 0.285);
   margin: 0 auto;
   padding: 3rem;
-  text-align: center;
+  /* text-align: center; */
   /* display: block; */
 
 }
@@ -869,12 +899,11 @@ body {
   height: 100%;
   background-image: url('./images/web14.jpg');
   background-position: 60% 8%;
-  
   /*background-color: rgba(16, 25, 68, 0.845);*/
   background-color: rgb(38, 32, 78);
   margin: 0 auto;
   padding: 3rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .welcome--coding--title {

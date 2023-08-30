@@ -20,7 +20,7 @@ export default function Audio() {
 
       <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
-      {/*<h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Welcome to my audio pricings page</h1>*/}
+      <h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Got feedback 🔊? Turn the 🎛️ and fix the 🎙️! </h1>
 
       <AudioPricings darkMode={darkMode} />
 
