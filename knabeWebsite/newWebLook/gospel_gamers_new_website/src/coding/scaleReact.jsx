@@ -826,7 +826,7 @@ export default function ScaleGenerator() {
 
         <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
-        <h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Welcome to my scales generator!</h1>
+        <h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Have fun with my scales 🎼 generator!!</h1>
 
         <div className={!darkMode ? 'piano--section' : 'piano--dark--section'}>
 

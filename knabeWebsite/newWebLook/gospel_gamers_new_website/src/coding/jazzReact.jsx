@@ -784,11 +784,11 @@ export default function JazzChordGen() {
   }
 
   return (
-    <div className={!darkMode ? 'App' : 'App--dark'}>
+    <div className={!darkMode ? 'jazzchords--page' : 'jazzchords--page--dark'}>
 
         <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
 
-        <h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Welcome to my jazz Chords generator!!</h1>
+        <h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Have fun with my jazz 🎷 chords 🎹 generator!!</h1>
 
         <div className={!darkMode ? 'piano--section' : 'piano--dark--section'}>
 

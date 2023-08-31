@@ -24,7 +24,6 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 
 function App() {
   // setState variables
-  const [count, setCount] = useState(0)
   const [darkMode, setDarkMode] = useState(false)
 
   function toggleDarkMode() {
