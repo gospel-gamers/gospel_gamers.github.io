@@ -8,8 +8,9 @@
   font-weight: 400;
 
   /* color-scheme: light dark; */
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+  /* background-color: #f9f9f9; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,6 +39,7 @@ a {
 .App {
   /* width: auto; */
   background-color:hsla(26, 92%, 68%, 0.285);
+  color: #213547;
   margin: 0 auto;
   padding: 3rem;
   text-align: center;
@@ -73,7 +75,6 @@ a {
 
 /* body and html for home-page */
 html {
-
   height: 100%;
 }
 
@@ -2265,7 +2266,7 @@ input:checked + .slider:before {
 
 /* media queries for light or dark mode */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -2276,7 +2277,18 @@ input:checked + .slider:before {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color: black;
+    background-color: darkblue;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+} */
 
 /* media queries for screen sizes */
 

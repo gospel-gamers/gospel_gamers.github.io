@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 import './App.css'
@@ -7,12 +7,63 @@ import Card  from './components/card'
 import Footer from './components/footer'
 
 export default function HomePage() {
-  // darkMode state variable
+  // state variables
+  const [checkSysCount, setCheckSysCount] = useState(0);
+  const [checkTimeCount, setCheckTimeCount] = useState(0);
   const [darkMode, setDarkMode] = useState(location.search.includes('darkMode=true'))
+
 
   function toggleDarkMode() {
     setDarkMode(prevMode => !prevMode)
   }
+
+  // Function to check if user system preferences are set to dark mode
+  const checkSystemPreferences = () => {
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+    setDarkMode(prefersDarkMode.matches);
+  };
+
+  // function to check if it is nighttime on the client browser
+  const isNighttime = () => {
+    const now = new Date();
+    // console.log(`Date: ${now}`)
+    const hour = now.getHours();
+    // console.log(`Hour: ${hour}`)
+    return hour >= 19 || hour < 7; // 7 PM to 7 AM
+  };
+
+  // Check the time and set darkMode on first load
+  useEffect(() => {
+    if (!darkMode) {
+      const nighttime = isNighttime();
+      setDarkMode(nighttime);
+    }
+  }, []); // [] --> Only run the effect on first load
+
+
+  // Check system preferences when the component mounts and the checkCount is 0
+  useEffect(() => {
+    if (checkSysCount === 0) {
+      checkSystemPreferences();
+      setCheckSysCount(1); // Increment the counter after checking
+    }
+  }, [checkSysCount]);
+
+  // Check system preferences when the component mounts (only once)
+  // useEffect(() => {
+  //   checkSystemPreferences();
+  // }, []);
+
+  // Check to see if user system color prefers dark mode, only on very first time
+  // useEffect(() => {
+  //   // Check system preferences only on the first visit to the homepage
+  //   if (!hasCheckedSystemPreferences) {
+  //     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+  //     setDarkMode(prefersDarkMode.matches);
+  //     setHasCheckedSystemPreferences(true); // Mark that we've checked system preferences
+  //   }
+  // }, [hasCheckedSystemPreferences]);
+
 
   return (
     <div className={!darkMode ? 'App' : 'App--dark'}>

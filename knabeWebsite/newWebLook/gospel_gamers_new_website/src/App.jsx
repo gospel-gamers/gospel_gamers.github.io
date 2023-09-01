@@ -24,11 +24,28 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 
 function App() {
   // setState variables
-  const [darkMode, setDarkMode] = useState(false)
-
-  function toggleDarkMode() {
-    setDarkMode(prevMode => !prevMode)
-  }
+  // const [darkMode, setDarkMode] = useState(false)
+  // function to toggle DarkMode
+  // function toggleDarkMode() {
+  //   setDarkMode(prevMode => !prevMode)
+  // }
+  // set DarkMode = true if system prefers dark mode
+  // Check for user's system color scheme preference and set dark mode accordingly
+  // useEffect(() => {
+  //   const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+  //   setDarkMode(prefersDarkMode.matches);
+    
+  //   // Add event listener to handle changes in system color scheme preference
+  //   const darkModeListener = (e) => {
+  //     setDarkMode(e.matches);
+  //   };
+  //   prefersDarkMode.addListener(darkModeListener);
+    
+  //   // Cleanup listener when the component unmounts
+  //   return () => {
+  //     prefersDarkMode.removeListener(darkModeListener);
+  //   };
+  // }, []);
 
   return (
     <Router>
