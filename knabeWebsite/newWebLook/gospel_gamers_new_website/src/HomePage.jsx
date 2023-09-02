@@ -7,15 +7,19 @@ import Card  from './components/card'
 import Footer from './components/footer'
 
 export default function HomePage() {
-  // state variables
-  const [checkSysCount, setCheckSysCount] = useState(0);
-  const [checkTimeCount, setCheckTimeCount] = useState(0);
-  const [darkMode, setDarkMode] = useState(location.search.includes('darkMode=true'))
 
+  // Extract the 'darkMode' query parameter and convert it to a boolean
+  const searchParams = new URLSearchParams(location.search);
+  const initialDarkModeQueryParam = searchParams.get('darkMode') === 'true';
 
-  function toggleDarkMode() {
-    setDarkMode(prevMode => !prevMode)
-  }
+  // Load or initialize checkSysCount from localStorage
+  const [checkSysCount, setCheckSysCount] = useState(() => {
+    const storedCount = localStorage.getItem('checkSysCount');
+    return storedCount ? parseInt(storedCount, 10) : 0;
+  });
+
+  // State variables
+  const [darkMode, setDarkMode] = useState(initialDarkModeQueryParam);
 
   // Function to check if user system preferences are set to dark mode
   const checkSystemPreferences = () => {
@@ -23,47 +27,34 @@ export default function HomePage() {
     setDarkMode(prefersDarkMode.matches);
   };
 
-  // function to check if it is nighttime on the client browser
-  const isNighttime = () => {
-    const now = new Date();
-    // console.log(`Date: ${now}`)
-    const hour = now.getHours();
-    // console.log(`Hour: ${hour}`)
-    return hour >= 19 || hour < 7; // 7 PM to 7 AM
-  };
-
-  // Check the time and set darkMode on first load
-  useEffect(() => {
-    if (!darkMode) {
-      const nighttime = isNighttime();
-      setDarkMode(nighttime);
-    }
-  }, []); // [] --> Only run the effect on first load
-
-
-  // Check system preferences when the component mounts and the checkCount is 0
+  // Check system preferences when the component mounts and checkSysCount is 0
   useEffect(() => {
     if (checkSysCount === 0) {
       checkSystemPreferences();
       setCheckSysCount(1); // Increment the counter after checking
+      localStorage.setItem('checkSysCount', '1'); // Save the counter to localStorage
     }
-  }, [checkSysCount]);
+  }, []);
 
-  // Check system preferences when the component mounts (only once)
-  // useEffect(() => {
-  //   checkSystemPreferences();
-  // }, []);
+  // Function to check if it is nighttime on the client browser
+  const isNighttime = () => {
+    const now = new Date();
+    const hour = 20; // now.getHours();
+    return hour >= 19 || hour < 7; // 7 PM to 7 AM
+  };
 
-  // Check to see if user system color prefers dark mode, only on very first time
-  // useEffect(() => {
-  //   // Check system preferences only on the first visit to the homepage
-  //   if (!hasCheckedSystemPreferences) {
-  //     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
-  //     setDarkMode(prefersDarkMode.matches);
-  //     setHasCheckedSystemPreferences(true); // Mark that we've checked system preferences
-  //   }
-  // }, [hasCheckedSystemPreferences]);
+  // UseEffect for Nighttime Check (only on the first page load)
+  useEffect(() => {
+    if (checkSysCount === 1) {
+      const nighttime = isNighttime();
+      setDarkMode(nighttime);
+    }
+  }, []);
 
+  // Toggle dark mode manually
+  function toggleDarkMode() {
+    setDarkMode(prevMode => !prevMode);
+  }
 
   return (
     <div className={!darkMode ? 'App' : 'App--dark'}>
