@@ -47,7 +47,6 @@ export default function HomePage() {
   useEffect(() => {
     if (checkSysCount === 1) {
       const nighttime = isNighttime();
-      //
       setDarkMode(nighttime);
     }
   }, [checkSysCount]);
