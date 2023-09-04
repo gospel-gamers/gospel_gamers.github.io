@@ -34,7 +34,7 @@ export default function HomePage() {
       setCheckSysCount(1); // Increment the counter after checking
       localStorage.setItem('checkSysCount', '1'); // Save the counter to localStorage
     }
-  }, []);
+  }, [checkSysCount]);
 
   // Function to check if it is nighttime on the client browser
   const isNighttime = () => {
@@ -47,9 +47,10 @@ export default function HomePage() {
   useEffect(() => {
     if (checkSysCount === 1) {
       const nighttime = isNighttime();
+      //
       setDarkMode(nighttime);
     }
-  }, []);
+  }, [checkSysCount]);
 
   // Toggle dark mode manually
   function toggleDarkMode() {
