@@ -1,4 +1,4 @@
-**Welcome to gospel-gamers.com**
+## Welcome to gospel-gamers.com
 
 This is the website of gospel_gamers. The source code is public under the MIT License.
 Two of my favorite coding projects are linked to on my coding page and include:
