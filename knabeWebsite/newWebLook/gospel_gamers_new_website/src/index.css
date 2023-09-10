@@ -206,7 +206,7 @@ body {
   width: auto;
   height: 100%;
   background-image: url('./images/mixer5.jpg');
-  background-position: bottom;
+  background-position: 10%, 100%;
   background-size: cover;
   background-color:hsla(26, 92%, 68%, 0.285);
   margin: 0 auto;
@@ -558,7 +558,7 @@ body {
   border: solid;
   font-size: 1.7rem;
   background-color: white;
-  height: 23rem;
+  height: 20rem;
   margin-left: 3rem;
   margin-right: 3rem;
   padding: 1.5rem;
@@ -569,7 +569,7 @@ body {
 .audio--paragraph--dark {
   border: solid white;
   font-size: 1.7rem;
-  height: 24rem;
+  height: 20rem;
   margin-left: 3rem;
   margin-right: 3rem;
   padding: 1.5rem;
@@ -2299,6 +2299,7 @@ input:checked + .slider:before {
 .footer--bar {
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .footer--cpr {
@@ -2307,9 +2308,33 @@ input:checked + .slider:before {
 }
 
 .footer--social {
-  font-size: 1.3rem;
-  margin-right: 3rem;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+  font-size: 2.5rem;
+  /* margin-right: 3rem; */
 }
+
+.footer--social > a {
+  color: #213547;
+  margin-top: 0.5rem;
+  margin-right: 2rem;
+}
+
+.footer--social--dark {
+  display: flex;
+  justify-content: space-between;
+  /* font-size: 2.5rem; */
+  /* margin-right: 3rem; */
+}
+
+.footer--social--dark > a {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
 
 /* footer darkMode */
 
