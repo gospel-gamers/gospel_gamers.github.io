@@ -58,7 +58,7 @@ function App() {
         <Route exact path="/weddings" element={<Weddings />} />
         <Route exact path="/coding" element={<Coding />} />
         <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/jazzChords" element={<JazzChordGen />} />
+        <Route exact path="/jazz" element={<JazzChordGen />} />
         <Route exact path="/scales" element={<ScaleGenerator />} />
         
       </Routes>

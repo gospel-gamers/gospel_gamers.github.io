@@ -945,7 +945,7 @@ body {
 
 .coding--page > p {
   max-width: 55rem;
-  margin-bottom: 16.55rem;
+  margin-bottom: 4.55rem;
   margin-left: 2rem;
   color: white;
   font-size: 2rem;
@@ -955,10 +955,76 @@ body {
 .coding--page--dark > p {
   max-width: 100rem;
   margin-left: 2rem;
-  margin-bottom: 22.55rem;
+  margin-bottom: 6.55rem;
   color: white;
   font-size: 2rem;
   text-align: justify;
+}
+
+.coding--button--section {
+  display: flex;
+  margin-left: 5.8rem;
+  margin-bottom: 8.4rem;
+  justify-content:space-around;
+  width: 50rem;
+}
+
+.coding--button--section--dark {
+  display: flex;
+  margin-left: 5.8rem;
+  margin-bottom: 12.4rem;
+  justify-content:space-around;
+  width: 90rem;
+}
+
+.coding--buttons {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #af704c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.coding--buttons:hover {
+  background-color: #af704c;
+}
+
+.coding--buttons:active {
+  background-color: #af704c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.coding--buttons--dark {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #af704c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.coding--buttons--dark:hover {
+  background-color: #af704c;
+}
+
+.coding--buttons--dark:active {
+  background-color: #af704c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 /* jazz Chords generator */

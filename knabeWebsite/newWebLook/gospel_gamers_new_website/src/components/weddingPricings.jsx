@@ -12,6 +12,17 @@ export default function WeddingPricings(props) {
     const [epMaster, setEpMaster] = useState(false)
     const [lpMaster, setLpMaster] = useState(false)
 
+    // arrays with groom, bride and wedding emojis
+    const weddArr = ['⛪'] // , '💒' '🔔', '💞']
+    const groomArr = ['🤵🏼', '🤵🏻', '🤵🏽', '🤵🏾', '🤵🏿']
+    const brideArr = ['👰🏼', '👰🏻', '👰🏽', '👰🏾', '👰🏿']
+
+    // Function that selects a random element from an input array
+    function getRandomElement(arr) {
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        return arr[randomIndex];
+      }
+
     function singleMixBool() {
         if (!singleMix) {
             setSingleMix(true)
@@ -39,7 +50,7 @@ export default function WeddingPricings(props) {
     return (
         <div>
             <div className={!props.darkMode ? 'wedding--titles' : 'wedding--titles--dark'}>
-                <h1>Plan your perfect day 🤵🏼 ⛪ 👰🏾 !</h1>
+                <h1>Plan your perfect day {getRandomElement(groomArr)} {getRandomElement(weddArr)} {getRandomElement(brideArr)} !</h1>
             </div>
 
 
