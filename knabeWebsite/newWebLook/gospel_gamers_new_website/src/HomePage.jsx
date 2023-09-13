@@ -39,7 +39,7 @@ export default function HomePage() {
   // Function to check if it is nighttime on the client browser
   const isNighttime = () => {
     const now = new Date();
-    const hour = 20; // now.getHours();
+    const hour = now.getHours();
     return hour >= 19 || hour < 7; // 7 PM to 7 AM
   };
 
