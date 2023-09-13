@@ -70,6 +70,79 @@ import a6 from '../coding/audioRecs/epianoAudioRecs/epianobounces/electric-piano
 import a6sharp from '../coding/audioRecs/epianoAudioRecs/epianobounces/electric-piano-a6-sharp-key.wav';
 import b6 from '../coding/audioRecs/epianoAudioRecs/epianobounces/electric-piano-b6-key.wav';
 
+// use this string to note object instead of the insecure eval method
+const stringToNoteObj = 
+{
+  // c2 octave
+  'c2': c2,
+  'c2sharp': c2sharp,
+  'd2': d2,
+  'd2sharp': d2sharp,
+  'e2': e2,
+  'f2': f2,
+  'f2sharp': f2sharp,
+  'g2': g2,
+  'g2sharp': g2sharp,
+  'a2': a2,
+  'a2sharp': a2sharp,
+  'b2': b2,
+
+  // c3 octave
+  'c3': c3,
+  'c3sharp': c3sharp,
+  'd3': d3,
+  'd3sharp': d3sharp,
+  'e3': e3,
+  'f3': f3,
+  'f3sharp': f3sharp,
+  'g3': g3,
+  'g3sharp': g3sharp,
+  'a3': a3,
+  'a3sharp': a3sharp,
+  'b3': b3,
+
+  // c4 octave
+  'c4': c4,
+  'c4sharp': c4sharp,
+  'd4': d4,
+  'd4sharp': d4sharp,
+  'e4': e4,
+  'f4': f4,
+  'f4sharp': f4sharp,
+  'g4': g4,
+  'g4sharp': g4sharp,
+  'a4': a4,
+  'a4sharp': a4sharp,
+  'b4': b4,
+
+  // c5 octave
+  'c5': c5,
+  'c5sharp': c5sharp,
+  'd5': d5,
+  'd5sharp': d5sharp,
+  'e5': e5,
+  'f5': f5,
+  'f5sharp': f5sharp,
+  'g5': g5,
+  'g5sharp': g5sharp,
+  'a5': a5,
+  'a5sharp': a5sharp,
+  'b5': b5,
+
+  // c6 octave
+  'c6': c6,
+  'c6sharp': c6sharp,
+  'd6': d6,
+  'd6sharp': d6sharp,
+  'e6': e6,
+  'f6': f6,
+  'f6sharp': f6sharp,
+  'g6': g6,
+  'g6sharp': g6sharp,
+  'a6': a6,
+  'a6sharp': a6sharp,
+  'b6': b6,
+}
 
 
 export default function PianoNote(props) {
@@ -100,8 +173,8 @@ export default function PianoNote(props) {
         // console.log(`result`)
         // console.log(result)
 
-        // ! using eval is a big security risk!!... find another solution to this
-        return new Audio(eval(note)).play()
+        // use stringToNoteObj instead of the eval method!
+        return new Audio(stringToNoteObj[note]).play()
     
         
       }

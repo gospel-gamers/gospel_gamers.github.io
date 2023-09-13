@@ -1047,6 +1047,8 @@ body {
   background-color: tomato; 
 } */
 
+/* individual piano key id's */
+
 .piano--key {
   width:2.5rem;
   height: 210px;
@@ -1062,8 +1064,9 @@ body {
   
 }
 
+/* added the !important method to override HTML inline CSS rules */
 .piano--key:hover {
-  background-color: tomato;
+  background-color: tomato !important;
 }
 
 .key--text{
@@ -1098,7 +1101,7 @@ body {
 }
 
 .piano--black--key:hover {
-  background-color: tomato;
+  background-color: tomato !important;
 }
 
 /* dark version */
@@ -1151,7 +1154,7 @@ body {
 }
 
 .piano--key--dark:hover {
-  background-color: tomato;
+  background-color: tomato !important;
 }
 
 .piano--black--key--dark {
@@ -1167,7 +1170,7 @@ body {
 }
 
 .piano--black--key--dark:hover {
-  background-color: tomato;
+  background-color: tomato !important;
 }
 
 /* deciding between chords or scales button */
