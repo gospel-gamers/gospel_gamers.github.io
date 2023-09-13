@@ -21,6 +21,7 @@ export default function Weddings() {
 
       <WeddingPricings darkMode={darkMode} />
 
+
       <Footer darkMode={darkMode}/>
 
     </div>

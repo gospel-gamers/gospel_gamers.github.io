@@ -48,7 +48,7 @@ export default function WeddingPricings(props) {
     }
 
     return (
-        <div>
+        <div className={!props.darkMode ? 'wedding--content' : 'wedding--content--dark'}>
             <div className={!props.darkMode ? 'wedding--titles' : 'wedding--titles--dark'}>
                 <h1>Plan your perfect day {getRandomElement(groomArr)} {getRandomElement(weddArr)} {getRandomElement(brideArr)} !</h1>
             </div>
