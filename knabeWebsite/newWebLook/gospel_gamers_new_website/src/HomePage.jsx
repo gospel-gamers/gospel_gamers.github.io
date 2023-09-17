@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 //import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './components/navbar'
+import MenuBar from './components/toggleMenuBar'
 import Card  from './components/card'
 import Footer from './components/footer'
 
@@ -20,6 +21,15 @@ export default function HomePage() {
 
   // State variables
   const [darkMode, setDarkMode] = useState(initialDarkModeQueryParam);
+
+  // hamburger menu toggle
+  // menu bar for navbar
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+      console.log(isMenuOpen)
+  };
 
   // Function to check if user system preferences are set to dark mode
   const checkSystemPreferences = () => {
@@ -59,9 +69,14 @@ export default function HomePage() {
   return (
     <div className={!darkMode ? 'App' : 'App--dark'}>
 
-        <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+        {/* Have Menubar closed or open based on screen size also */}
+        {!isMenuOpen && <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>}
 
-        <h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Welcome to a place where logic and creativity unite!</h1>
+        {isMenuOpen && <MenuBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>}
+
+        <div className='homepage--title-flex'>
+          <h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>Welcome to a place where logic and creativity unite!</h1>
+        </div>
 
         <div className='cards--section' >
         <Card id={!darkMode ? '1' : '11'} message='My story is quite unique, click above to find out more' darkMode={darkMode} />

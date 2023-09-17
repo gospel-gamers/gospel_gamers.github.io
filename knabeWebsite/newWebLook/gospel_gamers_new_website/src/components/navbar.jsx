@@ -1,4 +1,5 @@
 import React from "react"
+// import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 // logos and pics
@@ -12,8 +13,9 @@ import moonLogo from '../images/icons8-night-mode-64.png';
 import lightModeLogo from '../images/dark-mode1.png'
 import darkModeLogo from '../images/dark-mode2.png'
 
+
 export default function NavBar(props) {
-    
+
     return (
 
         <div className={!props.darkMode ? 'nav--bar' : 'nav--bar--dark'}>
@@ -48,6 +50,13 @@ export default function NavBar(props) {
 
             {!props.darkMode && <img src={lightModeLogo} className='button--sunLogo'/>}
             {props.darkMode && <img src={darkModeLogo} className='button--moonLogo'/>}
+
+
+            {/*  hamburger dropdown menu for smaller screens */}
+            <div className={!props.darkMode ? 'menu--toggle' : 'menu--toggle--dark'} onClick={props.toggleMenu}>
+                <img src={menuLogo}/>
+            </div>
+
 
             {/*!props.darkMode && <img src={offToggle} onClick={props.toggleDarkMode} className='button--lightMode'/> */}
             {/*props.darkMode && <img src={onToggle} onClick={props.toggleDarkMode} className='button--darkMode'/ >*/}

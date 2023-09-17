@@ -2006,6 +2006,7 @@ textarea::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* flex-shrink: 0; */
 }
 
 .nav--mainLogo {
@@ -2034,6 +2035,7 @@ textarea::placeholder {
 .nav--items {
   list-style: none;
   display: flex;
+  /* flex-shrink: 2; */
 }
 
 .nav--items > li {
@@ -2045,6 +2047,12 @@ textarea::placeholder {
   cursor: pointer;
   color: tomato;
   font-weight: 600;
+}
+
+/* menu css rules... keep hidden for large screens */
+
+.menu--toggle {
+  display: none;
 }
 
 /* navbar darkMode*/
@@ -2363,9 +2371,10 @@ input:checked + .slider:before {
   /* HomePage.jsx light */
 
   /* html, body, App and root */
-  #root {
+  .App, .App--dark, #root {
     width: 100%;
     height: 100%;
+    padding: 0;
   }
 
 
@@ -2375,6 +2384,7 @@ input:checked + .slider:before {
     text-align: start;
     margin-top: 3rem;
   }
+
 
   .welcome--title--dark {
     font-size: 1.5rem;
@@ -2417,78 +2427,158 @@ input:checked + .slider:before {
   }
 
 
-  /* navbar light */
-
-  .nav--bar {
-    height: 4rem; 
+  .nav--bar, .nav--bar--dark {
+    position: fixed;
+    top: 0;
+    height: 6rem; 
     width: 100%;
+    border-radius: 0;
   }
 
-  .nav--mainLogo {
-    height: 3rem;
+  .nav--mainLogo, .nav--mainLogo--dark {
+    height: 4.5rem;
   }
 
-  .nav--logoTitle {
-    font-size: 1.2rem;
-    margin-right: -1rem;
+  .nav--logoTitle, .nav--logoTitle {
+    font-size: 1.5rem;
+    display: none;
   }
 
-  .nav--items > li {
+  .nav--items > li, .nav--items--dark {
     /* padding: 1rem;  */
     display: none;
+    font-size: 1.4rem;
+    padding: 1rem;
   }
 
   .switch {
     position: relative;
     display: inline-block;
-    width: 40px;
-    height: 14px;
-    margin-right: 1rem
+    width: 50px;
+    height: 24px;
   }
 
   .slider:before {
-    height: 10px; 
-    width: 10px; 
-    margin-right: 1rem;
+    height: 20px; 
+    width: 20px; 
   }
 
   img.button--sunLogo {
-    width: 2rem;
-    margin-right: 2rem;
+    width: 3rem;
+    margin-right: 5rem;
   }
 
-  /* navbar dark */
-
-  .nav--bar--dark {
-    height: 4rem; 
-    width: 100%;
+  /* menu toggle bar */
+  .menu--toggle, .menu--toggle--dark {
+    display: flex;
   }
 
-  .nav--mainLogo--dark {
+  .menu--toggle > img, .menu--toggle--dark > img {
+    margin-right: 3rem;
+    width: auto;
     height: 3rem;
   }
 
-  .nav--logoTitle--dark {
-    font-size: 1.2rem;
-    margin-right: -1rem;
+  img.menuX, img.menuX--dark {
+    /* margin-right: 3rem; */
+    /* width: auto; */
+    margin: 0;
+    height: 13rem;
   }
 
-  .nav--items--dark > li {
-    /* padding: 1rem;  */
+  .menu--bar, .menu--bar--dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 15rem; 
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .menu--mainLogo, .menu--mainLogo--dark {
+    height: 4.5rem;
     display: none;
   }
 
-  img.button--moonLogo {
-    width: 2rem;
-    margin-right: 2rem;
+  .menu--logoTitle, .menu--logoTitle--dark {
+    font-size: 1.5rem;
+    display: none;
   }
+
+  .menu--items, .menu--items--dark {
+    padding: 0;
+  }
+
+  .menu--items > li, .menu--items--dark > li {
+    /* padding: 1rem;  */
+    /* display: none; */
+    font-size: 1.6rem;
+    padding: 1.3rem;
+  }
+  
+  .menu--logoDiv, .menu--logoDiv--dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-shrink: 0; */
+  }
+  
+  .menu--logoTitle:hover, .menu--logoTitle--dark:hover {
+    color: tomato;
+  }
+  
+  .menu--menuLogo, .menu--menuLogo--dark {
+    width: 5rem;
+    margin: 40px;
+  }
+  
+  .menu--items, .menu--items--dark {
+    list-style: none;
+    display: flex;
+    /* flex-shrink: 2; */
+  }
+  
+  .menu--items > li:hover, .menu--items--dark > li:hover {
+    cursor: pointer;
+    color: tomato;
+    font-weight: 600;
+  }
+
+
+
 
   /* footer */
 
-  footer--cpr {
-    /* font-size: 0.1rem; */
-    margin-left: 0rem;
+  .footer--cpr {
+    font-size: 0.6rem;
+    margin-left: 1rem;
   }
+
+  .footer--cpr--dark {
+    font-size: 0.6rem;
+    margin-left: 1rem;
+  }
+
+  .footer--social {
+    font-size: 1.2rem;
+  }
+
+  .footer--social--dark {
+
+  }
+
+  .footer--social > a {
+    margin-right: 0.8rem;
+  }
+
+  .footer--social--dark > a {
+
+  }
+
+
 
   /* bio page  */
   .bio--page {
@@ -2673,15 +2763,15 @@ input:checked + .slider:before {
 }
 
 
-/* Media query for screens between 769px and 1024px wide (typical for tablets in vertical position...?) */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-  /* HomePage.jsx light */
+/* Media query for screens between mobile and iPad */
+@media (min-width: 415px) and (max-width: 768px) {
+   /* HomePage.jsx light */
 
   /* html, body, App and root */
-  .App, #root {
+  .App, .App--dark, #root {
     /* width: 100%; */
     /* height: 100%; */
+    padding: 0;
   }
 
 
@@ -2708,25 +2798,27 @@ input:checked + .slider:before {
     cursor: pointer;
   }
 
-
-  /* navbar light */
-
-  .nav--bar {
-    height: 5rem; 
+  .nav--bar, .nav--bar--dark {
+    position: fixed;
+    top: 0;
+    height: 6rem; 
     width: 100%;
+    border-radius: 0;
   }
 
-  .nav--mainLogo {
+  .nav--mainLogo, .nav--mainLogo--dark {
     height: 4.5rem;
   }
 
-  .nav--logoTitle {
+  .nav--logoTitle, .nav--logoTitle {
     font-size: 1.5rem;
   }
 
-  .nav--items > li {
+  .nav--items > li, .nav--items--dark {
     /* padding: 1rem;  */
     display: none;
+    font-size: 1.4rem;
+    padding: 1rem;
   }
 
   .switch {
@@ -2746,31 +2838,250 @@ input:checked + .slider:before {
     margin-right: 5rem;
   }
 
-  /* navbar dark */
+  /* menu toggle bar */
+  .menu--toggle, .menu--toggle--dark {
+    display: flex;
+  }
 
-  .nav--bar--dark {
-    height: 5rem; 
+  .menu--toggle > img, .menu--toggle--dark > img {
+    margin-right: 3rem;
+    width: auto;
+    height: 3rem;
+  }
+
+  img.menuX, img.menuX--dark {
+    /* margin-right: 3rem; */
+    /* width: auto; */
+    margin: 0;
+    height: 13rem;
+  }
+
+  .menu--bar, .menu--bar--dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 15rem; 
     width: 100%;
+    border-radius: 0;
   }
 
-  .nav--logoTitle--dark {
-    font-size: 1.5rem; 
-  }
-
-  .nav--items--dark > li {
-    /* padding: 1rem;  */
+  .menu--mainLogo, .menu--mainLogo--dark {
+    height: 4.5rem;
     display: none;
   }
 
-  .nav--mainLogo--dark {
+  .menu--logoTitle, .menu--logoTitle--dark {
+    font-size: 1.5rem;
+    display: none;
+  }
+
+  .menu--items, .menu--items--dark {
+    padding: 0;
+  }
+
+  .menu--items > li, .menu--items--dark > li {
+    /* padding: 1rem;  */
+    /* display: none; */
+    font-size: 1.6rem;
+    padding: 1.3rem;
+  }
+  
+  .menu--logoDiv, .menu--logoDiv--dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-shrink: 0; */
+  }
+  
+  .menu--logoTitle:hover, .menu--logoTitle--dark:hover {
+    color: tomato;
+  }
+  
+  .menu--menuLogo, .menu--menuLogo--dark {
+    width: 5rem;
+    margin: 40px;
+  }
+  
+  .menu--items, .menu--items--dark {
+    list-style: none;
+    display: flex;
+    /* flex-shrink: 2; */
+  }
+  
+  .menu--items > li:hover, .menu--items--dark > li:hover {
+    cursor: pointer;
+    color: tomato;
+    font-weight: 600;
+  }
+
+
+
+
+}
+
+
+/* Media query for screens between 769px and 1279px wide (typical for tablets in vertical position...?) */
+@media (min-width: 769px) and (max-width: 1279px) {
+
+  /* HomePage.jsx light */
+
+  /* html, body, App and root */
+  .App, .App--dark, #root {
+    padding: 0;
+    /* display: flexbox; */
+    /* width: 100%; */
+    /* height: 100%; */
+  }
+
+  .homepage--title--flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .welcome--title, .welcome--title--dark {
+    font-size: 3.5rem;
+    width: 50rem;
+    /* text-align: justify; */
+    margin: 10rem auto 3.5rem auto;
+    
+  }
+
+  .card, .card--dark {
+    height: 27rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .card--dark:active .card--image--dark {
+    opacity: 0.65;
+    cursor: pointer;
+  }
+
+
+  /* navbar  */
+
+  .nav--bar, .nav--bar--dark {
+    position: fixed;
+    top: 0;
+    height: 6rem; 
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .nav--mainLogo, .nav--mainLogo--dark {
     height: 4.5rem;
   }
 
-  img.button--moonLogo {
+  .nav--logoTitle, .nav--logoTitle {
+    font-size: 1.5rem;
+  }
+
+  .nav--items > li, .nav--items--dark {
+    /* padding: 1rem;  */
+    display: none;
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+
+  .slider:before {
+    height: 20px; 
+    width: 20px; 
+  }
+
+  img.button--sunLogo {
     width: 3rem;
     margin-right: 5rem;
   }
 
+  /* menu toggle bar */
+  .menu--toggle, .menu--toggle--dark {
+    display: flex;
+  }
+
+  .menu--toggle > img, .menu--toggle--dark > img {
+    margin-right: 3rem;
+    width: auto;
+    height: 3rem;
+  }
+
+  img.menuX, img.menuX--dark {
+    /* margin-right: 3rem; */
+    /* width: auto; */
+    margin: 0;
+    height: 13rem;
+  }
+
+  .menu--bar, .menu--bar--dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 15rem; 
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .menu--mainLogo, .menu--mainLogo--dark {
+    height: 4.5rem;
+    display: none;
+  }
+
+  .menu--logoTitle, .menu--logoTitle--dark {
+    font-size: 1.5rem;
+    display: none;
+  }
+
+  .menu--items, .menu--items--dark {
+    padding: 0;
+  }
+
+  .menu--items > li, .menu--items--dark > li {
+    /* padding: 1rem;  */
+    /* display: none; */
+    font-size: 1.6rem;
+    padding: 1.3rem;
+  }
+  
+  .menu--logoDiv, .menu--logoDiv--dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-shrink: 0; */
+  }
+  
+  .menu--logoTitle:hover, .menu--logoTitle--dark:hover {
+    color: tomato;
+  }
+  
+  .menu--menuLogo, .menu--menuLogo--dark {
+    width: 5rem;
+    margin: 40px;
+  }
+  
+  .menu--items, .menu--items--dark {
+    list-style: none;
+    display: flex;
+    /* flex-shrink: 2; */
+  }
+  
+  .menu--items > li:hover, .menu--items--dark > li:hover {
+    cursor: pointer;
+    color: tomato;
+    font-weight: 600;
+  }
 
   /* bio page  */
   .bio--page {
@@ -2955,6 +3266,56 @@ input:checked + .slider:before {
 }
 
 
+
+/* Media query for screen sizes between 1280px wide and 1509px wide */
+@media (min-width: 1280px) and (max-width: 1509px) {
+
+  /* nav bar */
+  .nav--logoDiv {
+    flex-shrink: 1;
+  }
+
+  .nav--items {
+    flex-shrink: 5;
+    /* margin-left: 0rem; */
+    padding: 0rem;
+  }
+
+  .nav--items > li {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+  }
+
+  .switch {
+    flex-shrink: 1;
+  }
+}
+
+
+
+/* Media query for screen sizes between 1510px wide and 1920px or HD */
+@media (min-width: 1510px) and (max-width: 1920px) {
+
+  /* nav bar */
+  .nav--logoDiv {
+    flex-shrink: 1;
+  }
+
+  .nav--items {
+    flex-shrink: 5;
+    /* margin-left: 0rem; */
+    padding: 0rem;
+  }
+
+  .nav--items > li {
+    padding: 1.3rem;
+    font-size: 1.8rem;
+  }
+
+  .switch {
+    flex-shrink: 1;
+  }
+}
 
 
 /* media queries for light or dark mode */
