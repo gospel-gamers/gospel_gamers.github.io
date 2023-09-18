@@ -48,8 +48,8 @@ export default function MenuBar(props) {
 
             {/* sun and moon logos */}
 
-            {!props.darkMode && <img src={lightModeLogo} className='button--sunLogo' onClick={props.toggleDarkMode}/>}
-            {props.darkMode && <img src={darkModeLogo} className='button--moonLogo'onClick={props.toggleDarkMode}/>}
+            {!props.darkMode && <img src={lightModeLogo} className='button--sunLogo--menuBar' onClick={props.toggleDarkMode}/>}
+            {props.darkMode && <img src={darkModeLogo} className='button--moonLogo--menuBar'onClick={props.toggleDarkMode}/>}
 
 
             {/*  hamburger dropdown menu for smaller screens */}

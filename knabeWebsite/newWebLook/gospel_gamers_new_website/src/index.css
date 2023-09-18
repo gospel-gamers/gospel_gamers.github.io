@@ -1556,14 +1556,14 @@ body {
 .chord--type--text {
   font-size: 1.3rem;
   font-weight: 900;
-  margin: 0.3rem;
+  margin: 4.3rem;
 
 }
 
 .chord--notes--text {
   font-size: 1.3rem;
   font-weight: 900;
-  margin: 0.3rem;
+  margin: 4.3rem;
 
 }
 
@@ -2049,11 +2049,78 @@ textarea::placeholder {
   font-weight: 600;
 }
 
-/* menu css rules... keep hidden for large screens */
+/* menu css rules... make the same as nav-bar for large screens */
 
-.menu--toggle {
+.menu--toggle, .menu--toggle--dark {
   display: none;
 }
+
+/* navbar lightMode */
+.menu--bar {
+  display: flex;
+  background-color: white;
+  opacity: 1;
+  border-radius: 1rem;
+  height: 6.4rem;
+  align-items: center;
+  justify-content: space-between;
+  /*box-shadow: 4px 0 4px gray; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.menu--logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-shrink: 0; */
+}
+
+.menu--mainLogo {
+  width: auto;
+  height: 6.5rem;
+  display: absolute;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  /*padding: 2.5rem;*/
+}
+
+.menu--logoTitle {
+  font-size: 2rem;
+  color: black;
+}
+
+.menu--logoTitle:hover {
+  color: tomato;
+}
+
+.menu--menuLogo {
+  width: 5rem;
+  margin: 40px;
+}
+
+.menu--items {
+  list-style: none;
+  display: flex;
+  /* flex-shrink: 2; */
+}
+
+.menu--items > li {
+  padding: 3rem;
+  font-size: 1.7rem;
+}
+
+.menu--items > li:hover {
+  cursor: pointer;
+  color: tomato;
+  font-weight: 600;
+}
+
+/* ! failed attempt for transition */
+/* .menu--bar, .menu--bar--dark {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+} */
 
 /* navbar darkMode*/
 .nav--bar--dark {
@@ -2127,6 +2194,97 @@ textarea::placeholder {
   color: tomato;
 }
 
+/* menuBar darkMode for large screen sizes*/
+.menu--bar--dark {
+  display: flex;
+  background-color: rgba(39, 55, 136, 0.924);
+  opacity: 1;
+  border-radius: 1rem;
+  height: 6.4rem;
+  align-items: center;
+  justify-content: space-between;
+  /*box-shadow: 4px 0 4px gray; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.menu--logoDiv--dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu--mainLogo--dark {
+  width: auto;
+  height: 6.5rem;
+  display: absolute;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  /*padding: 2.5rem;*/
+}
+
+.menu--logoTitle--dark {
+  font-size: 2rem;
+  color: white;
+}
+
+.menu--logoTitle--dark:hover {
+  color: tomato;
+}
+
+.menu--menuLogo--dark {
+  width: 5rem;
+  margin: 40px;
+}
+
+.menu--items--dark {
+  list-style: none;
+  display: flex;
+  color: white;
+}
+
+.menu--items--dark > li {
+  padding: 3rem;
+  font-size: 1.7rem;
+}
+
+.menu--items--dark > li:hover {
+  cursor: pointer;
+  color: tomato;
+  font-weight: 600;
+}
+
+/* navbar anchor <a> tags from the Links */
+.nav--atag {
+  color: black;
+}
+
+.nav--atag--dark {
+  color: white;
+}
+
+.nav--atag:hover, .nav--atag--dark:hover {
+  color: tomato;
+}
+
+
+/* menu anchor <a> tags from the Links */
+.menu--atag {
+  color: black;
+}
+
+.menu--atag--dark {
+  color: white;
+}
+
+.menu--atag:hover, .nav--atag--dark:hover {
+  color: tomato;
+}
+
+
+
+
+
+
 /* lightMode button & logo */
 .button--lightMode {
   width: 6rem;
@@ -2134,6 +2292,11 @@ textarea::placeholder {
 }
 
 .button--sunLogo {
+  width: 4rem;
+  margin-right: 3rem;
+}
+
+.button--sunLogo--menuBar {
   width: 4rem;
   margin-right: 3rem;
 }
@@ -2148,6 +2311,12 @@ textarea::placeholder {
   width: 4rem;
   margin-right: 3rem;
 }
+
+.button--moonLogo--menuBar {
+  width: 4rem;
+  margin-right: 3rem;
+}
+
 
 /* toggle switch button */
 
@@ -2371,26 +2540,30 @@ input:checked + .slider:before {
   /* HomePage.jsx light */
 
   /* html, body, App and root */
-  .App, .App--dark, #root {
+  .App, #root {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .App--dark {
     width: 100%;
     height: 100%;
     padding: 0;
   }
 
-
-  .welcome--title {
-    font-size: 1.5rem;
-    width: 16rem;
-    text-align: start;
-    margin-top: 3rem;
+  html {
+    background-color: #F8A36249;
   }
 
 
-  .welcome--title--dark {
+  .welcome--title, .welcome--title--dark {
     font-size: 1.5rem;
     width: 16rem;
     text-align: start;
-    margin-top: 3rem;
+    margin-left: 5.5rem;
+    margin-top: 8rem;
   }
 
   .card {
@@ -2402,18 +2575,12 @@ input:checked + .slider:before {
     align-items: center;
   }
 
-  .card--message {
-    max-width: 10rem;
-    font-size: 0.6rem;
+  .card--message, .card--message--dark {
+    max-width: 15rem;
+    font-size: 0.7rem;
     font-weight: bold;
     margin-left: 3rem;
-  }
-
-  .card--message--dark {
-    max-width: 10rem;
-    font-size: 0.6rem;
-    font-weight: bold;
-    margin-left: 3rem;
+    margin-top: 0.3rem;
   }
 
   .card--dark {
@@ -2429,8 +2596,9 @@ input:checked + .slider:before {
 
   .nav--bar, .nav--bar--dark {
     position: fixed;
+    z-index: 2;
     top: 0;
-    height: 6rem; 
+    height: 5rem; 
     width: 100%;
     border-radius: 0;
   }
@@ -2453,7 +2621,7 @@ input:checked + .slider:before {
 
   .switch {
     position: relative;
-    display: inline-block;
+    display: none;
     width: 50px;
     height: 24px;
   }
@@ -2465,7 +2633,11 @@ input:checked + .slider:before {
 
   img.button--sunLogo {
     width: 3rem;
-    margin-right: 5rem;
+    /* margin-right: 5rem; */
+  }
+
+  .button--sunLogo--menuBar, .button--moonLogo--menuBar {
+    display: none;
   }
 
   /* menu toggle bar */
@@ -2473,10 +2645,18 @@ input:checked + .slider:before {
     display: flex;
   }
 
-  .menu--toggle > img, .menu--toggle--dark > img {
+  .menu--toggle > img {
     margin-right: 3rem;
     width: auto;
     height: 3rem;
+    /* display: none; */
+  }
+
+  .menu--img--dark {
+    /* margin-right: 3rem; */
+    /* width: auto; */
+    /* height: 3rem; */
+    /* display: none !important; */
   }
 
   img.menuX, img.menuX--dark {
@@ -2491,9 +2671,10 @@ input:checked + .slider:before {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 2;
     top: 0;
     background-color: white;
-    height: 15rem; 
+    height: 8rem; 
     width: 100%;
     border-radius: 0;
   }
@@ -2510,15 +2691,17 @@ input:checked + .slider:before {
 
   .menu--items, .menu--items--dark {
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    padding: 0;
+    margin-left: 3rem;
   }
 
   .menu--items > li, .menu--items--dark > li {
-    /* padding: 1rem;  */
-    /* display: none; */
-    font-size: 1.6rem;
-    padding: 1.3rem;
+    font-size: 1.15rem;
+    padding: 0.15rem;
   }
-  
+
   .menu--logoDiv, .menu--logoDiv--dark {
     display: flex;
     justify-content: center;
@@ -2535,11 +2718,6 @@ input:checked + .slider:before {
     margin: 40px;
   }
   
-  .menu--items, .menu--items--dark {
-    list-style: none;
-    display: flex;
-    /* flex-shrink: 2; */
-  }
   
   .menu--items > li:hover, .menu--items--dark > li:hover {
     cursor: pointer;
@@ -2552,14 +2730,13 @@ input:checked + .slider:before {
 
   /* footer */
 
-  .footer--cpr {
-    font-size: 0.6rem;
-    margin-left: 1rem;
+  .footer-bar, .footer--bar--dark {
   }
 
-  .footer--cpr--dark {
+  .footer--cpr, .footer--cpr--dark {
     font-size: 0.6rem;
     margin-left: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   .footer--social {
@@ -2800,6 +2977,7 @@ input:checked + .slider:before {
 
   .nav--bar, .nav--bar--dark {
     position: fixed;
+    z-index: 2;
     top: 0;
     height: 6rem; 
     width: 100%;
@@ -2823,7 +3001,7 @@ input:checked + .slider:before {
 
   .switch {
     position: relative;
-    display: inline-block;
+    display: none;
     width: 50px;
     height: 24px;
   }
@@ -2834,8 +3012,27 @@ input:checked + .slider:before {
   }
 
   img.button--sunLogo {
-    width: 3rem;
-    margin-right: 5rem;
+    display: none;
+  }
+
+  img.button--moonLogo {
+    display: none;
+  }
+
+  img.button--sunLogo--menuBar {
+    /* width: 3rem; */
+    /* margin: 0 0 0 4rem; */
+    margin: 0;
+    /* display: none; */
+    /* margin-right: 5rem; */
+  }
+
+  img.button--moonLogo--menuBar {
+    /* width: 3rem; */
+    /* margin: 0 0 0 3rem; */
+    margin: 0;
+    /* display: none; */
+    /* margin-right: 5rem; */
   }
 
   /* menu toggle bar */
@@ -2856,37 +3053,40 @@ input:checked + .slider:before {
     height: 13rem;
   }
 
-  .menu--bar, .menu--bar--dark {
+  .menu--bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 2;
     top: 0;
     background-color: white;
-    height: 15rem; 
+    height: 12rem; 
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .menu--bar--dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color: #273788;
+    height: 12rem; 
     width: 100%;
     border-radius: 0;
   }
 
   .menu--mainLogo, .menu--mainLogo--dark {
-    height: 4.5rem;
+    height: 5.5rem;
     display: none;
   }
 
   .menu--logoTitle, .menu--logoTitle--dark {
     font-size: 1.5rem;
     display: none;
-  }
-
-  .menu--items, .menu--items--dark {
-    padding: 0;
-  }
-
-  .menu--items > li, .menu--items--dark > li {
-    /* padding: 1rem;  */
-    /* display: none; */
-    font-size: 1.6rem;
-    padding: 1.3rem;
   }
   
   .menu--logoDiv, .menu--logoDiv--dark {
@@ -2905,10 +3105,17 @@ input:checked + .slider:before {
     margin: 40px;
   }
   
+
   .menu--items, .menu--items--dark {
-    list-style: none;
-    display: flex;
-    /* flex-shrink: 2; */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    padding: 0;
+  }
+
+  .menu--items > li, .menu--items--dark > li {
+    font-size: 1.5rem;
+    padding: 0.4rem;
   }
   
   .menu--items > li:hover, .menu--items--dark > li:hover {
@@ -2966,10 +3173,14 @@ input:checked + .slider:before {
 
   .nav--bar, .nav--bar--dark {
     position: fixed;
+    z-index: 2;
     top: 0;
     height: 6rem; 
     width: 100%;
     border-radius: 0;
+    transform: scaleY(1); /* Initially, set scaleY to 1 to keep it visible */
+    transform-origin: top; /* Set the transform origin to the top */
+    transition: transform 1.3s; /* Add a transition for transform property */
   }
 
   .nav--mainLogo, .nav--mainLogo--dark {
@@ -2989,7 +3200,7 @@ input:checked + .slider:before {
 
   .switch {
     position: relative;
-    display: inline-block;
+    display: none;
     width: 50px;
     height: 24px;
   }
@@ -3000,8 +3211,17 @@ input:checked + .slider:before {
   }
 
   img.button--sunLogo {
-    width: 3rem;
-    margin-right: 5rem;
+    /* width: 3rem;
+    margin: 0 0 0 38rem; */
+    display: none;
+    /* margin-right: 5rem; */
+  }
+
+  img.button--moonLogo {
+    /* width: 3rem;
+    margin: 0 0 0 38rem; */
+    display: none;
+    /* margin-right: 5rem; */
   }
 
   /* menu toggle bar */
@@ -3015,6 +3235,21 @@ input:checked + .slider:before {
     height: 3rem;
   }
 
+  img.button--sunLogo--menuBar {
+    /* width: 3rem; */
+    margin: 0 0 0 4rem;
+    /* display: none; */
+    /* margin-right: 5rem; */
+  }
+
+  img.button--moonLogo--menuBar {
+    /* width: 3rem; */
+    margin: 0 0 0 3rem;
+    /* display: none; */
+    /* margin-right: 5rem; */
+  }
+
+
   img.menuX, img.menuX--dark {
     /* margin-right: 3rem; */
     /* width: auto; */
@@ -3022,21 +3257,48 @@ input:checked + .slider:before {
     height: 13rem;
   }
 
-  .menu--bar, .menu--bar--dark {
+  .menu--bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 2;
     top: 0;
     background-color: white;
-    height: 15rem; 
+    height: 14rem; 
+    width: 100%;
+    border-radius: 0;
+    /* height: 100%; */
+    /* transform: scaleY(1); Initially, set scaleY to 0 to hide it */
+    /* transform-origin: top; Set the transform origin to the top */
+    /* transition: transform 1.3s; Add a transition for transform property */
+  }
+
+  .menu--bar--dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color: #273788;
+    height: 14rem; 
     width: 100%;
     border-radius: 0;
   }
 
+  .menu--atag{
+    color: black;
+  }
+
+  .menu--atag--dark {
+    color: white;
+  }
+
   .menu--mainLogo, .menu--mainLogo--dark {
-    height: 4.5rem;
-    display: none;
+    height: 6.5rem;
+    flex-shrink: 2;
+    /* display: none; */
   }
 
   .menu--logoTitle, .menu--logoTitle--dark {
@@ -3046,13 +3308,14 @@ input:checked + .slider:before {
 
   .menu--items, .menu--items--dark {
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    padding: 0;
   }
 
   .menu--items > li, .menu--items--dark > li {
-    /* padding: 1rem;  */
-    /* display: none; */
     font-size: 1.6rem;
-    padding: 1.3rem;
+    padding: 0.6rem;
   }
   
   .menu--logoDiv, .menu--logoDiv--dark {
@@ -3069,12 +3332,6 @@ input:checked + .slider:before {
   .menu--menuLogo, .menu--menuLogo--dark {
     width: 5rem;
     margin: 40px;
-  }
-  
-  .menu--items, .menu--items--dark {
-    list-style: none;
-    display: flex;
-    /* flex-shrink: 2; */
   }
   
   .menu--items > li:hover, .menu--items--dark > li:hover {
@@ -3316,6 +3573,21 @@ input:checked + .slider:before {
     flex-shrink: 1;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* media queries for light or dark mode */

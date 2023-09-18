@@ -54,7 +54,7 @@ export default function NavBar(props) {
 
             {/*  hamburger dropdown menu for smaller screens */}
             <div className={!props.darkMode ? 'menu--toggle' : 'menu--toggle--dark'} onClick={props.toggleMenu}>
-                <img src={menuLogo}/>
+                <img className={!props.darkMode ? 'menu--img' : 'menu--img--dark'} src={menuLogo}/>
             </div>
 
 
