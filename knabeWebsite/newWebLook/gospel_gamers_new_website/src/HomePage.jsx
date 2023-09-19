@@ -28,7 +28,7 @@ export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
-      console.log(isMenuOpen)
+      // console.log(isMenuOpen)
   };
 
   // Function to check if user system preferences are set to dark mode

@@ -20,6 +20,7 @@ export default function NavBar(props) {
 
         <div className={!props.darkMode ? 'nav--bar' : 'nav--bar--dark'}>
             
+            {/* gospel_gamers logo and text */}
             <div className={!props.darkMode ? 'nav--logoDiv' : 'nav--logoDiv--dark'}>
                 <Link to={`/?darkMode=${props.darkMode}`}>
                     <img src={!props.darkMode ? mainLogo : mainLogoDarkMode} className={!props.darkMode ? 'nav--mainLogo' : 'nav--mainLogo--dark'}/>
@@ -30,7 +31,7 @@ export default function NavBar(props) {
 
             </div>
 
-
+            {/* all the web page links */}
             <ul className={!props.darkMode ? 'nav--items' : 'nav--items--dark'}>
                     <li><Link to={`/bio?darkMode=${props.darkMode}`} className={!props.darkMode ? 'nav--atag' : 'nav--atag--dark'}>Bio</Link></li>
                     <li><Link to={`/music?darkMode=${props.darkMode}`} className={!props.darkMode ? 'nav--atag' : 'nav--atag--dark'}>Music</Link></li>
@@ -47,9 +48,8 @@ export default function NavBar(props) {
             </label>
 
             {/* sun and moon logos */}
-
-            {!props.darkMode && <img src={lightModeLogo} className='button--sunLogo'/>}
-            {props.darkMode && <img src={darkModeLogo} className='button--moonLogo'/>}
+            {!props.darkMode && <img src={lightModeLogo} className='button--sunLogo' onClick={props.toggleDarkMode}/>}
+            {props.darkMode && <img src={darkModeLogo} className='button--moonLogo' onClick={props.toggleDarkMode}/>}
 
 
             {/*  hamburger dropdown menu for smaller screens */}
