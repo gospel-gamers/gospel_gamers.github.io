@@ -2989,21 +2989,15 @@ input:checked + .slider:before {
   }
 
 
-  .welcome--title {
-    font-size: 3rem;
+  .welcome--title, .welcome--title--dark {
+    font-size: 2.8rem;
+    padding-top: 9rem;
   }
 
-  .welcome--title--dark {
-    font-size: 3rem;
-  }
-
-  .card {
+  .card, .card--dark {
     height: 27rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .card--dark {
-    height: 27rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-bottom: 2.5rem;
   }
 
@@ -3012,13 +3006,23 @@ input:checked + .slider:before {
     cursor: pointer;
   }
 
-  .nav--bar, .nav--bar--dark {
+  .nav--bar {
     position: fixed;
     z-index: 2;
     top: 0;
     height: 6rem; 
     width: 100%;
     border-radius: 0;
+  }
+
+  .nav--bar--dark {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    height: 6rem; 
+    width: 100%;
+    border-radius: 0;
+    background-color: #273788;
   }
 
   .nav--mainLogo, .nav--mainLogo--dark {
@@ -3058,8 +3062,7 @@ input:checked + .slider:before {
 
   img.button--sunLogo--menuBar {
     /* width: 3rem; */
-    /* margin: 0 0 0 4rem; */
-    margin: 0;
+    margin: 0 0 0 3rem;
     /* display: none; */
     /* margin-right: 5rem; */
   }
@@ -3067,7 +3070,7 @@ input:checked + .slider:before {
   img.button--moonLogo--menuBar {
     /* width: 3rem; */
     /* margin: 0 0 0 3rem; */
-    margin: 0;
+    margin: 0 0 0 3rem;
     /* display: none; */
     /* margin-right: 5rem; */
   }
@@ -3144,7 +3147,7 @@ input:checked + .slider:before {
   
 
   .menu--items, .menu--items--dark {
-    padding: 0;
+    margin-left: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Create two columns */
     padding: 0;
@@ -3161,6 +3164,11 @@ input:checked + .slider:before {
     font-weight: 600;
   }
 
+
+  .footer--bar, .footer--bar--dark {
+    margin: 0;
+    padding-bottom: 2rem;
+  }
 
 
 
@@ -3188,15 +3196,19 @@ input:checked + .slider:before {
   }
 
   .welcome--title, .welcome--title--dark {
-    font-size: 3.5rem;
-    width: 50rem;
+    font-size: 3.3rem;
+    /* width: 50rem; */
     /* text-align: justify; */
-    margin: 10rem auto 3.5rem auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 16rem;
+    margin: 0 auto 3.5rem auto;
     
   }
 
   .card, .card--dark {
-    height: 27rem;
+    height: 40rem;
+    width: 50rem;
     margin-bottom: 2.5rem;
   }
 
@@ -3208,16 +3220,29 @@ input:checked + .slider:before {
 
   /* navbar  */
 
-  .nav--bar, .nav--bar--dark {
+  .nav--bar {
     position: fixed;
     z-index: 2;
     top: 0;
     height: 6rem; 
     width: 100%;
     border-radius: 0;
-    transform: scaleY(1); /* Initially, set scaleY to 1 to keep it visible */
-    transform-origin: top; /* Set the transform origin to the top */
-    transition: transform 1.3s; /* Add a transition for transform property */
+    /* transform: scaleY(1); Initially, set scaleY to 1 to keep it visible */
+    /* transform-origin: top; Set the transform origin to the top */
+    /* transition: transform 1.3s; Add a transition for transform property */
+  }
+
+  .nav--bar--dark {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    height: 6rem; 
+    width: 100%;
+    border-radius: 0;
+    background-color: #273788;
+    /* transform: scaleY(1); Initially, set scaleY to 1 to keep it visible */
+    /* transform-origin: top; Set the transform origin to the top */
+    /* transition: transform 1.3s; Add a transition for transform property */
   }
 
   .nav--mainLogo, .nav--mainLogo--dark {
@@ -3556,6 +3581,15 @@ input:checked + .slider:before {
     margin-bottom: 9rem;
   }
 
+  .footer--bar, .footer--bar--dark {
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .footer--social, .footer--social--dark {
+    font-size: 2rem;
+    /* margin-right: 4rem; */
+  }
 
 }
 
@@ -3565,17 +3599,17 @@ input:checked + .slider:before {
 @media (min-width: 1280px) and (max-width: 1509px) {
 
   /* nav bar */
-  .nav--logoDiv {
+  .nav--logoDiv, .nav--logoDiv--dark {
     flex-shrink: 1;
   }
 
-  .nav--items {
+  .nav--items, .nav--items--dark {
     flex-shrink: 5;
     /* margin-left: 0rem; */
     padding: 0rem;
   }
 
-  .nav--items > li {
+  .nav--items > li, .nav--items--dark > li {
     padding: 0.7rem;
     font-size: 1.5rem;
   }
@@ -3583,31 +3617,70 @@ input:checked + .slider:before {
   .switch {
     flex-shrink: 1;
   }
-}
 
-
-
-/* Media query for screen sizes between 1510px wide and 1920px or HD */
-@media (min-width: 1510px) and (max-width: 1920px) {
-
-  /* nav bar */
-  .nav--logoDiv {
+  /* menu bar */
+  .menu--logoDiv, .menu--logoDiv--dark {
     flex-shrink: 1;
   }
 
-  .nav--items {
+  .menu--items, .menu--items--dark {
     flex-shrink: 5;
     /* margin-left: 0rem; */
     padding: 0rem;
   }
 
-  .nav--items > li {
+  .menu--items > li, .menu--items--dark > li {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+  }
+}
+
+
+
+/* Media query for screen sizes between 1510px wide and 1919px or HD */
+@media (min-width: 1510px) and (max-width: 1919px) {
+
+  /* nav bar */
+  .nav--logoDiv, .nav--logoDiv--dark {
+    flex-shrink: 1;
+  }
+
+  .nav--items, .nav--items--dark {
+    /* flex-shrink: 5; */
+    /* margin-left: 0rem; */
+    /* padding: 0rem; */
+  }
+
+  .nav--items > li, .nav--items--dark > li {
     padding: 1.3rem;
     font-size: 1.8rem;
   }
 
   .switch {
+    /* flex-shrink: 1; */
+  }
+
+  /* menu bar */
+  .menu--logoDiv, .menu--logoDiv--dark {
     flex-shrink: 1;
+  }
+
+  .menu--items, .menu--items--dark {
+    flex-shrink: 5;
+    /* margin-left: 0rem; */
+    padding: 0rem;
+  }
+
+  .menu--items > li, .menu--items--dark > li {
+    padding: 1.3rem;
+
+    font-size: 1.8rem;
+  }
+
+  .card, .card--dark {
+    margin-bottom: 4rem;
+    width: 42rem;
+    height: 32rem;
   }
 }
 
