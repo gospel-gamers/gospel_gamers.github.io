@@ -4,6 +4,7 @@ function spotifyAlbum() {
     return (
       <div>
         <iframe
+          className="iframe--spotify"
           style={{ borderRadius: '12px' }}
           src="https://open.spotify.com/embed/album/04cq4Bcvads5HGIpKhsqqv?utm_source=generator"
           width="70%"

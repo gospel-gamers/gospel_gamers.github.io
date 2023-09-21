@@ -14,7 +14,7 @@ export default function Bio() {
     setDarkMode(prevMode => !prevMode)
   }
 
-    // hamburger menu toggle
+  // hamburger menu toggle
   // menu bar for navbar
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

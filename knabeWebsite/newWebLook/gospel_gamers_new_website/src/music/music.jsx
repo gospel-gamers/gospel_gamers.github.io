@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NavBar from '../components/navbar'
+import MenuBar from '../components/toggleMenuBar'
 import Footer from '../components/footer'
 import SpotifyAlbum from '../components/spotifyAlbum'
 
@@ -11,9 +12,21 @@ export default function Music() {
     setDarkMode(prevMode => !prevMode)
   }
 
+  // hamburger menu toggle
+  // menu bar for navbar
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+      // console.log(isMenuOpen)
+  };
+
   return (
     <div className={!darkMode ? 'music--page' : 'music--page--dark'}>
-        <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+        {/* <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/> */}
+        {/* Have Menubar closed or open based on screen size also */}
+        {!isMenuOpen && <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>}
+        {isMenuOpen && <MenuBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>}
 
         <h1 className={!darkMode ? 'welcome--title' : 'welcome--title--dark'}>If 🎵 be the 🥘 of ❤️ play on</h1>
 

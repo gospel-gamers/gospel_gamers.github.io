@@ -158,13 +158,13 @@ body {
 }
 
 .shakespeare {
-  margin-left: 13rem;
+  margin-left: 5rem;
   font-size: 1.8rem;
 }
 
 .shakespeare--dark {
   color: white;
-  margin-left: 13rem;
+  margin-left: 5rem;
   font-size: 1.8rem;
 }
 
@@ -2832,39 +2832,83 @@ input:checked + .slider:before {
   }
 
   /*  music page */
-  .music--page--dark {
-    background-position: 50% 80%;
+  .music--page {
+    padding: 0;
+    background-image: url(/src/images/guitar21.jpg);
   }
-
+  
   .music--page > .welcome--title {
-    /* font-size: 3rem; */
+    color: white;
     max-width: 20rem;
     margin-bottom: 2rem;
   }
 
-  .music--page > .shakespeare {
-    max-width: 22rem;
+  .shakespeare {
+    max-width: 15rem;
     margin-left: 5rem;
-    
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
   }
 
   .music--content {
-    margin-top: 4rem;
-    font-size: 1.6rem;
-    max-width: 26rem;
+    margin: 0 auto;
+    max-width: none;
+    /* font-size: 1.6rem; */
+    /* max-width: 26rem; */
   }
 
-  .music--page--dark > .shakespeare--dark {
-    max-width: 22rem;
+  .music--content > p {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0 auto;
+    color: white;
+    margin: 1rem 3rem 2rem 3rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .iframe--spotify {
+    margin-left: 3.5rem;
+  }
+
+  .music--page--dark {
+    padding: 0;
+    background-image: url(/src/images/guitar13.jpg);
+    /* background-position: 50% 80%; */
+  }
+
+  .music--page--dark > .welcome--title--dark {
+    color: white;
+    max-width: 20rem;
+    margin-bottom: 2rem;
+  }
+
+  .shakespeare--dark {
+    max-width: 15rem;
     margin-left: 5rem;
-    
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
   }
 
   .music--content--dark {
-    margin-top: 4rem;
-    font-size: 1.6rem;
-    max-width: 26rem;
-    margin-bottom: 3rem;
+    margin: 0 auto;
+    max-width: none;
+    /* font-size: 1.6rem; */
+    /* max-width: 26rem; */
+  }
+
+  .music--content--dark > p {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0 auto;
+    color: white;
+    margin: 1rem 3rem 2rem 3rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.2;
   }
 
 
@@ -3178,9 +3222,6 @@ input:checked + .slider:before {
     font-weight: 600;
   }
 
-
-
-
 /* bio page  */
 .bio--page, .bio--page--dark {
   /* background-image: url('./images/berlinDay/berlin13.jpg'); */
@@ -3216,6 +3257,91 @@ input:checked + .slider:before {
   margin-bottom: 2rem;
 
 }
+
+
+ /*  music page */
+ .music--page {
+  padding: 0;
+  background-image: url(/src/images/guitar21.jpg);
+}
+
+.music--page > .welcome--title {
+  color: white;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.shakespeare {
+  /* max-width: 20rem; */
+  margin-left: 5rem;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.music--content {
+  margin: 0 auto;
+  max-width: none;
+  /* font-size: 1.6rem; */
+  /* max-width: 26rem; */
+}
+
+.music--content > p {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+  margin: 1rem 3rem 2rem 3rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.iframe--spotify {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 4.5rem;
+  max-width: 50rem;
+}
+
+.music--page--dark {
+  padding: 0;
+  background-image: url(/src/images/guitar13.jpg);
+  /* background-position: 50% 80%; */
+}
+
+.music--page--dark > .welcome--title {
+  color: white;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.shakespeare--dark {
+  /* max-width: 20rem; */
+  margin-left: 5rem;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.music--content--dark {
+  margin: 0 auto;
+  max-width: none;
+  /* font-size: 1.6rem; */
+  /* max-width: 26rem; */
+}
+
+.music--content--dark > p {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+  margin: 1rem 3rem 2rem 3rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
 
   /* footer lightMode */
 
@@ -3557,41 +3683,96 @@ input:checked + .slider:before {
 
 
 
-  /*  music page */
-  .music--page--dark {
-    background-position: 50% 80%;
-  }
+ /*  music page */
+ .music--page {
+  padding: 0;
+  background-image: url(/src/images/guitar21.jpg);
+}
 
-  .music--page > .welcome--title {
-    /* font-size: 3rem; */
-    max-width: 20rem;
-    margin-bottom: 2rem;
-  }
+.music--page > .welcome--title {
+  color: white;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
 
-  .music--page > .shakespeare {
-    max-width: 22rem;
-    margin-left: 5rem;
-    
-  }
+.shakespeare {
+  /* max-width: 20rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0rem;
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  margin-bottom: 4rem;
+}
 
-  .music--content {
-    margin-top: 4rem;
-    font-size: 1.6rem;
-    max-width: 26rem;
-  }
+.music--content {
+  margin: 0 auto;
+  max-width: none;
+  /* font-size: 1.6rem; */
+  /* max-width: 26rem; */
+}
 
-  .music--page--dark > .shakespeare--dark {
-    max-width: 22rem;
-    margin-left: 5rem;
-    
-  }
+.music--content > p {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin: 0 auto; */
+  color: white;
+  margin: 1rem 7rem 2rem 7rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
 
-  .music--content--dark {
-    margin-top: 4rem;
-    font-size: 1.6rem;
-    max-width: 26rem;
-    margin-bottom: 3rem;
-  }
+.iframe--spotify {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 10.5rem;
+  max-width: 40rem;
+}
+
+.music--page--dark {
+  padding: 0;
+  background-image: url(/src/images/guitar13.jpg);
+  /* background-position: 50% 80%; */
+}
+
+.music--page--dark > .welcome--title--dark {
+  color: white;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.shakespeare--dark {
+  /* max-width: 20rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0rem;
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  margin-bottom: 4rem;
+}
+
+.music--content--dark {
+  margin: 0 auto;
+  max-width: none;
+  /* font-size: 1.6rem; */
+  /* max-width: 26rem; */
+}
+
+.music--content--dark > p {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin: 0 auto; */
+  color: white;
+  margin: 1rem 7rem 2rem 7rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
 
 
   /* audio page */
@@ -3756,6 +3937,9 @@ input:checked + .slider:before {
     padding: 0.7rem;
     font-size: 1.8rem;
   }
+
+  
+
 }
 
 
