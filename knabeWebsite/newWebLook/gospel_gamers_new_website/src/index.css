@@ -2765,9 +2765,6 @@ input:checked + .slider:before {
     font-weight: 600;
   }
 
-
-
-
   /* footer */
 
   .footer-bar, .footer--bar--dark {
@@ -2792,38 +2789,46 @@ input:checked + .slider:before {
     margin-right: 0.8rem;
   }
 
-
-
   /* bio page  */
   .bio--page {
-    background-image: url('./images/berlinDay/berlin13.jpg');
-    /* background-position: center; */
-    background-position: top;
-    background-size: cover;
+    background-image: url('./images/berlinDay/berlin2.jpg');
+    background-position: center;
+    /* background-position: ; */
+    /* background-size: cover; */
+    padding: 0;
   }
 
   .bio--page--dark {
-
+    padding: 0;
+    background-image: url('./images/berlinDay/berlin11.jpg');
   }
 
-  .bio--welcome--title {
-    font-size: 3rem;
-  }
-
-  .bio--welcome--title--dark {
-    font-size: 3rem;
+  .bio--welcome--title, .bio--welcome--title--dark {
+    padding-top: 6rem;
+    font-size: 2.2rem;
+    display: flex;
+    /* color: white; */
+    justify-content: center;
+    align-items: center;
   }
 
   .bio--para {
     font-size: 1.4rem;
     margin-top: 2rem;
-    margin-bottom: 32rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    /* color: white; */
   }
 
   .bio--para--dark {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-top: 2rem;
-    margin-bottom: 27rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
   }
 
   /*  music page */
@@ -2977,6 +2982,7 @@ input:checked + .slider:before {
 }
 
 
+
 /* Media query for screens between mobile and iPad */
 @media (min-width: 415px) and (max-width: 768px) {
    /* HomePage.jsx light */
@@ -3007,6 +3013,8 @@ input:checked + .slider:before {
   }
 
   .nav--bar {
+    background-image: url('./images/berlinDay/berlin13.jpg');
+    background-position: 28% 80%;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -3016,6 +3024,8 @@ input:checked + .slider:before {
   }
 
   .nav--bar--dark {
+    background-image: url('./images/berlinNight/berlin8.jpg');
+    background-position: 54% 42.2%;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -3029,11 +3039,11 @@ input:checked + .slider:before {
     height: 4.5rem;
   }
 
-  .nav--logoTitle, .nav--logoTitle {
+  .nav--logoTitle, .nav--logoTitle--dark {
     font-size: 1.5rem;
   }
 
-  .nav--items > li, .nav--items--dark {
+  .nav--items > li, .nav--items--dark > li {
     /* padding: 1rem;  */
     display: none;
     font-size: 1.4rem;
@@ -3094,6 +3104,8 @@ input:checked + .slider:before {
   }
 
   .menu--bar {
+    background-image: url('./images/berlinDay/berlin13.jpg');
+    background-position: 25.5% 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3107,13 +3119,15 @@ input:checked + .slider:before {
   }
 
   .menu--bar--dark {
+    background-image: url('./images/berlinNight/berlin8.jpg');
+    background-position: 54% 41%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 2;
     top: 0;
-    background-color: #273788;
+    /* background-color: #273788; */
     height: 12rem; 
     width: 100%;
     border-radius: 0;
@@ -3165,14 +3179,109 @@ input:checked + .slider:before {
   }
 
 
-  .footer--bar, .footer--bar--dark {
-    margin: 0;
-    padding-bottom: 2rem;
-  }
+
+
+/* bio page  */
+.bio--page, .bio--page--dark {
+  /* background-image: url('./images/berlinDay/berlin13.jpg'); */
+  /* background-position: center; */
+  background-image: none;
+  height: auto;
+  width: 100vw;
+  /* background-position: ; */
+  /* background-size: cover; */
+  padding: 0;
+}
+
+.bio--welcome--title, .bio--welcome--title--dark {
+  padding-top: 10rem;
+  font-size: 2.2rem;
+  display: flex;
+  margin-bottom: 4rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.bio--para, .bio--para--dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 23rem;
+  margin: 0 auto;
+
+  font-size: 1.45rem;
+  margin-top: 3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+
+}
+
+  /* footer lightMode */
+
+.footer--bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.footer--cpr {
+  font-size: 0.8rem;
+  margin-left: 1rem;;
+  /* color: white; */
+}
+
+.footer--social {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  /* margin-right: 3rem; */
+}
+
+.footer--social > a {
+  /* color: #213547; */
+  /* color: white; */
+  padding-bottom: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 1.3rem;
+}
+
+/* footer darkMode */
+
+.footer--bar--dark {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.footer--cpr--dark {
+  font-size: 0.8rem;
+  margin-left: 1rem;;
+  /* color: white; */
+}
+
+.footer--social--dark {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  /* margin-right: 3rem; */
+}
+
+.footer--social--dark > a {
+  /* color: #213547; */
+  /* color: white; */
+  padding-bottom: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 1.3rem;
+}
+
 
 
 
 }
+
 
 
 /* Media query for screens between 769px and 1279px wide (typical for tablets in vertical position...?) */
@@ -3221,6 +3330,8 @@ input:checked + .slider:before {
   /* navbar  */
 
   .nav--bar {
+    background-image: url('./images/berlinDay/berlin13.jpg');
+    background-position: 20% 79.6%;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -3233,6 +3344,8 @@ input:checked + .slider:before {
   }
 
   .nav--bar--dark {
+    background-image: url('./images/berlinNight/berlin8.jpg');
+    background-position: 54% 40.3%;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -3320,6 +3433,8 @@ input:checked + .slider:before {
   }
 
   .menu--bar {
+    background-image: url('./images/berlinDay/berlin13.jpg');
+    background-position: 20% 80.2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3337,6 +3452,8 @@ input:checked + .slider:before {
   }
 
   .menu--bar--dark {
+    background-image: url('./images/berlinNight/berlin8.jpg');
+    background-position: 54% 41%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3402,37 +3519,43 @@ input:checked + .slider:before {
     font-weight: 600;
   }
 
-  /* bio page  */
-  .bio--page {
-    background-image: url('./images/berlinDay/berlin13.jpg');
-    /* background-position: center; */
-    background-position: top;
-    background-size: cover;
-  }
+/* bio page  */
+.bio--page, .bio--page--dark {
+  /* background-image: url('./images/berlinDay/berlin13.jpg'); */
+  /* background-position: center; */
+  background-image: none;
+  height: auto;
+  width: 100vw;
+  /* background-position: ; */
+  /* background-size: cover; */
+  padding: 0;
+}
 
-  .bio--page--dark {
+.bio--welcome--title, .bio--welcome--title--dark {
+  padding-top: 14rem;
+  font-size: 2.8rem;
+  display: flex;
+  margin-bottom: 4rem;
 
-  }
+  justify-content: center;
+  align-items: center;
+}
 
-  .bio--welcome--title {
-    font-size: 3rem;
-  }
+.bio--para, .bio--para--dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 30rem;
+  margin: 0 auto;
 
-  .bio--welcome--title--dark {
-    font-size: 3rem;
-  }
+  font-size: 1.45rem;
+  margin-top: 3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
 
-  .bio--para {
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    margin-bottom: 32rem;
-  }
+}
 
-  .bio--para--dark {
-    font-size: 1.6rem;
-    margin-top: 2rem;
-    margin-bottom: 27rem;
-  }
+
 
   /*  music page */
   .music--page--dark {
@@ -3684,67 +3807,3 @@ input:checked + .slider:before {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media queries for light or dark mode */
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    color: black;
-    background-color: darkblue;
-  }
-  a:hover {
-    color: #535bf2;
-  }
-} */
-
-/* media queries for screen sizes */
-
-/* former count  button
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-*/
