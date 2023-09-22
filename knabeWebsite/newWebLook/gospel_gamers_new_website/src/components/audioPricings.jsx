@@ -64,98 +64,96 @@ export default function AudioPricings(props) {
     }
 
     return (
-        <div>
-            <div className={!props.darkMode ? 'audio--content' : 'audio--content--dark'}>
-                <div className={!props.darkMode ? 'audio--titles' : 'audio--titles--dark'}>
-                    <h1>Mixing</h1>
-                    <h1>Mastering</h1>
-                </div>
+        <div className={!props.darkMode ? 'audio--content' : 'audio--content--dark'}>
+            <div className={!props.darkMode ? 'audio--titles' : 'audio--titles--dark'}>
+                <h1>Mixing</h1>
+                <h1>Mastering</h1>
+            </div>
 
-                <div className={!props.darkMode ? 'audio--pricings' : 'audio--pricings--dark'}>
+            <div className={!props.darkMode ? 'audio--pricings' : 'audio--pricings--dark'}>
 
-                    <div className={!props.darkMode ? 'audio--mixing' : 'audio--mixing--dark'}>
-                        <div className={!props.darkMode ? 'mixing--list' : 'mixing--list--dark'}>
-                            <div onClick={singleMixBool} className={!props.darkMode ? 'mixing--single' : 'mixing--single--dark'}>
-                                <h3>Single</h3>
-                            </div>
-                            <div onClick={epMixBool} className={!props.darkMode ? 'mixing--ep' : 'mixing--ep--dark'}>
-                                <h3>EP</h3>
-                            </div>
-                            <div onClick={lpMixBool} className={!props.darkMode ? 'mixing--lp' : 'mixing--lp--dark'}>
-                                <h3>LP</h3>
-                            </div>
-
+                <div className={!props.darkMode ? 'audio--mixing' : 'audio--mixing--dark'}>
+                    <div className={!props.darkMode ? 'mixing--list' : 'mixing--list--dark'}>
+                        <div onClick={singleMixBool} className={!props.darkMode ? 'mixing--single' : 'mixing--single--dark'}>
+                            <h3>Single</h3>
                         </div>
-
-                        {singleMix && <AudioParagraph 
-                        className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
-                        text='Mixing audio is an underappreciated art form.                    
-                        I have been mixing in studio and live settings for nearly a decade. Now I mix for recording artists from my home studio.
-                        My rate is $250 per song, which includes:
-                        
-                        an initial first mix,
-                        a second revised mix after you give it a listen 
-                        and one final mix with correct levels for mastering.
-                        Bundle your savings with an EP or LP!
-                        '
-                        />}
-                        {epMix && <AudioParagraph 
-                        className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
-                        text={`An Extended Play (EP) four to six tracks and is under 30 minutes in duration. My rate changes to $200 per song with the same qualifications as before for each song:                     
-                        an initial first mix,
-                        a second revised mix after you give it a listen 
-                        and one final mix with correct levels for mastering.`}
-                        />}
-                        {lpMix && <AudioParagraph 
-                        className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
-                        text={`A Long Play (LP) has seven or more tracks and is over 30 minutes in duration. My rate changes to $150 per song with the same qualifications as before for each song:                     
-                        an initial first mix,
-                        a second revised mix after you give it a listen 
-                        and one final mix with correct levels for mastering.`}
-                        />}
+                        <div onClick={epMixBool} className={!props.darkMode ? 'mixing--ep' : 'mixing--ep--dark'}>
+                            <h3>EP</h3>
+                        </div>
+                        <div onClick={lpMixBool} className={!props.darkMode ? 'mixing--lp' : 'mixing--lp--dark'}>
+                            <h3>LP</h3>
+                        </div>
 
                     </div>
 
-                    <div className={!props.darkMode ? 'audio--mastering' : 'audio--mastering--dark'}>
-                        <div className={!props.darkMode ? 'mastering--list' : 'mastering--list--dark'}>
-                            <div onClick={singleMasterBool} className={!props.darkMode ? 'mastering--single' : 'mastering--single--dark'}>
-                                <h3>Single</h3>
-                            </div>
-                            <div onClick={epMasterBool} className={!props.darkMode ? 'mastering--ep' : 'mastering--ep--dark'}>
-                                <h3>EP</h3>
-                            </div>
-                            <div onClick={lpMasterBool} className={!props.darkMode ? 'mastering--lp' : 'mastering--lp--dark'}>
-                                <h3>LP</h3>
-                            </div>
+                    {singleMix && <AudioParagraph 
+                    className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
+                    text='Mixing audio is an underappreciated art form.                    
+                    I have been mixing in studio and live settings for nearly a decade. Now I mix for recording artists from my home studio.
+                    My rate is $250 per song, which includes:
+                    
+                    an initial first mix,
+                    a second revised mix after you give it a listen 
+                    and one final mix with correct levels for mastering.
+                    Bundle your savings with an EP or LP!
+                    '
+                    />}
+                    {epMix && <AudioParagraph 
+                    className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
+                    text={`An Extended Play (EP) four to six tracks and is under 30 minutes in duration. My rate changes to $200 per song with the same qualifications as before for each song:                     
+                    an initial first mix,
+                    a second revised mix after you give it a listen 
+                    and one final mix with correct levels for mastering.`}
+                    />}
+                    {lpMix && <AudioParagraph 
+                    className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
+                    text={`A Long Play (LP) has seven or more tracks and is over 30 minutes in duration. My rate changes to $150 per song with the same qualifications as before for each song:                     
+                    an initial first mix,
+                    a second revised mix after you give it a listen 
+                    and one final mix with correct levels for mastering.`}
+                    />}
 
+                </div>
+
+                <div className={!props.darkMode ? 'audio--mastering' : 'audio--mastering--dark'}>
+                    <div className={!props.darkMode ? 'mastering--list' : 'mastering--list--dark'}>
+                        <div onClick={singleMasterBool} className={!props.darkMode ? 'mastering--single' : 'mastering--single--dark'}>
+                            <h3>Single</h3>
                         </div>
-
-                        {singleMaster&& <AudioParagraph 
-                        className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
-                        text={`So you get this awesome mix going on your home speakers.                   
-                        But wait... why can't I hear it on my phone?
-                        And why does it distort all of a sudden in my car?
-                        
-                        Welcome to the world of mastering.                   
-                        
-                        My rate for mastering is $250 per song, which includes:
-                        
-                        an initial first master,
-                        a second revised master after you give it a listen and
-                        one final master ready for release.`}
-                        />}
-                        {epMaster&& <AudioParagraph 
-                        className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
-                        text={`An Extended Play (EP) four to six tracks and is under 30 minutes in duration. My rate changes to $200 per song with the same qualifications as before for each song: an initial first master, a second revised master after you give it a listen and one final master ready for release.`}
-                        />}
-                        {lpMaster&& <AudioParagraph 
-                        className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
-                        text={`A Long Play (LP) has seven or more tracks and is over 30 minutes in duration. My rate changes to $150 per song with the same qualifications as before for each song: an initial first master, a second revised master after you give it a listen and one final master ready for release.`}
-                        />}
+                        <div onClick={epMasterBool} className={!props.darkMode ? 'mastering--ep' : 'mastering--ep--dark'}>
+                            <h3>EP</h3>
+                        </div>
+                        <div onClick={lpMasterBool} className={!props.darkMode ? 'mastering--lp' : 'mastering--lp--dark'}>
+                            <h3>LP</h3>
+                        </div>
 
                     </div>
 
+                    {singleMaster&& <AudioParagraph 
+                    className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
+                    text={`So you get this awesome mix going on your home speakers.                   
+                    But wait... why can't I hear it on my phone?
+                    And why does it distort all of a sudden in my car?
+                    
+                    Welcome to the world of mastering.                   
+                    
+                    My rate for mastering is $250 per song, which includes:
+                    
+                    an initial first master,
+                    a second revised master after you give it a listen and
+                    one final master ready for release.`}
+                    />}
+                    {epMaster&& <AudioParagraph 
+                    className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
+                    text={`An Extended Play (EP) four to six tracks and is under 30 minutes in duration. My rate changes to $200 per song with the same qualifications as before for each song: an initial first master, a second revised master after you give it a listen and one final master ready for release.`}
+                    />}
+                    {lpMaster&& <AudioParagraph 
+                    className={!props.darkMode ? 'audio--paragraph' : 'audio--paragraph--dark'}
+                    text={`A Long Play (LP) has seven or more tracks and is over 30 minutes in duration. My rate changes to $150 per song with the same qualifications as before for each song: an initial first master, a second revised master after you give it a listen and one final master ready for release.`}
+                    />}
+
                 </div>
+
             </div>
         </div>
     )

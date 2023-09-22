@@ -29,7 +29,6 @@ export default function Bio() {
       {/* <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/> */}
       {/* Have Menubar closed or open based on screen size also */}
       {!isMenuOpen && <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>}
-
       {isMenuOpen && <MenuBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>}
 
       <h1 className={!darkMode ? 'bio--welcome--title' : 'bio--welcome--title--dark'}>gospel_gamers | bio 📖</h1>

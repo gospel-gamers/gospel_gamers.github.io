@@ -2768,7 +2768,7 @@ input:checked + .slider:before {
   /* footer */
 
   .footer-bar, .footer--bar--dark {
-
+    /* margin-top: 10rem; */
   }
 
   .footer--cpr, .footer--cpr--dark {
@@ -2914,48 +2914,93 @@ input:checked + .slider:before {
 
   /* audio page */
   .audio--page {
+    padding: 0;
     background-position: 30% 0%;
+    height: 155vh;
+  }
+
+  .audio--page--dark {
+    padding: 0;
+    height: 155vh;
   }
 
   .audio--page > .welcome--title, .audio--page--dark > .welcome--title--dark {
-    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    line-height: 2.7rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
     /* margin: 0rem; */
   }
 
+  .audio--content, .audio--content--dark {
+    display: flex;
+    flex-direction: column;
+    height: 115vh;
+
+    /* margin-bottom: 15rem; */
+    /* flex-direction: column; */
+  }
+
   .audio--titles, .audio--titles--dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0rem;
-    margin-bottom: 2rem;
+    margin: 0 auto;
   }
 
   .audio--titles > h1, .audio--titles--dark > h1 {
-    font-size: 3rem;
+    font-size: 1.8rem;
+    padding: 1rem;
   }
 
-  .audio--content, .audio--content--dark {
-    margin-bottom: 15rem;
+  .audio--mixing, .audio--mixing--dark {
+    margin-bottom: 3rem;
   }
 
   .audio--pricings, .audio--pricings--dark {
     margin: 0rem;
+    display: inline-flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* display: none; */
   }
 
   .mixing--list, .mixing--list--dark {
-    margin-left: 0rem;
-  }
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    justify-content: center;
 
-  .mastering--list, .mastering--list--dark {
-    margin-left: 0rem;
+    width: 83vw;
+    height: 11vh;
   }
 
   .audio--paragraph, .audio--paragraph--dark {
-    height: 36rem;
-    width: 24rem;
-    margin-left: 0rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+
+    width: 70vw;
+    height: 30vh;
   }
 
   .audio--paragraph > p, .audio--paragraph--dark > p {
-    font-size: 1.6rem;
+    font-size: 0.95rem;
+    margin: 0;
+    font-weight: 600;
     /* align-items: start; */
+  }
+
+  .mastering--list, .mastering--list--dark {
+    display: flex;
+    margin: 0 auto;
+    /* margin-top: 0.5rem; */
+    justify-content: center;
+
+    width: 83vw;
+    height: 11vh;
   }
 
   /* weddings page */
@@ -3222,6 +3267,67 @@ input:checked + .slider:before {
     font-weight: 600;
   }
 
+    /* footer lightMode */
+
+.footer--bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.footer--cpr {
+  font-size: 0.8rem;
+  margin-left: 1rem;;
+  /* color: white; */
+}
+
+.footer--social {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  /* margin-right: 3rem; */
+}
+
+.footer--social > a {
+  /* color: #213547; */
+  /* color: white; */
+  padding-bottom: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 1.3rem;
+}
+
+/* footer darkMode */
+
+.footer--bar--dark {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.footer--cpr--dark {
+  font-size: 0.8rem;
+  margin-left: 1rem;;
+  /* color: white; */
+}
+
+.footer--social--dark {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  /* margin-right: 3rem; */
+}
+
+.footer--social--dark > a {
+  /* color: #213547; */
+  /* color: white; */
+  padding-bottom: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 1.3rem;
+}
+
+
 /* bio page  */
 .bio--page, .bio--page--dark {
   /* background-image: url('./images/berlinDay/berlin13.jpg'); */
@@ -3342,67 +3448,98 @@ input:checked + .slider:before {
   line-height: 1.2;
 }
 
+  /* audio page */
+  .audio--page {
+    padding: 0;
+    background-position: 30% 0%;
+    height: 212vh;
+  }
 
-  /* footer lightMode */
+  .audio--page--dark {
+    padding: 0;
+    height: 212vh;
+  }
 
-.footer--bar {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
+  .audio--page > .welcome--title, .audio--page--dark > .welcome--title--dark {
+    display: flex;
+    justify-content: center;
+    line-height: 4rem;
+    font-size: 4.5vh;
+    padding-top: 20vh;
+    margin-bottom: 3.5rem;
+    /* margin: 0rem; */
+  }
 
-.footer--cpr {
-  font-size: 0.8rem;
-  margin-left: 1rem;;
-  /* color: white; */
-}
+  .audio--content, .audio--content--dark {
+    display: flex;
+    flex-direction: column;
+    height: 143vh;
+    /* margin-bottom: 15rem; */
+    /* flex-direction: column; */
+  }
 
-.footer--social {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 1rem;
-  font-size: 1.8rem;
-  /* margin-right: 3rem; */
-}
+  .audio--titles, .audio--titles--dark {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
 
-.footer--social > a {
-  /* color: #213547; */
-  /* color: white; */
-  padding-bottom: 2rem;
-  margin-top: 0.5rem;
-  margin-right: 1.3rem;
-}
+  .audio--titles > h1, .audio--titles--dark > h1 {
+    font-size: 3rem;
+    padding: 1rem;
+    display: none;
+  }
 
-/* footer darkMode */
+  .audio--mixing, .audio--mixing--dark {
+    margin-bottom: 3rem;
+  }
 
-.footer--bar--dark {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
+  .audio--pricings, .audio--pricings--dark {
+    margin: 0rem;
+    display: inline-flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* display: none; */
+  }
 
-.footer--cpr--dark {
-  font-size: 0.8rem;
-  margin-left: 1rem;;
-  /* color: white; */
-}
+  .mixing--list, .mixing--list--dark {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 0rem;
+    justify-content: center;
 
-.footer--social--dark {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 1rem;
-  font-size: 1.8rem;
-  /* margin-right: 3rem; */
-}
+    width: 88vw;
+    height: 11vh;
+  }
 
-.footer--social--dark > a {
-  /* color: #213547; */
-  /* color: white; */
-  padding-bottom: 2rem;
-  margin-top: 0.5rem;
-  margin-right: 1.3rem;
-}
+  .audio--paragraph, .audio--paragraph--dark {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
 
+    width: 76vw;
+    height: 50vh;
+  }
+
+  .audio--paragraph > p, .audio--paragraph--dark > p {
+    font-size: 1.4rem;
+    font-weight: 590;
+    margin: 0;
+    /* align-items: start; */
+  }
+
+  .mastering--list, .mastering--list--dark {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 8.5rem;
+    justify-content: center;
+
+    width: 88vw;
+    height: 11vh;
+  }
 
 
 
@@ -3645,181 +3782,162 @@ input:checked + .slider:before {
     font-weight: 600;
   }
 
-/* bio page  */
-.bio--page, .bio--page--dark {
-  /* background-image: url('./images/berlinDay/berlin13.jpg'); */
-  /* background-position: center; */
-  background-image: none;
-  height: auto;
-  width: 100vw;
-  /* background-position: ; */
-  /* background-size: cover; */
-  padding: 0;
-}
-
-.bio--welcome--title, .bio--welcome--title--dark {
-  padding-top: 14rem;
-  font-size: 2.8rem;
-  display: flex;
-  margin-bottom: 4rem;
-
-  justify-content: center;
-  align-items: center;
-}
-
-.bio--para, .bio--para--dark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 30rem;
-  margin: 0 auto;
-
-  font-size: 1.45rem;
-  margin-top: 3rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-
-}
-
-
-
- /*  music page */
- .music--page {
-  padding: 0;
-  background-image: url(/src/images/guitar21.jpg);
-}
-
-.music--page > .welcome--title {
-  color: white;
-  max-width: 40rem;
-  margin-bottom: 2rem;
-}
-
-.shakespeare {
-  /* max-width: 20rem; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0rem;
-  margin-top: 3rem;
-  font-size: 1.7rem;
-  margin-bottom: 4rem;
-}
-
-.music--content {
-  margin: 0 auto;
-  max-width: none;
-  /* font-size: 1.6rem; */
-  /* max-width: 26rem; */
-}
-
-.music--content > p {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  /* margin: 0 auto; */
-  color: white;
-  margin: 1rem 7rem 2rem 7rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  line-height: 1.2;
-}
-
-.iframe--spotify {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 10.5rem;
-  max-width: 40rem;
-}
-
-.music--page--dark {
-  padding: 0;
-  background-image: url(/src/images/guitar13.jpg);
-  /* background-position: 50% 80%; */
-}
-
-.music--page--dark > .welcome--title--dark {
-  color: white;
-  max-width: 40rem;
-  margin-bottom: 2rem;
-}
-
-.shakespeare--dark {
-  /* max-width: 20rem; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0rem;
-  margin-top: 3rem;
-  font-size: 1.7rem;
-  margin-bottom: 4rem;
-}
-
-.music--content--dark {
-  margin: 0 auto;
-  max-width: none;
-  /* font-size: 1.6rem; */
-  /* max-width: 26rem; */
-}
-
-.music--content--dark > p {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  /* margin: 0 auto; */
-  color: white;
-  margin: 1rem 7rem 2rem 7rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  line-height: 1.2;
-}
-
-
-  /* audio page */
-  .audio--page {
-    background-position: 30% 0%;
+  .footer--bar, .footer--bar--dark {
+    padding-bottom: 2rem;
+    margin-top: 1rem;
   }
 
-  .audio--page > .welcome--title, .audio--page--dark > .welcome--title--dark {
-    font-size: 2.5rem;
-    /* margin: 0rem; */
+  .footer--social, .footer--social--dark {
+    font-size: 2rem;
+    /* margin-right: 4rem; */
   }
 
-  .audio--titles, .audio--titles--dark {
-    padding: 0rem;
+
+  /* bio page  */
+  .bio--page, .bio--page--dark {
+    /* background-image: url('./images/berlinDay/berlin13.jpg'); */
+    /* background-position: center; */
+    background-image: none;
+    height: auto;
+    width: 100vw;
+    /* background-position: ; */
+    /* background-size: cover; */
+    padding: 0;
+  }
+
+  .bio--welcome--title, .bio--welcome--title--dark {
+    padding-top: 14rem;
+    font-size: 2.8rem;
+    display: flex;
+    margin-bottom: 4rem;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bio--para, .bio--para--dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+    margin: 0 auto;
+
+    font-size: 1.45rem;
+    margin-top: 3rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+
+  }
+
+
+  /*  music page */
+  .music--page {
+    padding: 0;
+    background-image: url(/src/images/guitar21.jpg);
+  }
+
+  .music--page > .welcome--title {
+    color: white;
+    max-width: 40rem;
     margin-bottom: 2rem;
   }
 
-  .audio--titles > h1, .audio--titles--dark > h1 {
-    font-size: 3rem;
-  }
-
-  .audio--content, .audio--content--dark {
-    margin-bottom: 15rem;
-  }
-
-  .audio--pricings, .audio--pricings--dark {
-    margin: 0rem;
-  }
-
-  .mixing--list, .mixing--list--dark {
+  .shakespeare {
+    /* max-width: 20rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 0rem;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
   }
 
-  .mastering--list, .mastering--list--dark {
+  .music--content {
+    margin: 0 auto;
+    max-width: none;
+    /* font-size: 1.6rem; */
+    /* max-width: 26rem; */
+  }
+
+  .music--content > p {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin: 0 auto; */
+    color: white;
+    margin: 1rem 7rem 2rem 7rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .iframe--spotify {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10.5rem;
+    max-width: 40rem;
+  }
+
+  .music--page--dark {
+    padding: 0;
+    background-image: url(/src/images/guitar13.jpg);
+    /* background-position: 50% 80%; */
+  }
+
+  .music--page--dark > .welcome--title--dark {
+    color: white;
+    max-width: 40rem;
+    margin-bottom: 2rem;
+  }
+
+  .shakespeare--dark {
+    /* max-width: 20rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 0rem;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
   }
 
-  .audio--paragraph, .audio--paragraph--dark {
-    height: 36rem;
-    width: 24rem;
-    margin-left: 0rem;
+  .music--content--dark {
+    margin: 0 auto;
+    max-width: none;
+    /* font-size: 1.6rem; */
+    /* max-width: 26rem; */
   }
 
-  .audio--paragraph > p, .audio--paragraph--dark > p {
-    font-size: 1.6rem;
-    /* align-items: start; */
+  .music--content--dark > p {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin: 0 auto; */
+    color: white;
+    margin: 1rem 7rem 2rem 7rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
+
+
+ .audio--page, .audio--page--dark {
+  padding: 0;
+ }
+
+ .audio--content, .audio--content--dark {
+  height: 100vh;
+ }
+
+ .audio--paragraph, .audio--paragraph--dark {
+  height: 67vh;
+ }
+
+ .audio--paragraph > p, .audio--paragraph--dark > p {
+  font-size: 2.5vh;
+  font-weight: 600;
+ }
 
   /* weddings page */
 
@@ -3885,15 +4003,6 @@ input:checked + .slider:before {
     margin-bottom: 9rem;
   }
 
-  .footer--bar, .footer--bar--dark {
-    padding-bottom: 2rem;
-    margin-top: 1rem;
-  }
-
-  .footer--social, .footer--social--dark {
-    font-size: 2rem;
-    /* margin-right: 4rem; */
-  }
 
 }
 
@@ -3938,7 +4047,16 @@ input:checked + .slider:before {
     font-size: 1.8rem;
   }
 
-  
+
+  /* audio page */
+
+  .audio--content, .audio--content--dark {
+    height: 85vh;
+  }
+
+  .audio--paragraph, .audio--paragraph--dark {
+    height: 50vh;
+  }
 
 }
 
@@ -3988,6 +4106,16 @@ input:checked + .slider:before {
     margin-bottom: 4rem;
     width: 42rem;
     height: 32rem;
+  }
+
+  /* audio page */
+
+  .audio--content, .audio--content--dark {
+    height: 80vh;
+  }
+
+  .audio--paragraph, .audio--paragraph--dark {
+    height: 45vh;
   }
 }
 
