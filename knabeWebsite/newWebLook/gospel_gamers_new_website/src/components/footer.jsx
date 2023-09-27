@@ -1,4 +1,5 @@
 import React from "react"
+import './footer.css'
 import { FaYoutube, FaInstagram, FaGithub } from 'react-icons/fa';
 //import ReactDOM from "react-dom"
 

@@ -1,0 +1,127 @@
+/* coding page css rules */
+
+ .coding--page {
+    width: auto;
+    height: 100%;
+    background-image: url('../images/web3.jpg');
+    background-position: top;
+    background-size: cover;
+    background-color:hsla(26, 92%, 68%, 0.285);
+    margin: 0 auto;
+    padding: 3rem;
+    /* text-align: center; */
+    /* display: block; */
+  
+  }
+  
+  .coding--page--dark {
+    width: auto;
+    height: 100%;
+    background-image: url('../images/web14.jpg');
+    background-position: 60% 3.6%;
+    /*background-color: rgba(16, 25, 68, 0.845);*/
+    background-color: rgb(38, 32, 78);
+    margin: 0 auto;
+    padding: 3rem;
+    /* text-align: center; */
+  }
+  
+  .welcome--coding--title {
+    color: white;
+    font-size: 4rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+  
+  }
+  
+  .welcome--coding--title--dark {
+    color: white;
+    font-size: 4rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+  }
+  
+  
+  .coding--page > p {
+    max-width: 55rem;
+    margin-bottom: 4.55rem;
+    margin-left: 2rem;
+    color: white;
+    font-size: 2rem;
+    text-align: justify;
+  }
+  
+  .coding--page--dark > p {
+    max-width: 100rem;
+    margin-left: 2rem;
+    margin-bottom: 6.55rem;
+    color: white;
+    font-size: 2rem;
+    text-align: justify;
+  }
+  
+  .coding--button--section {
+    display: flex;
+    margin-left: 5.8rem;
+    margin-bottom: 8.4rem;
+    justify-content:space-around;
+    width: 50rem;
+  }
+  
+  .coding--button--section--dark {
+    display: flex;
+    margin-left: 5.8rem;
+    margin-bottom: 12.4rem;
+    justify-content:space-around;
+    width: 90rem;
+  }
+  
+  .coding--buttons {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #af704c;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .coding--buttons:hover {
+    background-color: #af704c;
+  }
+  
+  .coding--buttons:active {
+    background-color: #af704c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  .coding--buttons--dark {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #af704c;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .coding--buttons--dark:hover {
+    background-color: #af704c;
+  }
+  
+  .coding--buttons--dark:active {
+    background-color: #af704c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

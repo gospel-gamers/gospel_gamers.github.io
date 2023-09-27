@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import './bio.css'
 import NavBar from '../components/navbar'
 import MenuBar from '../components/toggleMenuBar'
 import Footer from '../components/footer'

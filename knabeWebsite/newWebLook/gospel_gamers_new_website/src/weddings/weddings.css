@@ -1,0 +1,320 @@
+/* wedding page css rules */
+
+  .wedding--page {
+    width: auto;
+    height: 100%;
+    background-image: url('../images/wedding18.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color:hsla(26, 92%, 68%, 0.285);
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+  
+  }
+  
+  .wedding--page--dark {
+    width: auto;
+    height: 100%;
+    background-image: url('../images/wedding19.jpg');
+    background-position: top;
+    background-size: cover;
+    /*background-color: rgba(16, 25, 68, 0.845);*/
+    background-color: rgb(38, 32, 78);
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .wedding--titles {
+    display: flex;
+    color: white;
+    /* border: solid blue; */
+    height: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    color: #213547;
+  
+  }
+  
+  .wedding--titles--dark {
+    display: flex;
+    color: white;
+    /* border: solid blue; */
+    height: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .wedding--titles--info {
+    display: flex;
+    /* border: solid blue; */
+    font-weight: 600;
+    height: 2rem;
+    width: auto;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    color: white;
+    text-align: justify;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 2rem;
+    margin-top: 3rem;
+  
+  }
+  
+  .wedding--titles--info--dark {
+    display: flex;
+    /* border: solid blue; */
+    font-weight: 600;
+    height: 2rem;
+    /* max-width: 60rem; */
+    width: auto;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    color: white;
+    text-align: justify;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+  }
+  
+  .wedding--pricings {
+    display: flex;
+    height: 33rem;
+    align-items: center;
+    padding: 0rem;
+    /* opacity: 0.9; */
+  }
+  
+  .wedding--pricings--dark {
+    display: flex;
+    height: 33rem;
+    align-items: center;
+    padding: 0rem;
+    color: white;
+    /* opacity: 0.9; */
+  }
+  
+  .wedding--main {
+    height: 30rem;
+    display: flex;
+    flex: 1;
+  }
+  
+  .wedding--main--dark {
+    height: 30rem;
+    display: flex;
+    flex: 1;
+  }
+  
+  /* wedding pricings component */
+  
+  .wedding--list {
+    flex-direction: column;
+    flex: 1;
+    list-style: none;
+    display: flex;
+    margin-left: 10rem;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
+  
+    /* margin-right: 10rem; */
+    /* margin-top: 6rem; */
+    /* margin-left: 10rem; */
+    /* margin-right: 3rem; */
+    /* background-color: white; */
+    /* align-items: center; */
+    /* opacity: 0.9; */
+    /* justify-content: space-around; */
+    /*box-shadow: 4px 0 4px gray; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  */
+  }
+  
+  .wedding--list > div:hover {
+    opacity: 1;
+    cursor: pointer;
+    border: solid;
+    /* color: white; */
+  }
+  
+  .wedding--list--dark {
+    flex-direction: column;
+    flex: 1;
+    list-style: none;
+    display: flex;
+    margin-left: 10rem;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
+  
+    /* margin-right: 10rem; */
+    /* margin-top: 6rem; */
+    /* margin-left: 10rem; */
+    /* margin-right: 3rem; */
+    /* background-color: white; */
+    /* align-items: center; */
+    /* opacity: 0.9; */
+    /* justify-content: space-around; */
+    /*box-shadow: 4px 0 4px gray; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  */
+  }
+  
+  .wedding--list--dark > div:hover {
+    opacity: 1;
+    cursor: pointer;
+    border-style: solid;
+    border-color: white;
+    color: white;
+  }
+  
+  /* medals for pricings */
+  
+  .wedding--bronze {
+  
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    background-color: rgb(205, 127, 50);
+    /* color: white; */
+    transition: 0.1s ease-in-out;
+    /* border-color: black; */
+    /* border-style: solid; */
+      /* margin: auto; */
+  }
+  
+  .wedding--bronze--dark {
+  
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    color: white;
+    background-color: rgb(205, 127, 50);
+    transition: 0.1s ease-in-out;
+    /* border-color: black; */
+    /* border-style: solid; */
+      /* margin: auto; */
+  }
+  
+  .wedding--silver {
+    /* margin: auto; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    background-color: rgb(192, 192, 192);
+    opacity: 0.9;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .wedding--silver--dark {
+    /* margin: auto; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(192, 192, 192);
+    opacity: 0.9;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .wedding--gold {
+    /* margin: auto; */
+    /* background-color: rgb(255, 215, 0); */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    background-color: goldenrod;
+    opacity: 0.9;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .wedding--gold--dark {
+    /* margin: auto; */
+    /* background-color: rgb(255, 215, 0); */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+    opacity: 0.9;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .wedding--medal--bronze {
+    max-width: 17%;
+  }
+  
+  .wedding--medal--silver {
+    max-width: 20%;
+  }
+  
+  .wedding--medal--gold {
+    max-width: 16%;
+  }
+  
+  /* wedding paragraph component */
+  
+  .wedding--paragraph {
+    border: solid;
+    flex: 3;
+    font-size: 1.7rem;
+    font-weight: 550;
+    background-color: white;
+    opacity: 0.9;
+    height: 76.2%;
+    width: auto;
+    margin-top: 1.4rem;
+    margin-right: 8rem;
+    /* margin-left: 35rem; */
+    /* margin-right: 35rem; */
+    padding: 2rem;
+    align-items: start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  }
+  
+  .wedding--paragraph--dark {
+    border: solid;
+    flex: 3;
+    font-size: 1.7rem;
+    font-weight: 550;
+    background-color: white;
+    opacity: 0.95;
+    height: 75.6%;
+    width: auto;
+    margin-top: 1.4rem;
+    margin-right: 8rem;
+    /* margin-left: 35rem; */
+    /* margin-right: 35rem; */
+    padding: 2rem;
+    align-items: start;
+    background-color: rgba(39, 55, 136, 0.924);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  
+  
+    /*border: solid 1px red;*/
+    /* font-size: 1.7rem;
+    height: 21rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 2rem;
+    align-items: start;
+    background-color: rgba(39, 55, 136, 0.924);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  */
+  }

@@ -1,0 +1,77 @@
+/* cards section lightMode */
+  .cards--section {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card {
+    margin: 1rem;
+    width: 35rem;
+    height: 30rem;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card:hover .card--image {
+    opacity: 0.65;
+    cursor: pointer;
+  }
+  
+  .card--image {
+    width: 100%;
+    height: 80%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    transition: 0.7s ease;
+    backface-visibility: hidden;
+  }
+  
+  .card--container {
+    text-align: center;
+    /*padding: 10px 20px;*/
+  }
+  
+  .card--message {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  
+  /* cards section darkMode */
+  .card--dark {
+    margin: 1rem;
+    width: 35rem;
+    height: 30rem;
+    border-radius: 1rem;
+    background-color: rgba(39, 55, 136, 0.924);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card--dark:hover .card--image--dark {
+    opacity: 0.65;
+    cursor: pointer;
+  }
+  
+  .card--image--dark {
+    width: 100%;
+    height: 80%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    transition: 0.7s ease;
+    backface-visibility: hidden;
+  }
+  
+  .card--container--dark {
+    text-align: center;
+    /*padding: 10px 20px;*/
+  }
+  
+  .card--message--dark {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+  }
+  

@@ -1,4 +1,5 @@
 import React from "react"
+import './card.css'
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 //import ReactDOM from "react-dom"
 import BioImg from '../images/berlin2.jpg'

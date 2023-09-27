@@ -1,0 +1,58 @@
+/* bio page css rules */
+
+  .bio--page {
+    width: auto;
+    height: 100%;
+    background-image: url('../images/berlinDay/berlin13.jpg');
+    /* background-position: center; */
+    background-position: 40% 36%;
+    background-size: cover;
+    background-color:hsla(26, 92%, 68%, 0.285);
+    margin: 0 auto;
+    padding: 3rem;
+    /* text-align: center; */
+  
+  }
+  
+  .bio--page--dark {
+    width: auto;
+    height: 100%;
+    background-image: url('../images/berlinNight/berlin14.jpg');
+    background-position: 40% 68%;
+    background-size: cover;
+    /*background-color: rgba(16, 25, 68, 0.845);*/
+    background-color: rgb(38, 32, 78);
+    margin: 0 auto;
+    padding: 3rem;
+    /* text-align: center; */
+  }
+  
+  .bio--welcome--title {
+    margin-top: 3rem;
+    font-size: 4rem;
+    color: black;
+  }
+  
+  .bio--welcome--title--dark {
+    margin-top: 3rem;
+    font-size: 4rem;
+    color: white;
+  }
+  
+  .bio--para {
+    margin-bottom: 9.55rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: black;
+    text-align: justify;
+    max-width: 58rem;
+  }
+  
+  .bio--para--dark {
+    margin-bottom: 9.55rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    text-align: justify;
+    max-width: 58rem;
+  }

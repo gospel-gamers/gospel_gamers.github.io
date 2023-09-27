@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './jazzScales.css'
 import NavBar from '../components/navbar'
 import PianoNote from '../components/pianoNote'
 import JazzChordsButtons from '../components/jazzChordsButtons'

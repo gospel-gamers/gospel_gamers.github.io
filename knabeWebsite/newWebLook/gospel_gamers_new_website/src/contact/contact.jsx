@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './contact.css'
 import NavBar from '../components/navbar'
 import ContactForm from '../components/contactForm'
 import Footer from '../components/footer'

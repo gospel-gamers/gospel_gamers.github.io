@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './music.css'
 import NavBar from '../components/navbar'
 import MenuBar from '../components/toggleMenuBar'
 import Footer from '../components/footer'
