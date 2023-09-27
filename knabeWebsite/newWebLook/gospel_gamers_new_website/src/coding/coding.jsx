@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './coding.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import NavBar from '../components/navbar'
+import MenuBar from '../components/toggleMenuBar'
 import Footer from '../components/footer'
 
 export default function Coding() {
@@ -12,10 +13,21 @@ export default function Coding() {
     setDarkMode(prevMode => !prevMode)
   }
 
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+      // console.log(isMenuOpen)
+  };
+
+
   return (
     <div className={!darkMode ? 'coding--page' : 'coding--page--dark'}>
 
-      <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+      {/* <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/> */}
+      {/* Have Menubar closed or open based on screen size also */}
+      {!isMenuOpen && <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>}
+      {isMenuOpen && <MenuBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}/>}
 
       <h1 className={!darkMode ? 'welcome--coding--title' : 'welcome--coding--title--dark'}>coding == 'cool' ? 🥳 : 😩</h1>
 

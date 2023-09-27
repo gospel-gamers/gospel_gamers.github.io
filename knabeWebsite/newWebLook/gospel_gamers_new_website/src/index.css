@@ -1,5 +1,3 @@
-
-
 /* * {
   box-sizing: border-box;
 } */
@@ -100,9 +98,223 @@ body {
 }
 
 
+/* navbar css rules */
+
+.button--sunLogo {
+  width: 4rem;
+  margin-right: 3rem;
+}
+
+.button--moonLogo {
+  width: 4rem;
+  margin-right: 3rem;
+}
+
+
+/* navbar lightMode */
+.nav--bar {
+  display: flex;
+  background-color: white;
+  opacity: 1;
+  border-radius: 1rem;
+  height: 6.4rem;
+  align-items: center;
+  justify-content: space-between;
+  /*box-shadow: 4px 0 4px gray; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.nav--logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-shrink: 0; */
+}
+
+.nav--mainLogo {
+  width: auto;
+  height: 6.5rem;
+  display: absolute;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  /*padding: 2.5rem;*/
+}
+
+.nav--logoTitle {
+  font-size: 2rem;
+  color: black;
+}
+
+.nav--logoTitle:hover {
+  color: tomato;
+}
+
+.nav--menuLogo {
+  width: 5rem;
+  margin: 40px;
+}
+
+.nav--items {
+  list-style: none;
+  display: flex;
+  /* flex-shrink: 2; */
+}
+
+.nav--items > li {
+  padding: 3rem;
+  font-size: 1.7rem;
+}
+
+.nav--items > li:hover {
+  cursor: pointer;
+  color: tomato;
+  font-weight: 600;
+}
+
+/* navbar darkMode*/
+.nav--bar--dark {
+  display: flex;
+  background-color: rgba(39, 55, 136, 0.924);
+  opacity: 1;
+  border-radius: 1rem;
+  height: 6.4rem;
+  align-items: center;
+  justify-content: space-between;
+  /*box-shadow: 4px 0 4px gray; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.nav--logoDiv--dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav--mainLogo--dark {
+  width: auto;
+  height: 6.5rem;
+  display: absolute;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  /*padding: 2.5rem;*/
+}
+
+.nav--logoTitle--dark {
+  font-size: 2rem;
+  color: white;
+}
+
+.nav--logoTitle--dark:hover {
+  color: tomato;
+}
+
+.nav--menuLogo--dark {
+  width: 5rem;
+  margin: 40px;
+}
+
+.nav--items--dark {
+  list-style: none;
+  display: flex;
+  color: white;
+}
+
+.nav--items--dark > li {
+  padding: 3rem;
+  font-size: 1.7rem;
+}
+
+.nav--items--dark > li:hover {
+  cursor: pointer;
+  color: tomato;
+  font-weight: 600;
+}
+
+/* navbar anchor <a> tags from the Links */
+.nav--atag {
+  color: black;
+}
+
+.nav--atag--dark {
+  color: white;
+}
+
+.nav--atag:hover, .nav--atag--dark:hover {
+  color: tomato;
+}
+
+
+
+/* toggle switch button */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
 /* media queries for different screen sizes */
-
-
 /* Media query for screens up to 414px wide (typical for mobile in vertical position) */
 @media (max-width: 414px) {
   /* HomePage.jsx light */
@@ -119,9 +331,9 @@ body {
     padding: 0;
   }
 
-  html {
+  /* html { */
     /* background-color: #F8A36249; */
-  }
+  /* } */
 
   .homepage--title--flex {
     display: flex;
@@ -238,12 +450,12 @@ body {
     display: flex;
   }
 
-  .menu--toggle {
+  /* .menu--toggle { */
     /* margin-right: 3rem; */
     /* width: auto; */
     /* height: 3rem; */
     /* display: none; */
-  }
+  /* } */
 
   .menu--img, .menu--img--dark {
     margin-right: 2rem; 
@@ -334,9 +546,9 @@ body {
 
   /* footer */
 
-  .footer-bar, .footer--bar--dark {
+  /* .footer-bar, .footer--bar--dark { */
     /* margin-top: 10rem; */
-  }
+  /* } */
 
   .footer--cpr, .footer--cpr--dark {
     font-size: 0.6rem;
@@ -358,7 +570,8 @@ body {
 
   /* bio page  */
   .bio--page {
-    background-image: url('./images/berlinDay/berlin2.jpg');
+    /* background-image: url('./images/berlinDay/berlin2.jpg'); */
+    background-image: none;
     background-position: center;
     /* background-position: ; */
     /* background-size: cover; */
@@ -367,14 +580,16 @@ body {
 
   .bio--page--dark {
     padding: 0;
-    background-image: url('./images/berlinDay/berlin11.jpg');
+    /* background-image: url('./images/berlinDay/berlin11.jpg'); */
+    background-image: none;
   }
 
   .bio--welcome--title, .bio--welcome--title--dark {
     padding-top: 6rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
     display: flex;
     /* color: white; */
+    text-align: none;
     justify-content: center;
     align-items: center;
   }
@@ -382,8 +597,8 @@ body {
   .bio--para {
     font-size: 1.4rem;
     margin-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-weight: normal;
     margin-bottom: 2rem;
     /* color: white; */
@@ -392,8 +607,8 @@ body {
   .bio--para--dark {
     font-size: 1.4rem;
     margin-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-weight: normal;
     margin-bottom: 2rem;
   }
@@ -483,12 +698,12 @@ body {
   .audio--page {
     padding: 0;
     background-position: 30% 0%;
-    height: 155vh;
+    height: 90rem;
   }
 
   .audio--page--dark {
     padding: 0;
-    height: 155vh;
+    height: 90rem;
   }
 
   .audio--page > .welcome--title, .audio--page--dark > .welcome--title--dark {
@@ -503,7 +718,7 @@ body {
   .audio--content, .audio--content--dark {
     display: flex;
     flex-direction: column;
-    height: 115vh;
+    height: 68rem;
 
     /* margin-bottom: 15rem; */
     /* flex-direction: column; */
@@ -540,8 +755,8 @@ body {
     margin-top: 2.5rem;
     justify-content: center;
 
-    width: 83vw;
-    height: 11vh;
+    /* width: 83vw;
+    height: 11vh; */
   }
 
   .audio--paragraph, .audio--paragraph--dark {
@@ -550,11 +765,11 @@ body {
     justify-content: center;
 
     width: 70vw;
-    height: 30vh;
+    /* height: 30vh; */
   }
 
   .audio--paragraph > p, .audio--paragraph--dark > p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin: 0;
     font-weight: 600;
     /* align-items: start; */
@@ -563,21 +778,18 @@ body {
   .mastering--list, .mastering--list--dark {
     display: flex;
     margin: 0 auto;
+    margin-top: 1.5rem;
     /* margin-top: 0.5rem; */
     justify-content: center;
 
-    width: 83vw;
-    height: 11vh;
+    /* width: 83vw;
+    height: 11vh; */
   }
 
 
   /* wedding page */
   .wedding--page, .wedding--page--dark {
     padding: 0;
-  }
-
-  .wedding--content, .wedding--content--dark {
-    /* display: none; */
   }
 
   .wedding--titles, .wedding--titles--dark {
@@ -588,57 +800,73 @@ body {
 
   .wedding--pricings, .wedding--pricings--dark {
     /* display: none; */
-    width: 80vw;
+    width: 2rem;
     margin: 0 auto;
     justify-content: center;
   }
 
-  .wedding--main, .wedding--main--dark {
-    /* height: 40vw; */
-  }
-
   .wedding--list, .wedding--list--dark {
     margin: 0rem;
-
-    height: 100vw;
+    padding: 0;
+    /* width: 6rem; */
+    height: 22.2rem;
   }
 
   .wedding--list > div > h3, .wedding--list--dark > div > h3 {
-    font-size: 5vw;
-    width: 5rem;
+    font-size: 1.2rem;
+    width: 6rem;
     /* padding-left: 2rem; */
     /* padding-right: 2rem; */
   }
 
   .wedding--paragraph, .wedding--paragraph--dark {
     margin: 0rem;
-    height: 84vw;
+    width: 12rem;
+    height: 22rem;
+    padding: 0;
   }
 
   .wedding--paragraph > p, .wedding--paragraph--dark > p {
-    font-size: 1.3rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    font-size: 1.4rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .wedding--titles--info, .wedding--titles--info--dark {
-    margin-top: 6rem;
+    margin-top: 0rem;
     margin-left: 0rem;
     margin-bottom: 8rem;
     width: 80vw;
-    font-size: 5vw;
+    font-size: 1.2rem;
+    text-align: justify;
   }
+
 
   /* coding page */
-  .coding--page > h1, .coding--page--dark > h1 {
-    font-size: 3rem;
+  .coding--page {
+    padding: 0;
+    height: 55rem;
+    background-image: url(./images/web6.jpg);
   }
 
-  .coding--page > p {
+  .coding--page--dark {
+    padding: 0;
+    height: 55rem;
+    background-size: cover;
+    background-image: url(./images/web13.jpg);
+  }
+
+  .welcome--coding--title, .welcome--coding--title--dark {
+    padding-top: 4rem;
+    font-size: 1.8rem;
+  }
+
+  .coding--page > p, .coding--page--dark > p {
     margin-top: 4rem;
     margin-bottom: 8rem;
-    max-width: 34rem;
+    width: 85vw;
     text-align: start;
+    font-size: 1.6rem;
   }
 
   .coding--page--dark > p {
@@ -649,8 +877,9 @@ body {
   }
 
   .coding--button--section, .coding--button--section--dark {
-    margin-left: 3.5rem;
-    display: inline-block;
+    /* margin-left: 3.5rem; */
+    /* display: inline-block; */
+    display: none;
   }
   .coding--buttons {
     margin-right: 2rem;
@@ -660,6 +889,63 @@ body {
     margin-right: 15rem;
     margin-bottom: 9rem;
   }
+
+
+  /* contact page */
+  .contact--page, .contact--page--dark {
+    padding: 0;
+    width: 100vw;
+  }
+
+  .contact--welcome--title, .contact--welcome--title--dark {
+    padding-top: 9rem;
+    font-size: 1.4rem;
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact--form, .contact--form--dark {
+    /* display: none; */
+    margin: 0;
+  }
+
+  .input--line, .input--line--dark {
+    height: 8vw;
+    width: 73vw;
+    font-size: 1.2rem;
+  }
+
+  .input--text, .input--text--dark {
+    width: 73vw;
+    height: 50vw;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .captcha--test, .captcha--test--dark {
+    width: 80vw;
+    margin: 0;
+    display: none;
+  }
+
+  .submit--button--class, .submit--button--class--dark {
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    width: 40vw;
+    height: 10vw;
+    /* padding: 0; */
+  }
+
+  .submit--button, .submit--button--dark {
+    font-size: 1rem;
+  }
+
 }
 
 
@@ -1146,459 +1432,457 @@ body {
 
 /* Media query for screens between 769px and 1279px wide (typical for tablets in vertical position...?) */
 @media (min-width: 769px) and (max-width: 1279px) {
-  @media (min-width: 415px) and (max-width: 768px) {
-    /* HomePage.jsx light */
-    
-      /* html, body, App and root */
-      .App, .App--dark, #root {
-        padding: 0;
-        /* display: flexbox; */
-        /* width: 100%; */
-        /* height: 100%; */
-      }
-    
-      .homepage--title--flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-      }
-    
-      .welcome--title, .welcome--title--dark {
-        font-size: 3.3rem;
-        /* width: 50rem; */
-        /* text-align: justify; */
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-top: 16rem;
-        margin: 0 auto 3.5rem auto;
-        
-      }
-    
-      .card, .card--dark {
-        height: 40rem;
-        width: 50rem;
-        margin-bottom: 2.5rem;
-      }
-    
-      .card--dark:active .card--image--dark {
-        opacity: 0.65;
-        cursor: pointer;
-      }
-    
-    
-      /* navbar  */
-    
-      .nav--bar {
-        background-image: url('./images/berlinDay/berlin13.jpg');
-        background-position: 20% 79.6%;
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        height: 6rem; 
-        width: 100%;
-        border-radius: 0;
-        /* transform: scaleY(1); Initially, set scaleY to 1 to keep it visible */
-        /* transform-origin: top; Set the transform origin to the top */
-        /* transition: transform 1.3s; Add a transition for transform property */
-      }
-    
-      .nav--bar--dark {
-        background-image: url('./images/berlinNight/berlin8.jpg');
-        background-position: 54% 40.3%;
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        height: 6rem; 
-        width: 100%;
-        border-radius: 0;
-        background-color: #273788;
-        /* transform: scaleY(1); Initially, set scaleY to 1 to keep it visible */
-        /* transform-origin: top; Set the transform origin to the top */
-        /* transition: transform 1.3s; Add a transition for transform property */
-      }
-    
-      .nav--mainLogo, .nav--mainLogo--dark {
-        height: 4.5rem;
-      }
-    
-      .nav--logoTitle, .nav--logoTitle {
-        font-size: 1.5rem;
-      }
-    
-      .nav--items > li, .nav--items--dark {
-        /* padding: 1rem;  */
-        display: none;
-        font-size: 1.4rem;
-        padding: 1rem;
-      }
-    
-      .switch {
-        position: relative;
-        display: none;
-        width: 50px;
-        height: 24px;
-      }
-    
-      .slider:before {
-        height: 20px; 
-        width: 20px; 
-      }
-    
-      img.button--sunLogo {
-        /* width: 3rem;
-        margin: 0 0 0 38rem; */
-        display: none;
-        /* margin-right: 5rem; */
-      }
-    
-      img.button--moonLogo {
-        /* width: 3rem;
-        margin: 0 0 0 38rem; */
-        display: none;
-        /* margin-right: 5rem; */
-      }
-    
-      /* menu toggle bar */
-      .menu--toggle, .menu--toggle--dark {
-        display: flex;
-      }
-    
-      .menu--toggle > img, .menu--toggle--dark > img {
-        margin-right: 3rem;
-        width: auto;
-        height: 3rem;
-      }
-    
-      img.button--sunLogo--menuBar {
-        /* width: 3rem; */
-        margin: 0 0 0 4rem;
-        /* display: none; */
-        /* margin-right: 5rem; */
-      }
-    
-      img.button--moonLogo--menuBar {
-        /* width: 3rem; */
-        margin: 0 0 0 3rem;
-        /* display: none; */
-        /* margin-right: 5rem; */
-      }
-    
-    
-      img.menuX, img.menuX--dark {
-        /* margin-right: 3rem; */
-        /* width: auto; */
-        margin: 0;
-        height: 13rem;
-      }
-    
-      .menu--bar {
-        background-image: url('./images/berlinDay/berlin13.jpg');
-        background-position: 20% 80.2%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        background-color: white;
-        height: 14rem; 
-        width: 100%;
-        border-radius: 0;
-        /* height: 100%; */
-        /* transform: scaleY(1); Initially, set scaleY to 0 to hide it */
-        /* transform-origin: top; Set the transform origin to the top */
-        /* transition: transform 1.3s; Add a transition for transform property */
-      }
-    
-      .menu--bar--dark {
-        background-image: url('./images/berlinNight/berlin8.jpg');
-        background-position: 54% 41%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        background-color: #273788;
-        height: 14rem; 
-        width: 100%;
-        border-radius: 0;
-      }
-    
-      .menu--atag{
-        color: black;
-      }
-    
-      .menu--atag--dark {
-        color: white;
-      }
-    
-      .menu--mainLogo, .menu--mainLogo--dark {
-        height: 6.5rem;
-        flex-shrink: 2;
-        /* display: none; */
-      }
-    
-      .menu--logoTitle, .menu--logoTitle--dark {
-        font-size: 1.5rem;
-        display: none;
-      }
-    
-      .menu--items, .menu--items--dark {
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Create two columns */
-        padding: 0;
-      }
-    
-      .menu--items > li, .menu--items--dark > li {
-        font-size: 1.6rem;
-        padding: 0.6rem;
-      }
-      
-      .menu--logoDiv, .menu--logoDiv--dark {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* flex-shrink: 0; */
-      }
-      
-      .menu--logoTitle:hover, .menu--logoTitle--dark:hover {
-        color: tomato;
-      }
-      
-      .menu--menuLogo, .menu--menuLogo--dark {
-        width: 5rem;
-        margin: 40px;
-      }
-      
-      .menu--items > li:hover, .menu--items--dark > li:hover {
-        cursor: pointer;
-        color: tomato;
-        font-weight: 600;
-      }
-    
-      .footer--bar, .footer--bar--dark {
-        padding-bottom: 2rem;
-        margin-top: 1rem;
-      }
-    
-      .footer--social, .footer--social--dark {
-        font-size: 2rem;
-        /* margin-right: 4rem; */
-      }
-    
-    
-      /* bio page  */
-      .bio--page, .bio--page--dark {
-        /* background-image: url('./images/berlinDay/berlin13.jpg'); */
-        /* background-position: center; */
-        background-image: none;
-        height: auto;
-        width: 100vw;
-        /* background-position: ; */
-        /* background-size: cover; */
-        padding: 0;
-      }
-    
-      .bio--welcome--title, .bio--welcome--title--dark {
-        padding-top: 14rem;
-        font-size: 2.8rem;
-        display: flex;
-        margin-bottom: 4rem;
-    
-        justify-content: center;
-        align-items: center;
-      }
-    
-      .bio--para, .bio--para--dark {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 30rem;
-        margin: 0 auto;
-    
-        font-size: 1.45rem;
-        margin-top: 3rem;
-        font-weight: 500;
-        margin-bottom: 2rem;
-    
-      }
-    
-    
-      /*  music page */
-      .music--page {
-        padding: 0;
-        background-image: url(/src/images/guitar21.jpg);
-      }
-    
-      .music--page > .welcome--title {
-        color: white;
-        max-width: 40rem;
-        margin-bottom: 2rem;
-      }
-    
-      .shakespeare {
-        /* max-width: 20rem; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0rem;
-        margin-top: 3rem;
-        font-size: 1.7rem;
-        margin-bottom: 4rem;
-      }
-    
-      .music--content {
-        margin: 0 auto;
-        max-width: none;
-        /* font-size: 1.6rem; */
-        /* max-width: 26rem; */
-      }
-    
-      .music--content > p {
-        display: flex;
-        /* justify-content: center; */
-        align-items: center;
-        /* margin: 0 auto; */
-        color: white;
-        margin: 1rem 7rem 2rem 7rem;
-        font-weight: 600;
-        font-size: 1.8rem;
-        line-height: 1.2;
-      }
-    
-      .iframe--spotify {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        margin-left: 10.5rem;
-        max-width: 40rem;
-      }
-    
-      .music--page--dark {
-        padding: 0;
-        background-image: url(/src/images/guitar13.jpg);
-        /* background-position: 50% 80%; */
-      }
-    
-      .music--page--dark > .welcome--title--dark {
-        color: white;
-        max-width: 40rem;
-        margin-bottom: 2rem;
-      }
-    
-      .shakespeare--dark {
-        /* max-width: 20rem; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0rem;
-        margin-top: 3rem;
-        font-size: 1.7rem;
-        margin-bottom: 4rem;
-      }
-    
-      .music--content--dark {
-        margin: 0 auto;
-        max-width: none;
-        /* font-size: 1.6rem; */
-        /* max-width: 26rem; */
-      }
-    
-      .music--content--dark > p {
-        display: flex;
-        /* justify-content: center; */
-        align-items: center;
-        /* margin: 0 auto; */
-        color: white;
-        margin: 1rem 7rem 2rem 7rem;
-        font-weight: 600;
-        font-size: 1.8rem;
-        line-height: 1.2;
-      }
-    
-    
-     .audio--page, .audio--page--dark {
+  /* HomePage.jsx light */
+  
+    /* html, body, App and root */
+    .App, .App--dark, #root {
       padding: 0;
-     }
+      /* display: flexbox; */
+      /* width: 100%; */
+      /* height: 100%; */
+    }
+  
+    .homepage--title--flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  
+    .welcome--title, .welcome--title--dark {
+      font-size: 3.3rem;
+      /* width: 50rem; */
+      /* text-align: justify; */
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-top: 16rem;
+      margin: 0 auto 3.5rem auto;
+      
+    }
+  
+    .card, .card--dark {
+      height: 40rem;
+      width: 50rem;
+      margin-bottom: 2.5rem;
+    }
+  
+    .card--dark:active .card--image--dark {
+      opacity: 0.65;
+      cursor: pointer;
+    }
+  
+  
+    /* navbar  */
+  
+    .nav--bar {
+      background-image: url('./images/berlinDay/berlin13.jpg');
+      background-position: 20% 79.6%;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      height: 6rem; 
+      width: 100%;
+      border-radius: 0;
+      /* transform: scaleY(1); Initially, set scaleY to 1 to keep it visible */
+      /* transform-origin: top; Set the transform origin to the top */
+      /* transition: transform 1.3s; Add a transition for transform property */
+    }
+  
+    .nav--bar--dark {
+      background-image: url('./images/berlinNight/berlin8.jpg');
+      background-position: 54% 40.3%;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      height: 6rem; 
+      width: 100%;
+      border-radius: 0;
+      background-color: #273788;
+      /* transform: scaleY(1); Initially, set scaleY to 1 to keep it visible */
+      /* transform-origin: top; Set the transform origin to the top */
+      /* transition: transform 1.3s; Add a transition for transform property */
+    }
+  
+    .nav--mainLogo, .nav--mainLogo--dark {
+      height: 4.5rem;
+    }
+  
+    .nav--logoTitle, .nav--logoTitle {
+      font-size: 1.5rem;
+    }
+  
+    .nav--items > li, .nav--items--dark {
+      /* padding: 1rem;  */
+      display: none;
+      font-size: 1.4rem;
+      padding: 1rem;
+    }
+  
+    .switch {
+      position: relative;
+      display: none;
+      width: 50px;
+      height: 24px;
+    }
+  
+    .slider:before {
+      height: 20px; 
+      width: 20px; 
+    }
+  
+    img.button--sunLogo {
+      /* width: 3rem;
+      margin: 0 0 0 38rem; */
+      display: none;
+      /* margin-right: 5rem; */
+    }
+  
+    img.button--moonLogo {
+      /* width: 3rem;
+      margin: 0 0 0 38rem; */
+      display: none;
+      /* margin-right: 5rem; */
+    }
+  
+    /* menu toggle bar */
+    .menu--toggle, .menu--toggle--dark {
+      display: flex;
+    }
+  
+    .menu--toggle > img, .menu--toggle--dark > img {
+      margin-right: 3rem;
+      width: auto;
+      height: 3rem;
+    }
+  
+    img.button--sunLogo--menuBar {
+      /* width: 3rem; */
+      margin: 0 0 0 4rem;
+      /* display: none; */
+      /* margin-right: 5rem; */
+    }
+  
+    img.button--moonLogo--menuBar {
+      /* width: 3rem; */
+      margin: 0 0 0 3rem;
+      /* display: none; */
+      /* margin-right: 5rem; */
+    }
+  
+  
+    img.menuX, img.menuX--dark {
+      /* margin-right: 3rem; */
+      /* width: auto; */
+      margin: 0;
+      height: 13rem;
+    }
+  
+    .menu--bar {
+      background-image: url('./images/berlinDay/berlin13.jpg');
+      background-position: 20% 80.2%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      background-color: white;
+      height: 14rem; 
+      width: 100%;
+      border-radius: 0;
+      /* height: 100%; */
+      /* transform: scaleY(1); Initially, set scaleY to 0 to hide it */
+      /* transform-origin: top; Set the transform origin to the top */
+      /* transition: transform 1.3s; Add a transition for transform property */
+    }
+  
+    .menu--bar--dark {
+      background-image: url('./images/berlinNight/berlin8.jpg');
+      background-position: 54% 41%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      background-color: #273788;
+      height: 14rem; 
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .menu--atag{
+      color: black;
+    }
+  
+    .menu--atag--dark {
+      color: white;
+    }
+  
+    .menu--mainLogo, .menu--mainLogo--dark {
+      height: 6.5rem;
+      flex-shrink: 2;
+      /* display: none; */
+    }
+  
+    .menu--logoTitle, .menu--logoTitle--dark {
+      font-size: 1.5rem;
+      display: none;
+    }
+  
+    .menu--items, .menu--items--dark {
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Create two columns */
+      padding: 0;
+    }
+  
+    .menu--items > li, .menu--items--dark > li {
+      font-size: 1.6rem;
+      padding: 0.6rem;
+    }
     
-     .audio--content, .audio--content--dark {
-      height: 100vh;
-     }
+    .menu--logoDiv, .menu--logoDiv--dark {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* flex-shrink: 0; */
+    }
     
-     .audio--paragraph, .audio--paragraph--dark {
-      height: 67vh;
-     }
+    .menu--logoTitle:hover, .menu--logoTitle--dark:hover {
+      color: tomato;
+    }
     
-     .audio--paragraph > p, .audio--paragraph--dark > p {
-      font-size: 2.5vh;
+    .menu--menuLogo, .menu--menuLogo--dark {
+      width: 5rem;
+      margin: 40px;
+    }
+    
+    .menu--items > li:hover, .menu--items--dark > li:hover {
+      cursor: pointer;
+      color: tomato;
       font-weight: 600;
-     }
-    
-      /* weddings page */
-    
-      .wedding--page {
-    
-      }
-    
-      .wedding--titles, .wedding--titles--dark {
-        font-size: 1.6rem;
-        margin-bottom: 2rem;
-      }
-    
-      .wedding--list, .wedding--list--dark {
-        margin: 0rem;
-      }
-    
-      .wedding--paragraph, .wedding--paragraph--dark {
-        margin: 0rem;
-        height: 25.8rem;
-      }
-    
-      .wedding--paragraph > p, .wedding--paragraph--dark > p {
-        font-size: 2rem;
-      }
-    
-      .wedding--titles--info, .wedding--titles--info--dark {
-        margin-top: 4rem;
-        margin-left: 0rem;
-        margin-bottom: 8rem;
-        width: 55rem;
-        font-size: 1.7rem;
-      }
-    
-      /* coding page */
-      .coding--page > h1, .coding--page--dark > h1 {
-        font-size: 3rem;
-      }
-    
-      .coding--page > p {
-        margin-top: 4rem;
-        margin-bottom: 8rem;
-        max-width: 34rem;
-        text-align: start;
-      }
-    
-      .coding--page--dark > p {
-        margin-top: 4rem;
-        margin-bottom: 8rem;
-        max-width: 55rem;
-        text-align: start;
-      }
-    
-      .coding--button--section, .coding--button--section--dark {
-        margin-left: 3.5rem;
-        display: inline-block;
-      }
-      .coding--buttons {
-        margin-right: 2rem;
-      }
-    
-      .coding--buttons--dark {
-        margin-right: 15rem;
-        margin-bottom: 9rem;
-      }
+    }
+  
+    .footer--bar, .footer--bar--dark {
+      padding-bottom: 2rem;
+      margin-top: 1rem;
+    }
+  
+    .footer--social, .footer--social--dark {
+      font-size: 2rem;
+      /* margin-right: 4rem; */
+    }
+  
+  
+    /* bio page  */
+    .bio--page, .bio--page--dark {
+      /* background-image: url('./images/berlinDay/berlin13.jpg'); */
+      /* background-position: center; */
+      background-image: none;
+      height: auto;
+      width: 100vw;
+      /* background-position: ; */
+      /* background-size: cover; */
+      padding: 0;
+    }
+  
+    .bio--welcome--title, .bio--welcome--title--dark {
+      padding-top: 14rem;
+      font-size: 2.8rem;
+      display: flex;
+      margin-bottom: 4rem;
+  
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .bio--para, .bio--para--dark {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 30rem;
+      margin: 0 auto;
+  
+      font-size: 1.45rem;
+      margin-top: 3rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+  
+    }
+  
+  
+    /*  music page */
+    .music--page {
+      padding: 0;
+      background-image: url(/src/images/guitar21.jpg);
+    }
+  
+    .music--page > .welcome--title {
+      color: white;
+      max-width: 40rem;
+      margin-bottom: 2rem;
+    }
+  
+    .shakespeare {
+      /* max-width: 20rem; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0rem;
+      margin-top: 3rem;
+      font-size: 1.7rem;
+      margin-bottom: 4rem;
+    }
+  
+    .music--content {
+      margin: 0 auto;
+      max-width: none;
+      /* font-size: 1.6rem; */
+      /* max-width: 26rem; */
+    }
+  
+    .music--content > p {
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      /* margin: 0 auto; */
+      color: white;
+      margin: 1rem 7rem 2rem 7rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+  
+    .iframe--spotify {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 10.5rem;
+      max-width: 40rem;
+    }
+  
+    .music--page--dark {
+      padding: 0;
+      background-image: url(/src/images/guitar13.jpg);
+      /* background-position: 50% 80%; */
+    }
+  
+    .music--page--dark > .welcome--title--dark {
+      color: white;
+      max-width: 40rem;
+      margin-bottom: 2rem;
+    }
+  
+    .shakespeare--dark {
+      /* max-width: 20rem; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0rem;
+      margin-top: 3rem;
+      font-size: 1.7rem;
+      margin-bottom: 4rem;
+    }
+  
+    .music--content--dark {
+      margin: 0 auto;
+      max-width: none;
+      /* font-size: 1.6rem; */
+      /* max-width: 26rem; */
+    }
+  
+    .music--content--dark > p {
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      /* margin: 0 auto; */
+      color: white;
+      margin: 1rem 7rem 2rem 7rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+  
+  
+    .audio--page, .audio--page--dark {
+    padding: 0;
+    }
+  
+    .audio--content, .audio--content--dark {
+    height: 100vh;
+    }
+  
+    .audio--paragraph, .audio--paragraph--dark {
+    height: 67vh;
+    }
+  
+    .audio--paragraph > p, .audio--paragraph--dark > p {
+    font-size: 2.5vh;
+    font-weight: 600;
+    }
+  
+    /* weddings page */
+  
+    /* .wedding--page { */
+  
+    /* } */
+  
+    .wedding--titles, .wedding--titles--dark {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+  
+    .wedding--list, .wedding--list--dark {
+      margin: 0rem;
+    }
+  
+    .wedding--paragraph, .wedding--paragraph--dark {
+      margin: 0rem;
+      height: 25.8rem;
+    }
+  
+    .wedding--paragraph > p, .wedding--paragraph--dark > p {
+      font-size: 2rem;
+    }
+  
+    .wedding--titles--info, .wedding--titles--info--dark {
+      margin-top: 4rem;
+      margin-left: 0rem;
+      margin-bottom: 8rem;
+      width: 55rem;
+      font-size: 1.7rem;
+    }
+  
+    /* coding page */
+    .coding--page > h1, .coding--page--dark > h1 {
+      font-size: 3rem;
+    }
+  
+    .coding--page > p {
+      margin-top: 4rem;
+      margin-bottom: 8rem;
+      max-width: 34rem;
+      text-align: start;
+    }
+  
+    .coding--page--dark > p {
+      margin-top: 4rem;
+      margin-bottom: 8rem;
+      max-width: 55rem;
+      text-align: start;
+    }
+  
+    .coding--button--section, .coding--button--section--dark {
+      margin-left: 3.5rem;
+      display: inline-block;
+    }
+    .coding--buttons {
+      margin-right: 2rem;
+    }
+  
+    .coding--buttons--dark {
+      margin-right: 15rem;
+      margin-bottom: 9rem;
     }
 }
 
@@ -1664,20 +1948,20 @@ body {
     flex-shrink: 1;
   }
 
-  .nav--items, .nav--items--dark {
+  /* .nav--items, .nav--items--dark { */
     /* flex-shrink: 5; */
     /* margin-left: 0rem; */
     /* padding: 0rem; */
-  }
+  /* } */
 
   .nav--items > li, .nav--items--dark > li {
     padding: 1.3rem;
     font-size: 1.8rem;
   }
 
-  .switch {
+  /* .switch { */
     /* flex-shrink: 1; */
-  }
+  /* } */
 
   /* menu bar */
   .menu--logoDiv, .menu--logoDiv--dark {
