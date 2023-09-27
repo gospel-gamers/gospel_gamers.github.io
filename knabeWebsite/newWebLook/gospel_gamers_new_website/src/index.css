@@ -1211,8 +1211,8 @@ input:checked + .slider:before {
   /* background-image: url('./images/berlinDay/berlin13.jpg'); */
   /* background-position: center; */
   background-image: none;
-  height: auto;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   /* background-position: ; */
   /* background-size: cover; */
   padding: 0;
@@ -1243,9 +1243,11 @@ input:checked + .slider:before {
 }
 
 
- /*  music page */
- .music--page {
+/*  music page */
+.music--page {
   padding: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(/src/images/guitar21.jpg);
 }
 
@@ -1257,6 +1259,7 @@ input:checked + .slider:before {
 
 .shakespeare {
   /* max-width: 20rem; */
+  margin-top: 3rem;
   margin-left: 5rem;
   font-size: 1.5rem;
   margin-bottom: 4rem;
@@ -1290,6 +1293,7 @@ input:checked + .slider:before {
 
 .music--page--dark {
   padding: 0;
+  height: 100%;
   background-image: url(/src/images/guitar13.jpg);
   /* background-position: 50% 80%; */
 }
@@ -1330,12 +1334,12 @@ input:checked + .slider:before {
   .audio--page {
     padding: 0;
     background-position: 30% 0%;
-    height: 212vh;
+    height: 100%;
   }
 
   .audio--page--dark {
     padding: 0;
-    height: 212vh;
+    height: 100%;
   }
 
   .audio--page > .welcome--title, .audio--page--dark > .welcome--title--dark {
@@ -1351,7 +1355,7 @@ input:checked + .slider:before {
   .audio--content, .audio--content--dark {
     display: flex;
     flex-direction: column;
-    height: 143vh;
+    height: 70rem;
     /* margin-bottom: 15rem; */
     /* flex-direction: column; */
   }
@@ -1389,8 +1393,8 @@ input:checked + .slider:before {
     margin-top: 0rem;
     justify-content: center;
 
-    width: 88vw;
-    height: 11vh;
+    width: 30rem;
+    height: 4rem;
   }
 
   .audio--paragraph, .audio--paragraph--dark {
@@ -1398,13 +1402,13 @@ input:checked + .slider:before {
     margin: 0 auto;
     justify-content: center;
 
-    width: 76vw;
-    height: 50vh;
+    width: 26.5rem;
+    height: 25rem;
   }
 
   .audio--paragraph > p, .audio--paragraph--dark > p {
-    font-size: 1.4rem;
-    font-weight: 590;
+    font-size: 1.6rem;
+    font-weight: 400;
     margin: 0;
     /* align-items: start; */
   }
@@ -1412,19 +1416,184 @@ input:checked + .slider:before {
   .mastering--list, .mastering--list--dark {
     display: flex;
     margin: 0 auto;
-    margin-top: 8.5rem;
+    margin-top: 3.5rem;
     justify-content: center;
 
-    width: 88vw;
-    height: 11vh;
+    width: 30rem;
+    height: 4rem;
   }
 
+  .mastering--list > div, .mastering--list--dark > div, .mixing--list > div, .mixing--list--dark > div {
+    height: 4rem;
+    font-size: 1rem;
+  }
 
   /* wedding page */
   .wedding--page, .wedding--page--dark {
     padding: 0;
+    height: 100%;
   }
 
+  .wedding--titles, .wedding--titles--dark {
+    padding-top: 12rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .wedding--pricings, .wedding--pricings--dark {
+    /* display: none; */
+    width: 2rem;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .wedding--list, .wedding--list--dark {
+    margin: 0rem;
+    padding: 0;
+    /* width: 6rem; */
+    height: 22.2rem;
+  }
+
+  .wedding--list > div > h3, .wedding--list--dark > div > h3 {
+    font-size: 1.2rem;
+    width: 8rem;
+    /* padding-left: 2rem; */
+    /* padding-right: 2rem; */
+  }
+
+  .wedding--paragraph, .wedding--paragraph--dark {
+    margin: 0rem;
+    width: 22rem;
+    height: 22rem;
+    padding: 0;
+  }
+
+  .wedding--paragraph > p, .wedding--paragraph--dark > p {
+    font-size: 1.6rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .wedding--titles--info, .wedding--titles--info--dark {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    justify-content: center;
+    width: 70vw;
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+
+    /* coding page */
+    .coding--page {
+      padding: 0;
+      height: 70rem;
+      /* background-image: url(./images/web6.jpg); */
+    }
+  
+    .coding--page--dark {
+      padding: 0;
+      height: 100%;
+      /* background-size: contain; */
+      /* background-image: url(./images/web13.jpg); */
+    }
+  
+    .welcome--coding--title, .welcome--coding--title--dark {
+      padding-top: 9rem;
+      font-size: 2.4rem;
+    }
+  
+    .coding--page > p, .coding--page--dark > p {
+      margin-top: 4rem;
+      margin-bottom: 8rem;
+      width: 28rem;
+      text-align: start;
+      font-size: 1.6rem;
+    }
+  
+    .coding--page--dark > p {
+      margin-top: 4rem;
+      margin-bottom: 8rem;
+      max-width: 35rem;
+      text-align: start;
+    }
+  
+    .coding--button--section, .coding--button--section--dark {
+      /* display: inline-block; */
+      /* display: none; */
+      margin: 0;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      flex-direction: column;
+    }
+
+    .coding--buttons {
+      margin-bottom: 3rem;
+    }
+  
+    .coding--buttons--dark {
+      margin: 0;;
+      margin-bottom: 3rem;
+    }
+
+
+     /* contact page */
+  .contact--page, .contact--page--dark {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact--welcome--title, .contact--welcome--title--dark {
+    padding-top: 12.5rem;
+    font-size: 2rem;
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact--form, .contact--form--dark {
+    /* display: none; */
+    margin: 0;
+  }
+
+  .input--line, .input--line--dark {
+    height: 8vw;
+    width: 73vw;
+    font-size: 1.2rem;
+  }
+
+  .input--text, .input--text--dark {
+    width: 73vw;
+    height: 50vw;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .captcha--test, .captcha--test--dark {
+    width: 80vw;
+    margin: 0;
+    display: none;
+  }
+
+  .submit--button--class, .submit--button--class--dark {
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    width: 40vw;
+    height: 10vw;
+    /* padding: 0; */
+  }
+
+  .submit--button, .submit--button--dark {
+    font-size: 1rem;
+  }
 
 }
 
