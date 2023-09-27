@@ -5,9 +5,17 @@
     margin-right: 3rem;
   }
 
+  .button--sunLogo--menuBar:hover {
+    cursor: pointer;
+  }
+
   .button--moonLogo--menuBar {
     width: 4rem;
     margin-right: 3rem;
+  }
+
+  .button--moonLogo--menuBar:hover {
+    cursor: pointer;
   }
 
 

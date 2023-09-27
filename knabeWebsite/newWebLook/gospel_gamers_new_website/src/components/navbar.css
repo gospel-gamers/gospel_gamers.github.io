@@ -10,6 +10,17 @@
     margin-right: 3rem;
   }
 
+  .button--sunLogo:hover {
+    cursor: pointer;
+  }
+
+  .button--moonLogo:hover {
+    cursor: pointer;
+  }
+
+  .menu--img:hover, .menu--img--dark:hover, img.menuX, img.menuX--dark {
+    cursor: pointer;
+  }
 
 /* navbar lightMode */
  .nav--bar {

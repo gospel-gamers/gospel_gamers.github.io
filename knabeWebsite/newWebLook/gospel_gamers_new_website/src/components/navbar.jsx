@@ -43,10 +43,10 @@ export default function NavBar(props) {
             </ul>
 
             {/*<!-- Rounded switch --> */}
-            <label className="switch">
+            {/* <label className="switch">
                 <input type="checkbox" onClick={props.toggleDarkMode}/>
                 <span className="slider round"></span>
-            </label>
+            </label> */}
 
             {/* sun and moon logos */}
             {!props.darkMode && <img src={lightModeLogo} className='button--sunLogo' onClick={props.toggleDarkMode}/>}

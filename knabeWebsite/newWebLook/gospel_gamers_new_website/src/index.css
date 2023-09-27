@@ -441,6 +441,11 @@ input:checked + .slider:before {
     padding: 2rem;
   }
 
+  img.button--sunLogo:hover, img.button--moonLogo:hover {
+    cursor: pointer;
+  }
+
+
   .button--sunLogo--menuBar, .button--moonLogo--menuBar {
     display: none;
   }
@@ -450,12 +455,9 @@ input:checked + .slider:before {
     display: flex;
   }
 
-  /* .menu--toggle { */
-    /* margin-right: 3rem; */
-    /* width: auto; */
-    /* height: 3rem; */
-    /* display: none; */
-  /* } */
+  .menu--img:hover, .menu--img--dark:hover, img.menuX:hover, img.menuX--dark:hover {
+    cursor: pointer;
+  }
 
   .menu--img, .menu--img--dark {
     margin-right: 2rem; 
@@ -1037,6 +1039,10 @@ input:checked + .slider:before {
     display: none;
   }
 
+  img.button--sunLogo:hover, img.button--moonLogo:hover {
+    cursor: pointer;
+  }
+
   img.button--sunLogo--menuBar {
     /* width: 3rem; */
     margin: 0 0 0 3rem;
@@ -1068,6 +1074,10 @@ input:checked + .slider:before {
     /* width: auto; */
     margin: 0;
     height: 13rem;
+  }
+
+  .menu--img:hover, .menu--img--dark:hover, img.menuX:hover, img.menuX--dark:hover {
+    cursor: pointer;
   }
 
   .menu--bar {
@@ -1712,6 +1722,10 @@ input:checked + .slider:before {
       display: none;
       /* margin-right: 5rem; */
     }
+
+    img.button--sunLogo:hover, img.button--moonLogo:hover {
+      cursor: pointer;
+    }
   
     /* menu toggle bar */
     .menu--toggle, .menu--toggle--dark {
@@ -1746,6 +1760,10 @@ input:checked + .slider:before {
       height: 13rem;
     }
   
+    .menu--img:hover, .menu--img--dark:hover, img.menuX:hover, img.menuX--dark:hover {
+      cursor: pointer;
+    }
+
     .menu--bar {
       background-image: url('./images/berlinDay/berlin13.jpg');
       background-position: 20% 80.2%;
@@ -2274,6 +2292,10 @@ input:checked + .slider:before {
   flex-shrink: 1;
 }
 
+img.button--sunLogo:hover, img.button--moonLogo:hover {
+  cursor: pointer;
+}
+
 /* menu bar */
 .menu--logoDiv, .menu--logoDiv--dark {
   flex-shrink: 1;
@@ -2311,20 +2333,15 @@ input:checked + .slider:before {
     flex-shrink: 1;
   }
 
-  /* .nav--items, .nav--items--dark { */
-    /* flex-shrink: 5; */
-    /* margin-left: 0rem; */
-    /* padding: 0rem; */
-  /* } */
 
   .nav--items > li, .nav--items--dark > li {
     padding: 1.3rem;
     font-size: 1.8rem;
   }
 
-  /* .switch { */
-    /* flex-shrink: 1; */
-  /* } */
+  img.button--sunLogo:hover, img.button--moonLogo:hover {
+    cursor: pointer;
+  }
 
   /* menu bar */
   .menu--logoDiv, .menu--logoDiv--dark {
