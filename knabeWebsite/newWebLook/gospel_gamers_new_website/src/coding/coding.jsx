@@ -32,7 +32,7 @@ export default function Coding() {
       <h1 className={!darkMode ? 'welcome--coding--title' : 'welcome--coding--title--dark'}>coding == 'cool' ? 🥳 : 😩</h1>
 
       <p>
-        I am a self-taught developer and built this website using HTML, CSS, JavaScript and React. As of late, I have also been learning C# for video game development using the Unity engine. Visit my contact page regarding any inquiries and check out these two projects of mine:
+        I am a self-taught developer and built this website using HTML, CSS, JavaScript and React. As of late, I have also been learning TypeScript for video game development with the phaser engine. Visit my contact page regarding any inquiries and check out these two projects of mine:
       </p>
 
       <div className={!darkMode ? 'coding--button--section' : 'coding--button--section--dark'}>
