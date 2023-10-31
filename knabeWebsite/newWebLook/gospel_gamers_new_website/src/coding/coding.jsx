@@ -13,11 +13,14 @@ export default function Coding() {
     setDarkMode(prevMode => !prevMode)
   }
 
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
       // console.log(isMenuOpen)
+  };
+
+  const linkToSpotifyCreator = () => {
+    window.location.href = 'https://spotify.gospel-gamers.com';
   };
 
 
@@ -48,6 +51,10 @@ export default function Coding() {
             scales generator
           </button>
         </Link>
+
+        <button className={!darkMode ? 'coding--buttons' : 'coding--buttons--dark'} onClick={linkToSpotifyCreator}>
+          spotify playlist generator
+        </button>
 
       </div>
 
